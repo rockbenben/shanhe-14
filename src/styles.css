@@ -1,0 +1,51 @@
+:root {
+  color-scheme: light;
+  --paper: #f5f1e8;
+  --ink: #2b2620;
+  --dim: #7a6f5f;
+  --accent: #8c3f2b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Noto Serif SC', 'Songti SC', serif; background: var(--paper); color: var(--ink); }
+main { max-width: 640px; margin: 0 auto; padding: 48px 24px; min-height: 100dvh; display: flex; flex-direction: column; }
+button { font: inherit; cursor: pointer; border: 1px solid var(--ink); background: transparent; color: var(--ink); padding: 10px 20px; border-radius: 2px; }
+button:hover { background: var(--ink); color: var(--paper); }
+
+.home { align-items: center; justify-content: center; text-align: center; gap: 8px; }
+.home-title { font-size: 2.4rem; letter-spacing: 0.3em; margin: 0; }
+.home-sub { color: var(--dim); margin: 0 0 32px; }
+.story-card { border: 1px solid #d8cfbe; padding: 24px 32px; width: 100%; }
+.story-card h2 { margin: 0 0 8px; }
+.story-card p { color: var(--dim); margin: 0 0 16px; }
+.story-actions { display: flex; gap: 12px; justify-content: center; }
+
+.cover { align-items: center; justify-content: center; text-align: center; gap: 16px; }
+.cover-index { color: var(--dim); letter-spacing: 0.2em; }
+.cover-title { font-size: 2rem; margin: 0; letter-spacing: 0.15em; }
+.cover-epigraph { color: var(--dim); font-style: italic; max-width: 32em; }
+.cover-enter { margin-top: 16px; }
+.cover-note { margin-top: 24px; max-width: 36em; }
+.cover-note-toggle { border: none; color: var(--accent); padding: 4px 8px; }
+.cover-note-toggle:hover { background: transparent; color: var(--accent); text-decoration: underline; }
+.cover-note-body { text-align: left; color: var(--dim); font-size: 0.9rem; line-height: 1.9; border-left: 2px solid var(--accent); padding-left: 12px; }
+
+.reader { justify-content: center; gap: 24px; }
+.reader-chapter { color: var(--dim); letter-spacing: 0.15em; font-size: 0.9rem; }
+.reader-narrative { font-size: 1.05rem; line-height: 2.1; white-space: pre-wrap; }
+.reader-choices { display: flex; flex-direction: column; gap: 12px; }
+.reader-choices button, .reader-continue { text-align: left; padding: 14px 20px; }
+.reader-continue { align-self: flex-end; border: none; color: var(--accent); }
+.reader-continue:hover { background: transparent; color: var(--accent); text-decoration: underline; }
+
+.ending { align-items: center; justify-content: center; text-align: center; gap: 12px; }
+.ending-story { color: var(--dim); letter-spacing: 0.2em; }
+.ending-title { font-size: 1.8rem; margin: 0; letter-spacing: 0.1em; }
+.ending-epilogue { line-height: 2.1; max-width: 34em; text-align: left; }
+.ending-meta { color: var(--dim); font-size: 0.9rem; }
+.ending-actions { display: flex; gap: 12px; margin-top: 8px; }
+
+.recap { gap: 8px; }
+.recap-chapter h3 { margin: 16px 0 4px; font-size: 1rem; }
+.recap-chapter ul { margin: 0; color: var(--dim); }
+.recap-ending { color: var(--accent); margin-top: 16px; }
+.recap button { align-self: flex-start; margin-top: 16px; }

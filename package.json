@@ -1,0 +1,28 @@
+{
+  "name": "floating-life",
+  "version": "0.1.0",
+  "description": "浮生长卷 — 编排式叙事游戏框架：作者编排故事，引擎负责推进与记忆",
+  "author": "rockbenben",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.1.2",
+    "vitest": "^4.1.9"
+  },
+  "engines": { "node": ">=20" }
+}
