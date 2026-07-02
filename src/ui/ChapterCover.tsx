@@ -10,7 +10,8 @@ interface Props {
 
 export default function ChapterCover({ story, state, onEnter }: Props) {
   const ch = story.chapters[state.chapter]
-  const [showNote, setShowNote] = useState(false)
+  // 史实注默认展开——它是本作「真实底本」的证词，不该藏在折叠里
+  const [showNote, setShowNote] = useState(true)
   return (
     <main className={ch.art ? 'cover cover--photo' : 'cover'}>
       {ch.art && (
@@ -25,7 +26,7 @@ export default function ChapterCover({ story, state, onEnter }: Props) {
         <h2 className="cover-title">{ch.title}</h2>
         {ch.epigraph && <p className="cover-epigraph">{ch.epigraph}</p>}
         <button className="cover-enter" onClick={onEnter}>
-          开卷 ▸
+          {state.chapter === 0 ? '开卷 ▸' : '继续读下去 ▸'}
         </button>
         {ch.historyNote && (
           <div className="cover-note">
