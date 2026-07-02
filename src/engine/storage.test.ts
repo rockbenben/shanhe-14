@@ -31,4 +31,8 @@ describe('storage', () => {
     clearProgress('demo')
     expect(loadProgress('demo')).toBeNull()
   })
+  it('存档 storyId 与请求不符返回 null', () => {
+    store.set('floating-life:save:other', JSON.stringify({ v: 1, st }))
+    expect(loadProgress('other')).toBeNull()
+  })
 })
