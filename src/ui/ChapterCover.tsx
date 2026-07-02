@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Story } from '../stories/schema'
 import type { ReaderState } from '../engine/types'
 
@@ -12,8 +12,26 @@ export default function ChapterCover({ story, state, onEnter }: Props) {
   const ch = story.chapters[state.chapter]
   // 史实注默认展开——它是本作「真实底本」的证词，不该藏在折叠里
   const [showNote, setShowNote] = useState(true)
+
+  // 与阅读页同规：空格/回车/点击任意处 翻开本章
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault()
+        onEnter()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onEnter])
+
+  const onSurfaceClick = (e: React.MouseEvent) => {
+    if ((e.target as HTMLElement).closest('button')) return
+    onEnter()
+  }
+
   return (
-    <main className={ch.art ? 'cover cover--photo' : 'cover'}>
+    <main className={ch.art ? 'cover cover--photo' : 'cover'} onClick={onSurfaceClick}>
       {ch.art && (
         <div
           className="cover-photo"
@@ -24,7 +42,7 @@ export default function ChapterCover({ story, state, onEnter }: Props) {
       <div className="cover-body">
         <p className="cover-index">第 {state.chapter + 1} 章 · 共 {story.chapters.length} 章</p>
         <h2 className="cover-title">{ch.title}</h2>
-        {ch.epigraph && <p className="cover-epigraph">{ch.epigraph}</p>}
+        {ch.epigraph && <Epigraph text={ch.epigraph} />}
         <button className="cover-enter" onClick={onEnter}>
           {state.chapter === 0 ? '开卷 ▸' : '继续读下去 ▸'}
         </button>
@@ -39,5 +57,17 @@ export default function ChapterCover({ story, state, onEnter }: Props) {
       </div>
       {ch.artCredit && <p className="cover-credit">{ch.artCredit}</p>}
     </main>
+  )
+}
+
+// 章引：若含「——作者《作品》」署名，出处单独一行小字排——引文必须标注来源
+function Epigraph({ text }: { text: string }) {
+  const i = text.lastIndexOf('——')
+  if (i <= 0) return <p className="cover-epigraph">{text}</p>
+  return (
+    <p className="cover-epigraph">
+      {text.slice(0, i)}
+      <span className="cover-epigraph-source">——{text.slice(i + 2)}</span>
+    </p>
   )
 }

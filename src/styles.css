@@ -46,6 +46,10 @@ button:hover { background: var(--ink); color: var(--paper); }
 .cover-index { color: var(--dim); letter-spacing: 0.2em; }
 .cover-title { font-size: 2rem; margin: 0; letter-spacing: 0.15em; }
 .cover-epigraph { color: var(--dim); font-style: italic; max-width: 32em; }
+.cover-epigraph-source { display: block; margin-top: 6px; font-size: 0.82rem; font-style: normal; opacity: 0.75; }
+/* 可推进画面（无分支/回应页/章封）：整屏可点，指针提示 */
+.reader--advance, .cover { cursor: pointer; }
+.reader--advance button, .cover button { cursor: pointer; }
 .cover-enter { margin-top: 16px; }
 .cover-note { margin-top: 24px; max-width: 36em; }
 .cover-note-toggle { border: none; color: var(--accent); padding: 4px 8px; }
