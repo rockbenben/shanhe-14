@@ -5,13 +5,30 @@ import { currentBeat } from '../engine/reader'
 interface Props {
   story: Story
   state: ReaderState
+  // 选择后的即时回应：非空时整屏只显示这一行，点「继续」后才翻到下一拍
+  reaction: string | null
   onChoose: (index: number) => void
   onAdvance: () => void
 }
 
-export default function Reader({ story, state, onChoose, onAdvance }: Props) {
+export default function Reader({ story, state, reaction, onChoose, onAdvance }: Props) {
   const chapter = story.chapters[state.chapter]
   const beat = currentBeat(story, state)
+
+  if (reaction) {
+    return (
+      <main className="reader">
+        <header className="reader-chapter">
+          第{state.chapter + 1}章 · {chapter.title}
+        </header>
+        <article className="reader-reaction">{reaction}</article>
+        <button className="reader-continue" onClick={onAdvance}>
+          继续 ▸
+        </button>
+      </main>
+    )
+  }
+
   return (
     <main className="reader">
       <header className="reader-chapter">

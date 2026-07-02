@@ -55,6 +55,8 @@ button:hover { background: var(--ink); color: var(--paper); }
 .reader { justify-content: center; gap: 24px; }
 .reader-chapter { color: var(--dim); letter-spacing: 0.15em; font-size: 0.9rem; }
 .reader-narrative { font-size: 1.05rem; line-height: 2.1; white-space: pre-wrap; }
+/* 选择的即时回应：稍抬字号、缀以行首竖线，像书页边上的一声轻响 */
+.reader-reaction { font-size: 1.1rem; line-height: 2.2; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 16px; font-style: normal; }
 .reader-choices { display: flex; flex-direction: column; gap: 12px; }
 .reader-choices button, .reader-continue { text-align: left; padding: 14px 20px; }
 .reader-continue { align-self: flex-end; border: none; color: var(--accent); }

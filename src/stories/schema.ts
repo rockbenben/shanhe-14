@@ -21,6 +21,8 @@ const choiceSchema = z.object({
   text: z.string().min(1),
   set: z.array(z.string().min(1)).optional(), // 落下的 flag（选择的全部后果——没有数值）
   to: z.string().min(1),
+  // 选择后的即时回应：先浮现这一行，读者点「继续」才进下一拍——让每个选择都被看见
+  reaction: z.string().optional(),
 })
 
 const beatSchema = z.object({

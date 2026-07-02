@@ -18,6 +18,8 @@ interface Session {
 export default function App() {
   const [session, setSession] = useState<Session | null>(null)
   const [recap, setRecap] = useState(false)
+  // 选择的即时回应（瞬时展示，不进存档）：先浮现这一行，点「继续」才翻到下一拍
+  const [reaction, setReaction] = useState<string | null>(null)
 
   const update = (story: Story, state: ReaderState) => {
     saveProgress(state)
@@ -69,8 +71,21 @@ export default function App() {
     <Reader
       story={story}
       state={state}
-      onChoose={(i) => update(story, choose(story, state, i))}
-      onAdvance={() => update(story, advance(story, state))}
+      reaction={reaction}
+      onChoose={(i) => {
+        const beat = story.chapters[state.chapter].beats.find((b) => b.id === state.beatId)
+        const next = choose(story, state, i)
+        // 选择直达章末/终卷时跳过回应（封面/结局页会立即接管画面）
+        setReaction(next.beatId !== null && !next.ended ? (beat?.choices?.[i]?.reaction ?? null) : null)
+        update(story, next)
+      }}
+      onAdvance={() => {
+        if (reaction) {
+          setReaction(null)
+          return
+        }
+        update(story, advance(story, state))
+      }}
     />
   )
 }
