@@ -20,6 +20,29 @@ button:hover { background: var(--ink); color: var(--paper); }
 .story-actions { display: flex; gap: 12px; justify-content: center; }
 
 .cover { align-items: center; justify-content: center; text-align: center; gap: 16px; }
+/* 真实档案照片章封：做旧滤镜压底、暗色渐晕保文字可读、来源署名沉底 */
+.cover--photo { position: relative; color: #f0ead9; }
+.cover-photo {
+  position: fixed; inset: 0; z-index: -1;
+  background-size: cover; background-position: center;
+  filter: grayscale(1) sepia(0.28) contrast(0.92) brightness(0.55);
+}
+.cover--photo::after {
+  content: ''; position: fixed; inset: 0; z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(20, 16, 10, 0.25) 40%, rgba(20, 16, 10, 0.78) 100%);
+}
+.cover-body { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.cover--photo .cover-index, .cover--photo .cover-epigraph { color: #cfc5ad; }
+.cover--photo .cover-title { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+.cover--photo .cover-enter { border-color: #f0ead9; color: #f0ead9; }
+.cover--photo .cover-enter:hover { background: #f0ead9; color: #2b2620; }
+.cover--photo .cover-note-toggle { color: #d8a37a; }
+.cover--photo .cover-note-toggle:hover { color: #d8a37a; }
+.cover--photo .cover-note-body { color: #cfc5ad; border-left-color: #d8a37a; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+.cover-credit {
+  position: fixed; left: 0; right: 0; bottom: 10px; margin: 0;
+  text-align: center; font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(240, 234, 217, 0.55);
+}
 .cover-index { color: var(--dim); letter-spacing: 0.2em; }
 .cover-title { font-size: 2rem; margin: 0; letter-spacing: 0.15em; }
 .cover-epigraph { color: var(--dim); font-style: italic; max-width: 32em; }

@@ -37,7 +37,8 @@ const chapterSchema = z.object({
   title: z.string().min(1),
   epigraph: z.string().optional(), // 章引
   historyNote: z.string().optional(), // 史实注：本章的真实底本与出处线索
-  art: z.string().optional(),
+  art: z.string().optional(), // 章封影像文件名（public/covers/<art>，含扩展名）；历史题材用真实档案照片
+  artCredit: z.string().optional(), // 影像来源署名（如「日军入沈阳，1931 · Wikimedia Commons · 公有领域」）
   entry: z.string().min(1),
   beats: z.array(beatSchema).min(1),
 })
