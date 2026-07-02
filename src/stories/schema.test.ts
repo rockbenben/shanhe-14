@@ -66,4 +66,24 @@ describe('storySchema', () => {
     delete (bad2.endings[0] as Record<string, unknown>).when
     expect(() => storySchema.parse(bad2)).toThrow(/兜底结局/)
   })
+  it('章内重复 beat id 被拒', () => {
+    const s = clone()
+    s.chapters[0].beats.push({ id: 'b1', narrative: '重复的开场。', next: '$end' })
+    expect(() => storySchema.parse(s)).toThrow(/重复/)
+  })
+  it('重复 chapter id 被拒', () => {
+    const s = clone()
+    s.chapters.push({
+      id: 'c1',
+      title: '重复的章',
+      entry: 'x1',
+      beats: [{ id: 'x1', narrative: '另一章。', next: '$end' }],
+    })
+    expect(() => storySchema.parse(s)).toThrow(/重复/)
+  })
+  it('重复 ending id 被拒', () => {
+    const s = clone()
+    s.endings.push({ id: 'e-left', title: '另一个左途', epilogue: '重复的结局。' })
+    expect(() => storySchema.parse(s)).toThrow(/重复/)
+  })
 })

@@ -60,7 +60,43 @@ export const storySchema = z
     endings: z.array(endingSchema).min(1),
   })
   .superRefine((story, ctx) => {
+    // 章节 id 不得重复
+    const seenChapterIds = new Set<string>()
     story.chapters.forEach((ch, ci) => {
+      if (seenChapterIds.has(ch.id)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['chapters', ci, 'id'],
+          message: `chapter id "${ch.id}" 重复`,
+        })
+      }
+      seenChapterIds.add(ch.id)
+    })
+    // 结局 id 不得重复
+    const seenEndingIds = new Set<string>()
+    story.endings.forEach((e, ei) => {
+      if (seenEndingIds.has(e.id)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['endings', ei, 'id'],
+          message: `ending id "${e.id}" 重复`,
+        })
+      }
+      seenEndingIds.add(e.id)
+    })
+    story.chapters.forEach((ch, ci) => {
+      // 章内 beat id 不得重复
+      const seenBeatIds = new Set<string>()
+      ch.beats.forEach((b, bi) => {
+        if (seenBeatIds.has(b.id)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['chapters', ci, 'beats', bi, 'id'],
+            message: `beat id "${b.id}" 在本章内重复`,
+          })
+        }
+        seenBeatIds.add(b.id)
+      })
       const ids = new Set(ch.beats.map((b) => b.id))
       const edges = new Map<string, string[]>()
       ch.beats.forEach((b, bi) => {

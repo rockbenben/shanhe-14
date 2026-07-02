@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import type { ReaderState } from './types'
-import { clearProgress, loadProgress, saveProgress } from './storage'
+import { demoStory } from './fixtures'
+import { clearProgress, loadProgress, saveProgress, validProgress } from './storage'
 
 const store = new Map<string, string>()
 beforeEach(() => {
@@ -34,5 +35,34 @@ describe('storage', () => {
   it('存档 storyId 与请求不符返回 null', () => {
     store.set('floating-life:save:other', JSON.stringify({ v: 1, st }))
     expect(loadProgress('other')).toBeNull()
+  })
+})
+
+describe('validProgress', () => {
+  it('chapter 越界返回 null', () => {
+    const bad: ReaderState = { storyId: 'demo', chapter: 99, beatId: null, flags: [], log: [] }
+    expect(validProgress(demoStory, bad)).toBeNull()
+  })
+  it('beatId 在当前章已不存在时返回 null', () => {
+    const bad: ReaderState = { storyId: 'demo', chapter: 0, beatId: 'ghost', flags: [], log: [] }
+    expect(validProgress(demoStory, bad)).toBeNull()
+  })
+  it('ended.endingId 已不存在时返回 null', () => {
+    const bad: ReaderState = {
+      storyId: 'demo',
+      chapter: 1,
+      beatId: null,
+      flags: [],
+      log: [],
+      ended: { endingId: 'ghost' },
+    }
+    expect(validProgress(demoStory, bad)).toBeNull()
+  })
+  it('完好的存档原样返回', () => {
+    const ok: ReaderState = { storyId: 'demo', chapter: 0, beatId: 'b2', flags: ['左'], log: [] }
+    expect(validProgress(demoStory, ok)).toEqual(ok)
+  })
+  it('null 输入返回 null', () => {
+    expect(validProgress(demoStory, null)).toBeNull()
   })
 })

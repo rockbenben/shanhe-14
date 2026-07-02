@@ -3,7 +3,7 @@ import { builtinStories } from './stories'
 import type { Story } from './stories/schema'
 import type { ReaderState } from './engine/types'
 import { advance, choose, enterChapter, startStory } from './engine/reader'
-import { clearProgress, loadProgress, saveProgress } from './engine/storage'
+import { clearProgress, loadProgress, saveProgress, validProgress } from './engine/storage'
 import Home from './ui/Home'
 import Reader from './ui/Reader'
 import ChapterCover from './ui/ChapterCover'
@@ -32,7 +32,10 @@ export default function App() {
           clearProgress(story.id)
           update(story, startStory(story))
         }}
-        onContinue={(story) => setSession({ story, state: loadProgress(story.id)! })}
+        onContinue={(story) => {
+          const st = validProgress(story, loadProgress(story.id))
+          if (st) setSession({ story, state: st })
+        }}
       />
     )
   }

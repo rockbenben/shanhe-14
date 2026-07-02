@@ -29,7 +29,10 @@ export function advance(story: Story, st: ReaderState): ReaderState {
   const beat = currentBeat(story, st)
   if (beat.choices || beat.next === undefined) throw new Error(`beat "${beat.id}" 需要选择，不能直接推进`)
   const to =
-    typeof beat.next === 'string' ? beat.next : beat.next.find((n) => checkCond(n.when, st.flags))!.to
+    typeof beat.next === 'string'
+      ? beat.next
+      : // schema 保证条件 next 最后一项无 when，必然兜底
+        beat.next.find((n) => checkCond(n.when, st.flags))!.to
   const log = [...st.log, { chapter: st.chapter, beatId: beat.id }]
   return goto(story, { ...st, log }, to)
 }

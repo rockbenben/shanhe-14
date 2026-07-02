@@ -1,5 +1,5 @@
 import type { Story } from '../stories/schema'
-import { loadProgress } from '../engine/storage'
+import { loadProgress, validProgress } from '../engine/storage'
 
 interface Props {
   stories: Story[]
@@ -13,7 +13,7 @@ export default function Home({ stories, onStart, onContinue }: Props) {
       <h1 className="home-title">浮生长卷</h1>
       <p className="home-sub">编排式叙事 · 每一次选择都被长卷记得</p>
       {stories.map((s) => {
-        const saved = loadProgress(s.id)
+        const saved = validProgress(s, loadProgress(s.id))
         return (
           <section key={s.id} className="story-card">
             <h2>{s.title}</h2>
