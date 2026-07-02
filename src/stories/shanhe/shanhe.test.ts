@@ -14,6 +14,12 @@ describe('山河十四年 内容完整性', () => {
       for (const b of ch.beats)
         expect(b.narrative.length, `${ch.title}/${b.id} 文案过短`).toBeGreaterThanOrEqual(100)
   })
+  it('每个选择都有 ≥15 字的即时回应', () => {
+    for (const ch of shanhe.chapters)
+      for (const b of ch.beats)
+        for (const c of b.choices ?? [])
+          expect(c.reaction?.length ?? 0, `${ch.title}/${b.id}「${c.text}」缺 reaction`).toBeGreaterThanOrEqual(15)
+  })
   it('每章至少一处选择', () => {
     for (const ch of shanhe.chapters) expect(ch.beats.some((b) => b.choices)).toBe(true)
   })
