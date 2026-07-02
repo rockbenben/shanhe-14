@@ -6,6 +6,9 @@ import { advance, choose, enterChapter, startStory } from './engine/reader'
 import { clearProgress, loadProgress, saveProgress } from './engine/storage'
 import Home from './ui/Home'
 import Reader from './ui/Reader'
+import ChapterCover from './ui/ChapterCover'
+import EndingCard from './ui/EndingCard'
+import Recap from './ui/Recap'
 
 interface Session {
   story: Story
@@ -14,6 +17,7 @@ interface Session {
 
 export default function App() {
   const [session, setSession] = useState<Session | null>(null)
+  const [recap, setRecap] = useState(false)
 
   const update = (story: Story, state: ReaderState) => {
     saveProgress(state)
@@ -37,19 +41,25 @@ export default function App() {
 
   if (state.ended) {
     const ending = story.endings.find((e) => e.id === state.ended!.endingId)!
+    if (recap) {
+      return <Recap story={story} log={state.log} ending={ending} onBack={() => setRecap(false)} />
+    }
     return (
-      <main className="ending">
-        <h2>{ending.title}</h2>
-        <p>{ending.epilogue}</p>
-        <button onClick={() => setSession(null)}>回到首页</button>
-      </main>
+      <EndingCard
+        story={story}
+        ending={ending}
+        log={state.log}
+        onRestart={() => {
+          setRecap(false)
+          setSession(null)
+        }}
+        onRecap={() => setRecap(true)}
+      />
     )
   }
 
-  // 章封面：Task 8 换成真封面组件，这里先直接入章
   if (state.beatId === null) {
-    update(story, enterChapter(story, state))
-    return null
+    return <ChapterCover story={story} state={state} onEnter={() => update(story, enterChapter(story, state))} />
   }
 
   return (
