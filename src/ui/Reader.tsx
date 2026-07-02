@@ -1,6 +1,7 @@
 import type { Story } from '../stories/schema'
 import type { ReaderState } from '../engine/types'
 import { currentBeat } from '../engine/reader'
+import { artUrl } from './art'
 
 interface Props {
   story: Story
@@ -29,11 +30,14 @@ export default function Reader({ story, state, reaction, onChoose, onAdvance }: 
     )
   }
 
+  const img = beat.art ? artUrl(beat.art) : undefined
+
   return (
     <main className="reader">
       <header className="reader-chapter">
         第{state.chapter + 1}章 · {chapter.title}
       </header>
+      {img && <img className="reader-art" src={img} alt="" />}
       <article className="reader-narrative">{beat.narrative}</article>
       {beat.choices ? (
         <div className="reader-choices">
