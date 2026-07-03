@@ -5,47 +5,27 @@ import { currentBeat } from '../engine/reader'
 import { artUrl } from './art'
 import { useLang } from './lang'
 
-// 影像层：旧图保持到新图解码完成，新图交叉溶解入场并带缓慢推镜——
-// 纪录片式换镜头，不是幻灯片硬切；本拍无图（如 ch10 留白）则立即清空。
+// 影像层：画册式翻页——旧图保持到新图解码完成后瞬时硬切，无空窗无叠影无暗场；
+// 本拍无图（如素纸拍）则立即清空。
 function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
-  const [layers, setLayers] = useState<{ url: string; key: number }[]>(
-    url ? [{ url, key: 0 }] : [],
-  )
+  const [shown, setShown] = useState(url)
   useEffect(() => {
     if (!url) {
-      setLayers([])
+      setShown(undefined)
       return
     }
-    setLayers((ls) => {
-      if (ls[ls.length - 1]?.url === url) return ls
-      return ls
-    })
+    if (url === shown) return
     const im = new Image()
-    im.onload = () =>
-      setLayers((ls) => {
-        if (ls[ls.length - 1]?.url === url) return ls
-        // 只保留上一层做溶解底，旧层在下一次切换时退场
-        return [...ls.slice(-1), { url, key: (ls[ls.length - 1]?.key ?? 0) + 1 }]
-      })
+    im.onload = () => setShown(url)
     im.src = url
-  }, [url])
-  if (!layers.length) return null
+  }, [url, shown])
+  if (!shown) return null
   return (
-    <>
-      {/* 黑底暗场：转黑过渡的底——旧照沉入黑暗、新照再亮起，两图永不交叠 */}
-      <div className="reader-bg-base" aria-hidden="true" />
-      {layers.map((l, i) => (
-        <div
-          key={l.key}
-          className={
-            (full ? 'reader-bg reader-bg--full' : 'reader-bg') +
-            (i === layers.length - 1 ? ' reader-bg--front' : ' reader-bg--back')
-          }
-          style={{ backgroundImage: `url(${l.url})` }}
-          aria-hidden="true"
-        />
-      ))}
-    </>
+    <div
+      className={full ? 'reader-bg reader-bg--full' : 'reader-bg'}
+      style={{ backgroundImage: `url(${shown})` }}
+      aria-hidden="true"
+    />
   )
 }
 
