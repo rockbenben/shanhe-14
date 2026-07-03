@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 山河方印：朱砂底、白文竖排、内框细线——手钤微斜 -->
+  <g transform="rotate(-2 32 32)">
+    <rect x="3" y="3" width="58" height="58" rx="5" fill="#9e2b25"/>
+    <rect x="7.5" y="7.5" width="49" height="49" rx="2.5" fill="none" stroke="#f0ead9" stroke-width="1.8" opacity="0.9"/>
+    <text x="32" y="30" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-weight="700" font-size="23" fill="#f0ead9" text-anchor="middle">山</text>
+    <text x="32" y="54" font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-weight="700" font-size="23" fill="#f0ead9" text-anchor="middle">河</text>
+  </g>
+</svg>
