@@ -9,7 +9,12 @@ import { useLang } from './lang'
 function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
   const [shown, setShown] = useState(url)
   useEffect(() => {
-    if (!url || url === shown) return
+    if (!url) {
+      // 本拍无图（如 ch10 主题化留白）：立即清空，不残留上一拍画面
+      setShown(undefined)
+      return
+    }
+    if (url === shown) return
     const im = new Image()
     im.onload = () => setShown(url)
     im.src = url
