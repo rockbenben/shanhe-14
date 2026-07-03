@@ -10,8 +10,7 @@ interface Props {
   onGallery: () => void
 }
 
-// 结局页＝记录的最后一页：档案照片为幕（无照片则素纸）、结局题、
-// 一枚「存档」朱印收卷（与卷首「史实改编」印首尾同构）、尾声正文、去向按钮。
+// 结局页＝记录的最后一页：档案照片为幕（无照片则素纸）、结局题、尾声正文、去向按钮。
 export default function EndingCard({ story, ending, onRestart, onRecap, onGallery }: Props) {
   const { tr } = useLang()
   useEffect(() => {
@@ -33,10 +32,7 @@ export default function EndingCard({ story, ending, onRestart, onRecap, onGaller
         />
       )}
       <p className="ending-story">{tr(story.title)}</p>
-      <div className="ending-titleblock">
-        <h2 className="ending-title">{tr(ending.title)}</h2>
-        <span className="ending-seal" aria-hidden="true">{tr('存档')}</span>
-      </div>
+      <h2 className="ending-title">{tr(ending.title)}</h2>
       <p className="ending-epilogue">{tr(ending.epilogue)}</p>
       <div className="ending-actions">
         <button onClick={onRecap}>{tr('回顾全程')}</button>
