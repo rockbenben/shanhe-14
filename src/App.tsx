@@ -29,7 +29,7 @@ function Shell() {
   // 览图模式：隐去文字浮层纯赏画面
   const [artOnly, setArtOnly] = useState(false)
   // 回退栈：状态快照（会话级，不入存档）——←/↑ 逐步退回上一页，退过选择点即可重选
-  const [history, setHistory] = useState<ReaderState[]>([])
+  const [, setHistory] = useState<ReaderState[]>([])
 
   const update = (story: Story, state: ReaderState) => {
     saveProgress(state)

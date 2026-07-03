@@ -64,7 +64,12 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
     return () => window.removeEventListener('keydown', onKey)
   }, [canAdvance, artOnly, beat, onAdvance, onToggleArt, onChoose, onBack])
 
-  const img = beat.art ? artUrl(beat.art) : undefined
+  // 真实照片拍（beat.photo，档案照片+出处署名）优先于版画插画（beat.art）
+  const photoUrl = beat.photo ? `${import.meta.env.BASE_URL}covers/${beat.photo.file}` : undefined
+  const img = photoUrl ?? (beat.art ? artUrl(beat.art) : undefined)
+  const photoCredit = beat.photo && (
+    <p className="reader-photocredit">{tr(beat.photo.credit)}</p>
+  )
 
   // 览图模式：只留画面与一枚返回钮，点击任意处回到文字
   if (artOnly && img) {
@@ -81,6 +86,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
         <button className="reader-viewtoggle" onClick={onToggleArt}>
           {tr('读文')}
         </button>
+        {photoCredit}
       </main>
     )
   }
@@ -115,6 +121,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
           {tr('继续')} ▸
         </button>
         {viewBtn}
+        {photoCredit}
       </main>
     )
   }
@@ -132,6 +139,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
           </p>
         )}
         {tr(beat.narrative)}
+        {beat.source && <p className="reader-source">◈ {tr('据')} {tr(beat.source)}</p>}
       </article>
       {beat.choices ? (
         <div className="reader-choices">
@@ -147,6 +155,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
         </button>
       )}
       {viewBtn}
+      {photoCredit}
     </main>
   )
 }

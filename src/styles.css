@@ -100,6 +100,13 @@ button:hover { background: var(--ink); color: var(--paper); }
 .reader-reaction-choice { margin: 0 0 10px; font-size: 0.82rem; letter-spacing: 0.08em; opacity: 0.75; }
 /* 回响徽记：跨章兑现的选择在此记功 */
 .reader-echo { margin: 0 0 12px; font-size: 0.82rem; letter-spacing: 0.06em; color: #d8a37a; }
+/* 史料出处注：取材真实记载的拍，正文末小字注明 */
+.reader-source { margin: 12px 0 0; font-size: 0.78rem; letter-spacing: 0.04em; opacity: 0.6; }
+/* 真实照片拍的出处署名：与章封 cover-credit 同规沉底 */
+.reader-photocredit {
+  position: fixed; left: 0; right: 0; bottom: 10px; margin: 0; pointer-events: none;
+  text-align: center; font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(240, 234, 217, 0.6);
+}
 /* 选择的即时回应：稍抬字号、缀以行首竖线，像书页边上的一声轻响 */
 .reader-reaction { font-size: 1.1rem; line-height: 2.2; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 16px; font-style: normal; }
 .reader-choices { display: flex; flex-direction: column; gap: 12px; }
