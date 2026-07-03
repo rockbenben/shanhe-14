@@ -48,7 +48,7 @@ button:hover { background: var(--ink); color: var(--paper); }
 .cover-epigraph { color: var(--dim); font-style: italic; max-width: 32em; }
 .cover-epigraph-source { display: block; margin-top: 6px; font-size: 0.82rem; font-style: normal; opacity: 0.75; }
 /* 可推进画面（无分支/回应页/章封）：整屏可点，指针提示 */
-.reader--advance, .cover { cursor: pointer; }
+.reader--advance, .cover { }
 .reader--advance button, .cover button { cursor: pointer; }
 /* 开卷：去方框，作一枚安静的字——整屏本就可点，按钮只是视线的落点 */
 .cover-enter {
@@ -231,10 +231,6 @@ body::before {
   .home-slice { opacity: 0; animation: slice-in 0.6s ease forwards; }
   @keyframes slice-in { to { opacity: 1; } }
 }
-.home-stats { font-size: 0.78rem; letter-spacing: 0.12em; color: rgba(224, 214, 189, 0.75); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); margin-top: 2px; }
-/* 故事区不挡切片点击：让点击穿到时间轴，仅交互元素自身可点 */
-.home-story { pointer-events: none; }
-.home-story button, .home-story .home-seal { pointer-events: auto; }
 /* 故事区：书脊式竖排标题 + 朱砂印 */
 .home-story { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .home-title--spine {
