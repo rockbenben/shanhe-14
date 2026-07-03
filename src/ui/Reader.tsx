@@ -20,9 +20,11 @@ interface Props {
   onToggleArt: () => void
   onChoose: (index: number) => void
   onAdvance: () => void
+  // ←/↑ 回退到上一页（会话级快照栈）
+  onBack: () => void
 }
 
-export default function Reader({ story, state, reaction, artOnly, onToggleArt, onChoose, onAdvance }: Props) {
+export default function Reader({ story, state, reaction, artOnly, onToggleArt, onChoose, onAdvance, onBack }: Props) {
   const { tr } = useLang()
   const chapter = story.chapters[state.chapter]
   const beat = currentBeat(story, state)
@@ -46,6 +48,12 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
         onToggleArt()
         return
       }
+      // ←/↑ 回退上一页
+      if (!artOnly && (e.key === 'ArrowLeft' || e.key === 'ArrowUp')) {
+        e.preventDefault()
+        onBack()
+        return
+      }
       // 回车保留浏览器默认：聚焦某个选项按钮时回车＝键盘用户的明确选择
       if (canAdvance && e.key === 'Enter' && !(document.activeElement instanceof HTMLButtonElement)) {
         e.preventDefault()
@@ -54,7 +62,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [canAdvance, artOnly, beat, onAdvance, onToggleArt, onChoose])
+  }, [canAdvance, artOnly, beat, onAdvance, onToggleArt, onChoose, onBack])
 
   const img = beat.art ? artUrl(beat.art) : undefined
 

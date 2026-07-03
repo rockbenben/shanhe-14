@@ -28,10 +28,26 @@ function Shell() {
   const [reaction, setReaction] = useState<Reaction | null>(null)
   // 览图模式：隐去文字浮层纯赏画面
   const [artOnly, setArtOnly] = useState(false)
+  // 回退栈：状态快照（会话级，不入存档）——←/↑ 逐步退回上一页，退过选择点即可重选
+  const [history, setHistory] = useState<ReaderState[]>([])
 
   const update = (story: Story, state: ReaderState) => {
     saveProgress(state)
-    setSession({ story, state })
+    setSession((prev) => {
+      if (prev) setHistory((h) => [...h.slice(-199), prev.state])
+      return { story, state }
+    })
+  }
+
+  const goBack = () => {
+    setHistory((h) => {
+      if (!h.length) return h
+      const prev = h[h.length - 1]
+      setReaction(null)
+      saveProgress(prev)
+      setSession((s) => (s ? { story: s.story, state: prev } : s))
+      return h.slice(0, -1)
+    })
   }
 
   // 简繁角标常驻右上角
@@ -49,11 +65,15 @@ function Shell() {
         stories={builtinStories}
         onStart={(story) => {
           clearProgress(story.id)
+          setHistory([])
           update(story, startStory(story))
         }}
         onContinue={(story) => {
           const st = validProgress(story, loadProgress(story.id))
-          if (st) setSession({ story, state: st })
+          if (st) {
+            setHistory([])
+            setSession({ story, state: st })
+          }
         }}
       />
     )
@@ -83,7 +103,12 @@ function Shell() {
       }
     } else if (state.beatId === null) {
       screen = (
-        <ChapterCover story={story} state={state} onEnter={() => update(story, enterChapter(story, state))} />
+        <ChapterCover
+          story={story}
+          state={state}
+          onEnter={() => update(story, enterChapter(story, state))}
+          onBack={goBack}
+        />
       )
     } else {
       screen = (
@@ -92,6 +117,7 @@ function Shell() {
           state={state}
           reaction={reaction}
           artOnly={artOnly}
+          onBack={goBack}
           onToggleArt={() => setArtOnly((v) => !v)}
           onChoose={(i) => {
             const beat = story.chapters[state.chapter].beats.find((b) => b.id === state.beatId)

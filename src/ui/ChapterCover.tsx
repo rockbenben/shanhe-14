@@ -7,25 +7,32 @@ interface Props {
   story: Story
   state: ReaderState
   onEnter: () => void
+  // ←/↑ 回退（退回上一章的末尾）
+  onBack: () => void
 }
 
-export default function ChapterCover({ story, state, onEnter }: Props) {
+export default function ChapterCover({ story, state, onEnter, onBack }: Props) {
   const { tr } = useLang()
   const ch = story.chapters[state.chapter]
   // 史实注默认展开——它是本作「真实底本」的证词，不该藏在折叠里
   const [showNote, setShowNote] = useState(true)
 
-  // 与阅读页同规：空格/回车/点击任意处 翻开本章
+  // 与阅读页同规：空格/回车/→/↓/点击任意处 翻开本章；←/↑ 回退
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === ' ' || e.key === 'Enter') {
+      if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight' || e.key === 'ArrowDown') {
         e.preventDefault()
         onEnter()
+        return
+      }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault()
+        onBack()
       }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [onEnter])
+  }, [onEnter, onBack])
 
   const onSurfaceClick = (e: React.MouseEvent) => {
     if ((e.target as HTMLElement).closest('button')) return
