@@ -2,10 +2,11 @@ import type { Story } from '../stories/schema'
 import { loadProgress, validProgress } from '../engine/storage'
 import { useLang } from './lang'
 
-export default function Home({ stories, onStart, onContinue }: {
+export default function Home({ stories, onStart, onContinue, onAbout }: {
   stories: Story[]
   onStart: (story: Story) => void
   onContinue: (story: Story) => void
+  onAbout: () => void
 }) {
   const { tr } = useLang()
   const story = stories[0]
@@ -48,6 +49,9 @@ export default function Home({ stories, onStart, onContinue }: {
           </div>
         </section>
       )}
+      <button className="home-about" onClick={onAbout}>
+        {tr('关于本作')}
+      </button>
     </main>
   )
 }

@@ -5,27 +5,45 @@ import { currentBeat } from '../engine/reader'
 import { artUrl } from './art'
 import { useLang } from './lang'
 
-// 防闪背景：旧图保持到新图解码完成才切换——切拍时不露空白
+// 影像层：旧图保持到新图解码完成，新图交叉溶解入场并带缓慢推镜——
+// 纪录片式换镜头，不是幻灯片硬切；本拍无图（如 ch10 留白）则立即清空。
 function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
-  const [shown, setShown] = useState(url)
+  const [layers, setLayers] = useState<{ url: string; key: number }[]>(
+    url ? [{ url, key: 0 }] : [],
+  )
   useEffect(() => {
     if (!url) {
-      // 本拍无图（如 ch10 主题化留白）：立即清空，不残留上一拍画面
-      setShown(undefined)
+      setLayers([])
       return
     }
-    if (url === shown) return
+    setLayers((ls) => {
+      if (ls[ls.length - 1]?.url === url) return ls
+      return ls
+    })
     const im = new Image()
-    im.onload = () => setShown(url)
+    im.onload = () =>
+      setLayers((ls) => {
+        if (ls[ls.length - 1]?.url === url) return ls
+        // 只保留上一层做溶解底，旧层在下一次切换时退场
+        return [...ls.slice(-1), { url, key: (ls[ls.length - 1]?.key ?? 0) + 1 }]
+      })
     im.src = url
-  }, [url, shown])
-  if (!shown) return null
+  }, [url])
+  if (!layers.length) return null
   return (
-    <div
-      className={full ? 'reader-bg reader-bg--full' : 'reader-bg'}
-      style={{ backgroundImage: `url(${shown})` }}
-      aria-hidden="true"
-    />
+    <>
+      {layers.map((l, i) => (
+        <div
+          key={l.key}
+          className={
+            (full ? 'reader-bg reader-bg--full' : 'reader-bg') +
+            (i === layers.length - 1 ? ' reader-bg--front' : '')
+          }
+          style={{ backgroundImage: `url(${l.url})` }}
+          aria-hidden="true"
+        />
+      ))}
+    </>
   )
 }
 
@@ -48,12 +66,26 @@ interface Props {
   onBack: () => void
 }
 
+const HINT_KEY = 'floating-life:hinted'
+
 export default function Reader({ story, state, reaction, artOnly, onToggleArt, onChoose, onAdvance, onBack }: Props) {
   const { tr } = useLang()
   const chapter = story.chapters[state.chapter]
   const beat = currentBeat(story, state)
   // 视觉小说惯例：无分支时空格/回车推进，点击画面任意处亦可
   const canAdvance = !artOnly && (!!reaction || !beat.choices)
+  // 首次操作提示：初次进入正文出现，一翻页或 10 秒后收起，之后不再打扰
+  const [showHint, setShowHint] = useState(() => !localStorage.getItem(HINT_KEY))
+  useEffect(() => {
+    if (!showHint) return
+    const done = () => {
+      localStorage.setItem(HINT_KEY, '1')
+      setShowHint(false)
+    }
+    const t = setTimeout(done, 10000)
+    return () => { clearTimeout(t); done() }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.beatId, showHint])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -159,9 +191,9 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       <main className={cls} onClick={onSurfaceClick}>
         <ReaderBg url={img} />
         <header className="reader-chapter">
-          {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}
+          {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}{chapter.era && <span className="reader-era">{chapter.era}</span>}
         </header>
-        <article className="reader-reaction">
+        <article key="reaction" className="reader-reaction">
           <p className="reader-reaction-choice">
             {tr('你的选择')} · {tr(reaction.choiceText)}
           </p>
@@ -180,9 +212,9 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
     <main className={cls} onClick={onSurfaceClick}>
       <ReaderBg url={img} />
       <header className="reader-chapter">
-        {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}
+        {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}{chapter.era && <span className="reader-era">{chapter.era}</span>}
       </header>
-      <article className="reader-narrative">
+      <article key={state.beatId ?? undefined} className="reader-narrative">
         {beat.echo && (
           <p className="reader-echo">
             ◈ {tr('回响')} —— {tr(beat.echo)}
@@ -203,7 +235,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       {beat.choices ? (
         <div className="reader-choices">
           {beat.choices.map((c, i) => (
-            <button key={i} onClick={() => onChoose(i)}>
+            <button key={i} style={{ animationDelay: `${0.15 + i * 0.12}s` }} onClick={() => onChoose(i)}>
               {tr(c.text)}
             </button>
           ))}
@@ -215,6 +247,9 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       )}
       {viewBtn}
       {photoCredit}
+      {showHint && (
+        <p className="reader-hint">{tr('空格或点击画面继续 · ← 回退 · 到选择点空格会替你选一项')}</p>
+      )}
     </main>
   )
 }

@@ -65,12 +65,44 @@ button:hover { background: var(--ink); color: var(--paper); }
 
 .reader { justify-content: center; gap: 24px; }
 .reader-chapter { color: var(--dim); letter-spacing: 0.15em; font-size: 0.9rem; }
+/* 年代戳：眉标末端的小号档案编号感 */
+.reader-era { margin-left: 14px; font-size: 0.78rem; letter-spacing: 0.3em; opacity: 0.66; border-left: 1px solid currentColor; padding-left: 14px; }
 .reader-narrative { font-size: 1.05rem; line-height: 2.1; white-space: pre-wrap; }
+/* 翻页时正文自下微升浮现；选择项与继续键错落跟进（reduce 直出） */
+@media (prefers-reduced-motion: no-preference) {
+  .reader-narrative, .reader-reaction { animation: text-rise 0.55s ease both; }
+  .reader-choices button { animation: text-rise 0.45s ease both; }
+  @keyframes text-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+}
+/* 选择项：悬停时左缘落一道朱砂墨线 */
+.reader-choices button { position: relative; }
+.reader-choices button::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: #9e2b25; transform: scaleY(0); transition: transform 0.2s ease;
+}
+.reader-choices button:hover::before { transform: scaleY(1); }
+/* 首次操作提示：底部一行小字，自散 */
+.reader-hint {
+  position: fixed; left: 0; right: 0; bottom: 42px; margin: 0; text-align: center;
+  font-size: 0.8rem; letter-spacing: 0.08em; color: rgba(240, 234, 217, 0.75);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); pointer-events: none;
+}
+.reader:not(.reader--immersive) .reader-hint { color: var(--dim); text-shadow: none; }
 /* 沉浸式插画：整屏版画为幕、卷文浮层（呼应千世书范式）；无图节点保持素纸样式 */
 .reader-bg {
   position: fixed; inset: 0; z-index: -1;
   background-size: cover; background-position: center;
   filter: brightness(0.5) saturate(0.85);
+}
+/* 纪录片换镜头：新层交叉溶解入场 + 24s 缓慢推镜（幅度极小，reduce 亦保留——静止即幻灯片） */
+.reader-bg--front { animation: bg-dissolve 0.9s ease both, bg-drift 26s ease-out both; }
+@keyframes bg-dissolve { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bg-drift { from { transform: scale(1.045); } to { transform: scale(1); } }
+.reader-bg--full.reader-bg--front { animation: bg-dissolve 0.5s ease both; }
+/* 纸纹颗粒：全局一层极淡噪点，压住数字感 */
+body::before {
+  content: ''; position: fixed; inset: 0; z-index: 3; pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 .reader--immersive::after {
   content: ''; position: fixed; inset: 0; z-index: -1;
@@ -130,6 +162,20 @@ button:hover { background: var(--ink); color: var(--paper); }
 .ending-title { font-size: 1.8rem; margin: 0; letter-spacing: 0.1em; }
 .ending-epilogue { line-height: 2.1; max-width: 34em; text-align: left; }
 .ending-actions { display: flex; gap: 12px; margin-top: 8px; }
+/* 关于本作：素纸档案页 */
+.about { max-width: 620px; margin: 0 auto; padding: 56px 24px 72px; display: block; overflow-y: auto; }
+.about h2 { letter-spacing: 0.2em; margin-bottom: 28px; }
+.about h3 { font-size: 0.95rem; letter-spacing: 0.15em; color: #9e2b25; margin: 30px 0 10px; }
+.about p { line-height: 2; margin: 8px 0; font-size: 0.95rem; }
+.about-back { margin-top: 36px; padding: 10px 32px; }
+/* 卷首「关于本作」暗链 */
+.home-about {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: 22px;
+  background: none; border: none; cursor: pointer; padding: 6px 12px;
+  font-size: 0.8rem; letter-spacing: 0.15em; color: rgba(240, 234, 217, 0.55);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+.home-about:hover { color: rgba(240, 234, 217, 0.9); }
 
 /* 常驻角标：简繁切换（右上）；览图/读文（右下） */
 .lang-toggle {

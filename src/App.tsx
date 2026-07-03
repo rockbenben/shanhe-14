@@ -10,6 +10,7 @@ import ChapterCover from './ui/ChapterCover'
 import EndingCard from './ui/EndingCard'
 import Recap from './ui/Recap'
 import Gallery from './ui/Gallery'
+import About from './ui/About'
 import { LangProvider, useLang } from './ui/lang'
 
 interface Session {
@@ -30,6 +31,8 @@ function Shell() {
   const [artOnly, setArtOnly] = useState(false)
   // 回退栈：状态快照（会话级，不入存档）——←/↑ 逐步退回上一页，退过选择点即可重选
   const [, setHistory] = useState<ReaderState[]>([])
+  // 关于本作页（仅从卷首进入）
+  const [showAbout, setShowAbout] = useState(false)
 
   const update = (story: Story, state: ReaderState) => {
     saveProgress(state)
@@ -60,9 +63,12 @@ function Shell() {
   let screen: React.ReactNode
 
   if (!session) {
-    screen = (
+    screen = showAbout ? (
+      <About onBack={() => setShowAbout(false)} />
+    ) : (
       <Home
         stories={builtinStories}
+        onAbout={() => setShowAbout(true)}
         onStart={(story) => {
           clearProgress(story.id)
           setHistory([])
