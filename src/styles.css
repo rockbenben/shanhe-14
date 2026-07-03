@@ -138,6 +138,9 @@ button:hover { background: var(--ink); color: var(--paper); }
 .reader--artonly { cursor: pointer; }
 .reader-bg--full { filter: none; }
 .reader--artonly::after { content: none; }
+/* 章封看全图：同规——原片无滤镜、无渐晕 */
+.cover--artview .cover-photo { filter: none; }
+.cover--artview::after { content: none; }
 
 /* 卷首：各章档案照片连成整页胶片——十四年按时间层层排开，压暗铺满全屏 */
 .home-strip { position: fixed; inset: 0; display: flex; z-index: -1; }
