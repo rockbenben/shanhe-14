@@ -186,3 +186,50 @@
 - `end-sword.jpg`（结局 e-sword「投笔之后」） · [文件页](https://commons.wikimedia.org/wiki/File:SC_193045-S_-_Chinese_soldiers_march_to_front_crossing_treacherous_Salween_River_by_means_of_temporary_suspension_bridge._Bridge_was_blown_up_two_years_ago_by_Chinese_as_defense_measure_against_Jap_advance._(53400587055).jpg) · 许可：`{{PD-USGov-Military-Army}}`（美军作品，公有领域） · 作者/来源：摄影 T/Sgt. Schaifer／美国陆军通信兵（Signal Corps）SC 193045-S · 描述：1944 年 7 月 15 日，中国士兵携械与工具徒步过怒江临时吊桥开赴前线（原桥两年前由中方炸断以阻日军），一列人影沿索桥过江——对应结局「投笔之后……黔南的工事……只有一枚弹壳」（怒江/滇西战场·非黔南实拍，无尸体无惨状）。源图 5090×4145，缩放至 1920px。
 - `end-home.jpg`（结局 e-home「还乡」） · [文件页](https://commons.wikimedia.org/wiki/File:Mukden_Station_02.jpg) · 许可：`{{PD-Japan-oldphoto}}`（公有领域，战前日本刊行） · 作者/来源：佚名／满铁沿线明信片（hdl 123456789/27048） · 描述：战前（1945 年前）奉天驿（沈阳站）站前广场，一名旅人提行李独自走过红砖站舍前的空旷广场——对应结局「你回到了出发的月台……放下行李，站了一会儿，走出站去，像每一个还乡的人」。系与终章 ch12-d（Mukden Station 01）同站、不同影像；战前手工上色明信片影像，非该场景实拍。源图 1610×979。
 - `end-child.jpg`（结局 e-child「一起还乡」，携孤儿小满回沈阳老宅、冬雪、门槛、半块匾） · [文件页](https://commons.wikimedia.org/wiki/File:Faubourg_de_Moukden.jpg) · 许可：`{{PD-old}}`＋`{{CC-PD-Mark}}`（公有领域） · 作者/来源：佚名／法国国家图书馆 BnF Gallica（原刊 Adrien Launay《La Mission de Mandchourie》，Mame·图尔·1905） · 描述：约 1900 年奉天（沈阳）城郊街区俯瞰——长街两侧瓦顶民居连绵、市集棚、远山在望，行人三两——同城时代的「老城屋檐」氛围照，对应结局『带小满一起还乡、回到沈阳老宅』的还乡意境。**原「宁缺」决定已放宽**（作者定：不强求「1945–46 沈阳战后民居/雪景老宅」实拍——该题材 Commons/LOC/NARA 付阙，同期「儿童」题材真实照又几乎全为南京大屠杀惨状或日方宣传照触红线；改取同城战前真实影像并如实标注）。系书页网点（珂罗版）印刷，已裁去法文图注「Moukden. — Vue d'un faubourg.」与 gallica.bnf.fr 馆藏水印；非该场景实拍——无雪、非该老宅。源图 1536×948，裁存约 1264×774。
+
+
+---
+
+## 环境声 · 十二章循环底声（核验日期：2026-07-03，见 `scripts/_sound.json`）
+
+各章一段极低音量的环境底声，循环铺在阅读层之下；素材为通用环境声（无年代指纹，不求年代对应），逐条核验许可为公有领域（PD）/ CC0 / CC-BY（一律不含 CC-BY-SA、CC-BY-NC）。加工：截取平稳段 → 单声道 → `loudnorm` 拉平响度 → 头尾各 2s 淡入淡出 → 64kbps MP3（每个 352–547KB）。均取自 Wikimedia Commons，`url` 为其文件页。
+风声（`Howling wind.ogg`, CC0）在 ch02/ch03/ch10/ch11 复用同一素材的不同片段并施不同 EQ（低通/高通/全频），因合规风声在 Commons 的 PD/CC0/CC-BY 素材极稀缺，作低音量底声复用可接受，已如实标注。
+
+- `ch01.mp3` · 秋夜虫鸣 · 蝉声与远处夜风
+  - 许可：`CC BY 2.1 JP`（暮蝉主声）+ `CC0`（夜风铺底）
+  - `File:Higurashi 06c5856.ogg` · 作者 Cory (ISAKA Yoji) · [文件页](https://commons.wikimedia.org/wiki/File:Higurashi_06c5856.ogg) · 许可原文「Creative Commons Attribution 2.1 Japan」（该文件多重授权，含 CC BY 2.1 JP，按纯 CC BY 使用）· 暮蝉（ヒグラシ/Tanna japonensis）鸣声，2006 神奈川东高根森林公园
+  - `File:Howling wind.ogg` · 作者 Tvabutzku1234 · [文件页](https://commons.wikimedia.org/wiki/File:Howling_wind.ogg) · 许可原文「CC0」· 夜风，低通后极弱铺底
+- `ch02.mp3` · 城市废墟风 · 零星市声
+  - 许可：`CC0` + `CC0`
+  - `File:Howling wind.ogg` · Tvabutzku1234 · [文件页](https://commons.wikimedia.org/wiki/File:Howling_wind.ogg) · CC0 · 风声低通作废墟空旷风
+  - `File:Cafe ambiance.ogg` · Marble Toast · [文件页](https://commons.wikimedia.org/wiki/File:Cafe_ambiance.ogg) · 许可原文「CC0」· 咖啡馆人声嘈杂，带通后极弱作远处市声
+- `ch03.mp3` · 冬季寒风 · 许可：`CC0`
+  - `File:Howling wind.ogg` · Tvabutzku1234 · [文件页](https://commons.wikimedia.org/wiki/File:Howling_wind.ogg) · CC0 · 同源风声段 A，低通偏冷
+- `ch04.mp3` · 蒸汽火车行进 · 许可：`CC BY 4.0`
+  - `File:WWS Steamlocomotive.ogg` · 作者 Work With Sounds / Konrad Gutkowski · [文件页](https://commons.wikimedia.org/wiki/File:WWS_Steamlocomotive.ogg) · 许可原文「Creative Commons Attribution 4.0」· 蒸汽机车 Anna No.6（1940 Krupp 造），循环补足时长
+- `ch05.mp3` · 城市雨声 · 许可：`PD`
+  - `File:Rain (1).ogg` · 作者 ezwa（pdsounds.org 释出）· [文件页](https://commons.wikimedia.org/wiki/File:Rain_(1).ogg) · 许可原文「Public domain」· 大雨，循环补足时长
+- `ch06.mp3` · 江水 · 轮船机音
+  - 许可：`CC BY 4.0`（船机）+ `CC0`（流水）
+  - `File:WWS Seffleboatenginemonorecording.ogg` · Work With Sounds / Torsten Nilsson · [文件页](https://commons.wikimedia.org/wiki/File:WWS_Seffleboatenginemonorecording.ogg) · 许可原文「CC BY 4.0」· Seffle 热球式船用发动机（1950 瑞典）
+  - `File:433589 jackthemurray stream-river-water-up-close.wav` · jackthemurray · [文件页](https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav) · 许可原文「CC0」· 流水
+- `ch07.mp3` · 码头江水 · 人声远
+  - 许可：`CC0` + `CC0`
+  - `File:433589 jackthemurray stream-river-water-up-close.wav` · jackthemurray · [文件页](https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav) · CC0 · 江水
+  - `File:Cafe ambiance.ogg` · Marble Toast · [文件页](https://commons.wikimedia.org/wiki/File:Cafe_ambiance.ogg) · CC0 · 人声，带通后极弱作码头远处人声
+- `ch08.mp3` · 山城雨雾 · 远雷 · 许可：`CC0`
+  - `File:Light Rain Distant Thunder July 5th 2016.wav` · 作者 kvgarlic（原 freesound.org）· [文件页](https://commons.wikimedia.org/wiki/File:Light_Rain_Distant_Thunder_July_5th_2016.wav) · 许可原文「CC0」· 小雨伴远雷
+- `ch09.mp3` · 深夜滴答钟声 · 夜雨
+  - 许可：`CC BY 4.0`（钟）+ `PD`（雨）
+  - `File:WWS Alarmclockticking.ogg` · Work With Sounds / Technical Museum of Slovenia · [文件页](https://commons.wikimedia.org/wiki/File:WWS_Alarmclockticking.ogg) · 许可原文「CC BY 4.0」· Junghans 闹钟滴答（约1910）
+  - `File:Rain against the window.ogg` · 作者 cori（pdsounds.org）· [文件页](https://commons.wikimedia.org/wiki/File:Rain_against_the_window.ogg) · 许可原文「Public domain」· 夜雨打窗，低通铺底
+- `ch10.mp3` · 旷野干风 · 许可：`CC0`
+  - `File:Howling wind.ogg` · Tvabutzku1234 · [文件页](https://commons.wikimedia.org/wiki/File:Howling_wind.ogg) · CC0 · 同源风声段 B，高通偏干
+- `ch11.mp3` · 风雪 · 跋涉风声 · 许可：`CC0`
+  - `File:Howling wind.ogg` · Tvabutzku1234 · [文件页](https://commons.wikimedia.org/wiki/File:Howling_wind.ogg) · CC0 · 同源风声段 C，全频较强作风雪
+- `ch12.mp3` · 蒸汽火车 · 远处爆竹
+  - 许可：`CC BY 4.0`（火车）+ `PD`（爆竹）
+  - `File:WWS Steamlocomotive.ogg` · Work With Sounds / Konrad Gutkowski · [文件页](https://commons.wikimedia.org/wiki/File:WWS_Steamlocomotive.ogg) · CC BY 4.0 · 蒸汽机车，循环补足
+  - `File:Fireworks in distance 4.ogg` · 作者 ezwa（pdsounds.org）· [文件页](https://commons.wikimedia.org/wiki/File:Fireworks_in_distance_4.ogg) · 许可原文「Public domain」· 远处烟花/爆竹（2009 比利时乡间）
+
+**CC-BY 履约署名（CREDITS 用）**：Work With Sounds (workwithsounds.eu) — 素材见 ch04/ch06/ch09/ch12，均 CC BY 4.0；Cory (ISAKA Yoji) — ch01 暮蝉，CC BY 2.1 JP。CC0/PD 素材依许可无强制署名，上表仍如实记录作者以备查。

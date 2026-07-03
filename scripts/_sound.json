@@ -1,0 +1,140 @@
+[
+ {
+  "ch": "ch01",
+  "file": "ch01.mp3",
+  "desc": "秋夜虫鸣 · 蝉声与远处夜风",
+  "license": "CC BY 2.1 JP + CC0",
+  "credit": "Cory (ISAKA Yoji); Tvabutzku1234",
+  "url": "https://commons.wikimedia.org/wiki/File:Higurashi_06c5856.ogg",
+  "sources": [
+   { "credit": "Cory (ISAKA Yoji)", "license": "CC BY 2.1 JP", "url": "https://commons.wikimedia.org/wiki/File:Higurashi_06c5856.ogg", "note": "暮蝉（ヒグラシ/Tanna japonensis）鸣声，2006 神奈川，多重授权含 CC BY 2.1 JP，按 CC BY 用" },
+   { "credit": "Tvabutzku1234", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg", "note": "夜风底噪，低通后极弱铺底" }
+  ]
+ },
+ {
+  "ch": "ch02",
+  "file": "ch02.mp3",
+  "desc": "城市废墟风 · 零星市声",
+  "license": "CC0 + CC0",
+  "credit": "Tvabutzku1234; Marble Toast",
+  "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg",
+  "sources": [
+   { "credit": "Tvabutzku1234", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg", "note": "风声低通作废墟空旷风" },
+   { "credit": "Marble Toast", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Cafe_ambiance.ogg", "note": "咖啡馆人声，带通后极弱作远处市声" }
+  ]
+ },
+ {
+  "ch": "ch03",
+  "file": "ch03.mp3",
+  "desc": "冬季寒风",
+  "license": "CC0",
+  "credit": "Tvabutzku1234",
+  "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg",
+  "sources": [
+   { "credit": "Tvabutzku1234", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg", "note": "同源风声段 A，低通偏冷" }
+  ]
+ },
+ {
+  "ch": "ch04",
+  "file": "ch04.mp3",
+  "desc": "蒸汽火车行进",
+  "license": "CC BY 4.0",
+  "credit": "Work With Sounds / Konrad Gutkowski",
+  "url": "https://commons.wikimedia.org/wiki/File:WWS_Steamlocomotive.ogg",
+  "sources": [
+   { "credit": "Work With Sounds / Konrad Gutkowski", "license": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:WWS_Steamlocomotive.ogg", "note": "蒸汽机车 Anna No.6，循环补足时长" }
+  ]
+ },
+ {
+  "ch": "ch05",
+  "file": "ch05.mp3",
+  "desc": "城市雨声",
+  "license": "PD",
+  "credit": "ezwa (pdsounds.org)",
+  "url": "https://commons.wikimedia.org/wiki/File:Rain_(1).ogg",
+  "sources": [
+   { "credit": "ezwa (pdsounds.org)", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Rain_(1).ogg", "note": "大雨，循环补足时长" }
+  ]
+ },
+ {
+  "ch": "ch06",
+  "file": "ch06.mp3",
+  "desc": "江水 · 轮船机音",
+  "license": "CC BY 4.0 + CC0",
+  "credit": "Work With Sounds / Torsten Nilsson; jackthemurray",
+  "url": "https://commons.wikimedia.org/wiki/File:WWS_Seffleboatenginemonorecording.ogg",
+  "sources": [
+   { "credit": "Work With Sounds / Torsten Nilsson", "license": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:WWS_Seffleboatenginemonorecording.ogg", "note": "Seffle 热球式船用发动机" },
+   { "credit": "jackthemurray", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav", "note": "流水" }
+  ]
+ },
+ {
+  "ch": "ch07",
+  "file": "ch07.mp3",
+  "desc": "码头江水 · 人声远",
+  "license": "CC0 + CC0",
+  "credit": "jackthemurray; Marble Toast",
+  "url": "https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav",
+  "sources": [
+   { "credit": "jackthemurray", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav", "note": "江水" },
+   { "credit": "Marble Toast", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Cafe_ambiance.ogg", "note": "人声，带通后极弱作码头远处人声" }
+  ]
+ },
+ {
+  "ch": "ch08",
+  "file": "ch08.mp3",
+  "desc": "山城雨雾 · 远雷",
+  "license": "CC0",
+  "credit": "kvgarlic (freesound)",
+  "url": "https://commons.wikimedia.org/wiki/File:Light_Rain_Distant_Thunder_July_5th_2016.wav",
+  "sources": [
+   { "credit": "kvgarlic (freesound)", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Light_Rain_Distant_Thunder_July_5th_2016.wav", "note": "小雨伴远雷" }
+  ]
+ },
+ {
+  "ch": "ch09",
+  "file": "ch09.mp3",
+  "desc": "深夜滴答钟声 · 夜雨",
+  "license": "CC BY 4.0 + PD",
+  "credit": "Work With Sounds / Technical Museum of Slovenia; cori (pdsounds.org)",
+  "url": "https://commons.wikimedia.org/wiki/File:WWS_Alarmclockticking.ogg",
+  "sources": [
+   { "credit": "Work With Sounds / Technical Museum of Slovenia", "license": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:WWS_Alarmclockticking.ogg", "note": "Junghans 闹钟滴答（约1910）" },
+   { "credit": "cori (pdsounds.org)", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Rain_against_the_window.ogg", "note": "夜雨打窗，低通铺底" }
+  ]
+ },
+ {
+  "ch": "ch10",
+  "file": "ch10.mp3",
+  "desc": "旷野干风",
+  "license": "CC0",
+  "credit": "Tvabutzku1234",
+  "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg",
+  "sources": [
+   { "credit": "Tvabutzku1234", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg", "note": "同源风声段 B，高通偏干" }
+  ]
+ },
+ {
+  "ch": "ch11",
+  "file": "ch11.mp3",
+  "desc": "风雪 · 跋涉风声",
+  "license": "CC0",
+  "credit": "Tvabutzku1234",
+  "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg",
+  "sources": [
+   { "credit": "Tvabutzku1234", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg", "note": "同源风声段 C，全频较强作风雪" }
+  ]
+ },
+ {
+  "ch": "ch12",
+  "file": "ch12.mp3",
+  "desc": "蒸汽火车 · 远处爆竹",
+  "license": "CC BY 4.0 + PD",
+  "credit": "Work With Sounds / Konrad Gutkowski; ezwa (pdsounds.org)",
+  "url": "https://commons.wikimedia.org/wiki/File:WWS_Steamlocomotive.ogg",
+  "sources": [
+   { "credit": "Work With Sounds / Konrad Gutkowski", "license": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:WWS_Steamlocomotive.ogg", "note": "蒸汽机车，循环补足" },
+   { "credit": "ezwa (pdsounds.org)", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Fireworks_in_distance_4.ogg", "note": "远处烟花/爆竹（2009 比利时乡间）" }
+  ]
+ }
+]
