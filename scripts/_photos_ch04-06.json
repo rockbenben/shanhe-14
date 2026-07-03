@@ -1,0 +1,65 @@
+[
+  {
+    "ch": "ch04",
+    "beat": "b2",
+    "file": "ch04-e.jpg",
+    "match": "event",
+    "credit": "二十九军在卢沟桥头向侵略者还击，1937 年 7 月 · 佚名／《中华》(上海)1939 年第 79 期 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch04",
+    "beat": "b2x",
+    "file": "ch04-d.jpg",
+    "match": "event",
+    "credit": "坚守卢沟桥的中国士兵，沙袋工事间可见桥栏石狮，1937 年 7 月 · 佚名／《中华》(上海)1937 年第 56 期 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch05",
+    "beat": "b1",
+    "file": "ch05-f.jpg",
+    "match": "event",
+    "credit": "为躲炮火涌过外白渡桥逃入租界的上海市民，1937 年 9 月 · 佚名 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch05",
+    "beat": "b2",
+    "file": "ch05-e.jpg",
+    "match": "event",
+    "credit": "戴防毒面具、部署于上海郊外的中国守军班组，1937 · 佚名 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch05",
+    "beat": "b4",
+    "file": "ch05-d.jpg",
+    "match": "event",
+    "credit": "炮火下的四行仓库，墙上「四行信托部上海分部仓库」字样可辨，1937 年 10 月 · 佚名 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch06",
+    "beat": "b2",
+    "file": "ch06-d.jpg",
+    "match": "atmosphere",
+    "credit": "携全部行李当街候立的难民，上海，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非下关码头实拍）"
+  },
+  {
+    "ch": "ch06",
+    "beat": "b3",
+    "file": "ch06-e.jpg",
+    "match": "atmosphere",
+    "credit": "铁栅栏后等待的人群，冬日的上海，1939 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非该场景实拍）"
+  },
+  {
+    "ch": "ch06",
+    "beat": "b4",
+    "file": "ch06-f.jpg",
+    "match": "atmosphere",
+    "credit": "停靠趸船码头的多层江轮与四围木船，上海，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非长江西撤实拍）"
+  },
+  {
+    "ch": "ch06",
+    "beat": "b5",
+    "file": "ch06-g.jpg",
+    "match": "atmosphere",
+    "credit": "轮船与木船挤满江岸、人货拥塞的码头俯瞰，上海，1938 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非武汉码头实拍）"
+  }
+]

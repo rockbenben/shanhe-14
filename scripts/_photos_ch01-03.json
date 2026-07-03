@@ -1,0 +1,58 @@
+[
+  {
+    "ch": "ch01",
+    "beat": "b2",
+    "file": "ch01-d.jpg",
+    "match": "event",
+    "credit": "奉天近郊被日军飞机投弹焚烧的农舍，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch01",
+    "beat": "b3",
+    "file": "ch01-e.jpg",
+    "match": "event",
+    "credit": "日军自张学良将军官邸向外射击，奉天，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch01",
+    "beat": "b5x",
+    "file": "ch01-f.jpg",
+    "match": "atmosphere",
+    "credit": "「天下第一关」山海关城楼，1920–30 年代 · 亜東印画协会《亜東印画辑》 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch02",
+    "beat": "b3",
+    "file": "ch02-d.jpg",
+    "match": "event",
+    "credit": "一二八事变后被炸焚成废墟的上海商务印书馆，1932（日本明信片） · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch02",
+    "beat": "b3b",
+    "file": "ch02-e.jpg",
+    "match": "event",
+    "credit": "一二八事变中避入法租界的上海华人，1932 · Mondial 通讯社／法国国家图书馆 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch02",
+    "beat": "b2",
+    "file": "ch02-f.jpg",
+    "match": "event",
+    "credit": "在上海北站一带守卫公共租界入口的英军，1932 · 佚名／波兰国家数字档案馆(NAC) · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch03",
+    "beat": "b1",
+    "file": "ch03-d.jpg",
+    "match": "atmosphere",
+    "credit": "北平的小街，约 1930–1939 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch03",
+    "beat": "b1x",
+    "file": "ch03-e.jpg",
+    "match": "atmosphere",
+    "credit": "北平街头的骆驼，1935–1938 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域"
+  }
+]

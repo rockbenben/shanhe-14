@@ -14,6 +14,7 @@ export const ch03: Chapter = {
   beats: [
     {
       id: 'b1',
+      photo: { file: 'ch03-d.jpg', credit: '北平的小街，约 1930–1939 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域' },
       art: 'bp-dust',
       narrative:
         '三年后，你在北平。报馆的分社收你打杂：剪报，跑腿，给编辑先生送校样，得空就溜去沙滩一带的课堂旁听。古都的日子像慢了半拍，可华北的空气一年比一年紧——报上的地名越来越近，先是关外，再是滦东，后来就是城外的县份。同学中间传着油印的小册子，茶馆里说话的人声音越压越低。这年冬天来得早，风一起，满街黄土，人人缩着脖子走路，像在等一件躲不开的事。',
@@ -21,6 +22,7 @@ export const ch03: Chapter = {
     },
     {
       id: 'b1x',
+      photo: { file: 'ch03-e.jpg', credit: '北平街头的骆驼，1935–1938 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域' },
       art: 'bp-dust',
       narrative:
         '入冬以后，同学的公寓里常常挤满人，炉子上烤着窝头，一屋子的烟气。争的总是那一件事：华北眼看要「自治」了，书还念不念得成？有人拍桌子，说读书人只剩一张嘴一支笔，再不出声，往后连出声的地方都没有了；有人冷冷地顶回去：游行顶什么用，白白叫人抓了去；也有人不说话，只是把炉门拨得哗哗响。听说各校已经在暗里串联，选了代表，攒着一股劲，只等一个日子。你坐在靠窗的一角，窗纸叫风打得一鼓一鼓的。',

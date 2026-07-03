@@ -28,12 +28,29 @@ export default function Gallery({ story, onBack }: Props) {
             </span>
             {ch.artCredit && <span className="gallery-credit">{tr(ch.artCredit)}</span>}
           </figcaption>
-          {ch.artExtra?.map((ex) => (
-            <div key={ex.file} className="gallery-extra">
-              <img src={`${import.meta.env.BASE_URL}covers/${ex.file}`} alt="" loading="lazy" />
-              <span className="gallery-credit">{tr(ex.credit)}</span>
-            </div>
-          ))}
+          {(() => {
+            // 补充影像 + 正文照片拍聚合陈列（按文件名去重——同图不重复入册）
+            const seen = new Set<string>(ch.art ? [ch.art] : [])
+            const items: { file: string; credit: string }[] = []
+            for (const ex of ch.artExtra ?? []) {
+              if (!seen.has(ex.file)) {
+                seen.add(ex.file)
+                items.push(ex)
+              }
+            }
+            for (const b of ch.beats) {
+              if (b.photo && !seen.has(b.photo.file)) {
+                seen.add(b.photo.file)
+                items.push(b.photo)
+              }
+            }
+            return items.map((ex) => (
+              <div key={ex.file} className="gallery-extra">
+                <img src={`${import.meta.env.BASE_URL}covers/${ex.file}`} alt="" loading="lazy" />
+                <span className="gallery-credit">{tr(ex.credit)}</span>
+              </div>
+            ))
+          })()}
         </figure>
       ))}
       <button onClick={onBack}>{tr('返回')}</button>

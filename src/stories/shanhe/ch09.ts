@@ -30,6 +30,7 @@ export const ch09: Chapter = {
     },
     {
       id: 'b1y',
+      photo: { file: 'ch09-b.jpg', credit: '《国民政府对日宣战布告》，1941 年 12 月 9 日 · 中华民国国民政府（重庆） · Wikimedia Commons · 公有领域' },
       source: '据一九四一年十二月九日《国民政府对日宣战布告》',
       art: 'dx-key',
       narrative:
