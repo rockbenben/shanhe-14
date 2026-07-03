@@ -99,10 +99,9 @@ button:hover { background: var(--ink); color: var(--paper); }
   background-size: cover; background-position: center;
   filter: brightness(0.5) saturate(0.85);
 }
-/* 纪录片换镜头：新层交叉溶解入场 + 24s 缓慢推镜（幅度极小，reduce 亦保留——静止即幻灯片） */
-.reader-bg--front { animation: bg-dissolve 0.9s ease both, bg-drift 26s ease-out both; }
+/* 换页过渡：新画面从旧画面上交叉溶解入场——照片本身保持静止（档案影像不加运动） */
+.reader-bg--front { animation: bg-dissolve 0.9s ease both; }
 @keyframes bg-dissolve { from { opacity: 0; } to { opacity: 1; } }
-@keyframes bg-drift { from { transform: scale(1.045); } to { transform: scale(1); } }
 .reader-bg--full.reader-bg--front { animation: bg-dissolve 0.5s ease both; }
 /* 纸纹颗粒：全局一层极淡噪点，压住数字感 */
 body::before {
