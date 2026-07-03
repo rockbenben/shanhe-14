@@ -12,6 +12,7 @@ import Recap from './ui/Recap'
 import Gallery from './ui/Gallery'
 import About from './ui/About'
 import { LangProvider, useLang } from './ui/lang'
+import { useAmbient } from './ui/sound'
 
 interface Session {
   story: Story
@@ -33,6 +34,10 @@ function Shell() {
   const [, setHistory] = useState<ReaderState[]>([])
   // 关于本作页（仅从卷首进入）
   const [showAbout, setShowAbout] = useState(false)
+  // 环境声：跟随当前章（卷首/关于/终卷静默）
+  const ambientFile =
+    session && !session.state.ended ? session.story.chapters[session.state.chapter].sound : undefined
+  const { soundOn, toggleSound } = useAmbient(ambientFile)
 
   const update = (story: Story, state: ReaderState) => {
     saveProgress(state)
@@ -152,6 +157,11 @@ function Shell() {
     <>
       {screen}
       {langBtn}
+      {ambientFile && (
+        <button className="sound-toggle" onClick={toggleSound} aria-label="环境声开关">
+          {soundOn ? '声' : '静'}
+        </button>
+      )}
     </>
   )
 }

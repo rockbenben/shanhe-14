@@ -100,6 +100,16 @@ button:hover { background: var(--ink); color: var(--paper); }
   filter: brightness(0.5) saturate(0.85);
 }
 /* 换页＝画册翻页：解码完成后的瞬时硬切——无空窗、无叠影、无暗场 */
+/* 环境声开关：右上角简繁钮下方同规格 */
+.sound-toggle {
+  position: fixed; top: 64px; right: 14px; z-index: 10;
+  width: 36px; height: 36px; padding: 0; border-radius: 2px;
+  font-size: 0.85rem; letter-spacing: 0;
+  border: 1px solid rgba(43, 38, 32, 0.5); background: rgba(245, 241, 232, 0.82); color: var(--ink);
+}
+.reader--immersive ~ .sound-toggle, .home--photo ~ .sound-toggle, .cover--photo ~ .sound-toggle {
+  border-color: rgba(240, 234, 217, 0.55); background: rgba(26, 21, 14, 0.6); color: #f0ead9;
+}
 /* 纸纹颗粒：全局一层极淡噪点，压住数字感 */
 body::before {
   content: ''; position: fixed; inset: 0; z-index: 3; pointer-events: none; opacity: 0.05;

@@ -52,6 +52,8 @@ const chapterSchema = z.object({
   artCredit: z.string().optional(), // 影像来源署名（如「日军入沈阳，1931 · Wikimedia Commons · 公有领域」）
   // 影像志补充照片（不上章封，仅在卷末影像志陈列）：public/covers/<file> + 出处署名
   artExtra: z.array(z.object({ file: z.string().min(1), credit: z.string().min(1) })).optional(),
+  // 本章环境声（public/sound/<file>，循环低音量播放；出处记 CREDITS.md）——可静音
+  sound: z.string().optional(),
   entry: z.string().min(1),
   beats: z.array(beatSchema).min(1),
 })
