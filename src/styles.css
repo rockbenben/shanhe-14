@@ -6,7 +6,6 @@
   --accent: #8c3f2b;
 }
 * { box-sizing: border-box; }
-html { background: var(--paper); }
 body { margin: 0; font-family: 'Noto Serif SC', 'Songti SC', serif; background: var(--paper); color: var(--ink); }
 main { max-width: 640px; margin: 0 auto; padding: 48px 24px; min-height: 100dvh; display: flex; flex-direction: column; }
 button { font: inherit; cursor: pointer; border: 1px solid var(--ink); background: transparent; color: var(--ink); padding: 10px 20px; border-radius: 2px; }
@@ -89,6 +88,11 @@ button:hover { background: var(--ink); color: var(--paper); }
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); pointer-events: none;
 }
 .reader:not(.reader--immersive) .reader-hint { color: var(--dim); text-shadow: none; }
+/* 窄屏：提示行让位（触屏本能点按，提示的键位也不适用）；署名缩排避开看全图钮 */
+@media (max-width: 720px) {
+  .reader-hint { display: none; }
+  .reader-photocredit { font-size: 0.64rem; text-align: left; padding: 0 92px 0 12px; }
+}
 /* 沉浸式插画：整屏版画为幕、卷文浮层（呼应千世书范式）；无图节点保持素纸样式 */
 .reader-bg {
   position: fixed; inset: 0; z-index: -1;
