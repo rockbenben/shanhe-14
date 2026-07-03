@@ -23,6 +23,13 @@ export default function About({ onBack }: Props) {
     <main className="about">
       <h2>{tr('关于本作')}</h2>
 
+      <p className="about-thesis">
+        {tr('别人用 AI 想象历史，这部作品用 AI 核实历史。')}
+        <span>
+          {tr('每一句剧情都能点回原始记录，每一张照片都标着它到底是什么——包括那些查不到、于是老实留白的地方。')}
+        </span>
+      </p>
+
       <section>
         <h3>{tr('这是什么')}</h3>
         <p>

@@ -175,7 +175,10 @@ body::before {
 .ending-actions { display: flex; gap: 12px; margin-top: 8px; }
 /* 关于本作：素纸档案页 */
 .about { max-width: 620px; margin: 0 auto; padding: 56px 24px 72px; display: block; overflow-y: auto; }
-.about h2 { letter-spacing: 0.2em; margin-bottom: 28px; }
+.about h2 { letter-spacing: 0.2em; margin-bottom: 20px; }
+/* 立场语：全作的一句定位，压过其余小节 */
+.about-thesis { font-size: 1.22rem; line-height: 1.9; margin: 0 0 32px; padding-left: 16px; border-left: 3px solid #9e2b25; }
+.about-thesis span { display: block; margin-top: 10px; font-size: 0.95rem; color: var(--dim); line-height: 2; }
 .about h3 { font-size: 0.95rem; letter-spacing: 0.15em; color: #9e2b25; margin: 30px 0 10px; }
 .about p { line-height: 2; margin: 8px 0; font-size: 0.95rem; }
 .about-back { margin-top: 36px; padding: 10px 32px; }
