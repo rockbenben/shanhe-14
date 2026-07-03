@@ -112,7 +112,13 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
     }
   }, [beat, state.chapter, story])
   const photoCredit = beat.photo && (
-    <p className="reader-photocredit">{tr(beat.photo.credit)}</p>
+    <p className="reader-photocredit">
+      {beat.photo.url ? (
+        <a href={beat.photo.url} target="_blank" rel="noopener noreferrer">{tr(beat.photo.credit)}</a>
+      ) : (
+        tr(beat.photo.credit)
+      )}
+    </p>
   )
 
   // 览图模式：只留画面与一枚返回钮，点击任意处回到文字
@@ -183,7 +189,16 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
           </p>
         )}
         {tr(beat.narrative)}
-        {beat.source && <p className="reader-source">◈ {tr(beat.source)}</p>}
+        {beat.source && (
+          <p className="reader-source">
+            ◈{' '}
+            {beat.sourceUrl ? (
+              <a href={beat.sourceUrl} target="_blank" rel="noopener noreferrer">{tr(beat.source)}</a>
+            ) : (
+              tr(beat.source)
+            )}
+          </p>
+        )}
       </article>
       {beat.choices ? (
         <div className="reader-choices">

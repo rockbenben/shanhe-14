@@ -32,8 +32,10 @@ const beatSchema = z.object({
   echo: z.string().optional(),
   // 史料出处注：本拍剧情取材真实记载时注明（如「据朱学勤《火车上的记忆》」）——正文下小字呈现
   source: z.string().optional(),
-  // 真实照片拍：公共历史事件在有合规公版照片时以档案照片为幕（file 在 public/covers/ 下），credit 为出处署名
-  photo: z.object({ file: z.string().min(1), credit: z.string().min(1) }).optional(),
+  // 出处的线上来源链接：有则出处注渲染为可点链接（新窗口）
+  sourceUrl: z.string().optional(),
+  // 真实照片拍：公共历史事件在有合规公版照片时以档案照片为幕（file 在 public/covers/ 下），credit 为出处署名；url 为文件页链接
+  photo: z.object({ file: z.string().min(1), credit: z.string().min(1), url: z.string().optional() }).optional(),
   art: z.string().optional(),
   gen: z.enum(['flux', 'gemini']).optional(),
   choices: z.array(choiceSchema).min(2).max(4).optional(),

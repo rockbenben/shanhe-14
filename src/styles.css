@@ -107,6 +107,9 @@ button:hover { background: var(--ink); color: var(--paper); }
   position: fixed; left: 0; right: 0; bottom: 10px; margin: 0; pointer-events: none;
   text-align: center; font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(240, 234, 217, 0.6);
 }
+/* 线上来源可点：虚线下划线标识，署名行的链接恢复可点 */
+.reader-source a, .reader-photocredit a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; }
+.reader-photocredit a { pointer-events: auto; }
 /* 选择的即时回应：稍抬字号、缀以行首竖线，像书页边上的一声轻响 */
 .reader-reaction { font-size: 1.1rem; line-height: 2.2; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 16px; font-style: normal; }
 .reader-choices { display: flex; flex-direction: column; gap: 12px; }
