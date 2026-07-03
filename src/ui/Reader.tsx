@@ -50,7 +50,14 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
   // 览图模式：只留画面与一枚返回钮，点击任意处回到文字
   if (artOnly && img) {
     return (
-      <main className="reader reader--artonly" onClick={onToggleArt}>
+      <main
+        className="reader reader--artonly"
+        onClick={(e) => {
+          // 按钮自带 onClick；冒泡到整屏会二次切换（切出去又切回来），故拦掉
+          if ((e.target as HTMLElement).closest('button')) return
+          onToggleArt()
+        }}
+      >
         <div className="reader-bg reader-bg--full" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />
         <button className="reader-viewtoggle" onClick={onToggleArt}>
           {tr('读文')}
