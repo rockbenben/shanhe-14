@@ -69,6 +69,12 @@ function Shell() {
       <Home
         stories={builtinStories}
         onAbout={() => setShowAbout(true)}
+        onJump={(story, chapter) => {
+          // 时间轴直达：从任一年份进入该章章封（选读模式——旗标从零起，回响走兜底线）
+          setHistory([])
+          setReaction(null)
+          update(story, { storyId: story.id, chapter, beatId: null, flags: [], log: [] })
+        }}
         onStart={(story) => {
           clearProgress(story.id)
           setHistory([])

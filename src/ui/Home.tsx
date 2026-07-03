@@ -2,11 +2,12 @@ import type { Story } from '../stories/schema'
 import { loadProgress, validProgress } from '../engine/storage'
 import { useLang } from './lang'
 
-export default function Home({ stories, onStart, onContinue, onAbout }: {
+export default function Home({ stories, onStart, onContinue, onAbout, onJump }: {
   stories: Story[]
   onStart: (story: Story) => void
   onContinue: (story: Story) => void
   onAbout: () => void
+  onJump: (story: Story, chapter: number) => void
 }) {
   const { tr } = useLang()
   const story = stories[0]
@@ -17,9 +18,9 @@ export default function Home({ stories, onStart, onContinue, onAbout }: {
   const resumable = saved && !saved.ended && saved.chapter > 0
   return (
     <main className="home home--photo">
-      <div className="home-strip" aria-hidden="true">
+      <div className="home-strip">
         {slices.map((ch, i) => (
-          <div key={ch.id} className="home-slice" style={{ animationDelay: `${i * 90}ms` }}>
+          <div key={ch.id} className="home-slice" style={{ animationDelay: `${i * 90}ms` }} role="button" tabIndex={0} onClick={() => story && onJump(story, i)} title={tr(`${ch.era} · ${ch.title}`)}>
             {ch.art ? (
               <img src={`${import.meta.env.BASE_URL}covers/${ch.art}`} alt="" loading="lazy" />
             ) : (
@@ -39,6 +40,7 @@ export default function Home({ stories, onStart, onContinue, onAbout }: {
             {tr('史实改编')}
           </span>
           <p className="home-sub">{tr(story.tagline)}</p>
+          <p className="home-stats">{tr('12 章 · 40+ 张档案照片 · 58 处可查证史料出处 · 4 种结局')}</p>
           <div className="story-actions">
             {resumable && (
               <button className="story-primary" onClick={() => onContinue(story)}>

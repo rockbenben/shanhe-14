@@ -99,10 +99,14 @@ button:hover { background: var(--ink); color: var(--paper); }
   background-size: cover; background-position: center;
   filter: brightness(0.5) saturate(0.85);
 }
-/* 换页过渡：新画面从旧画面上交叉溶解入场——照片本身保持静止（档案影像不加运动） */
-.reader-bg--front { animation: bg-dissolve 0.9s ease both; }
-@keyframes bg-dissolve { from { opacity: 0; } to { opacity: 1; } }
-.reader-bg--full.reader-bg--front { animation: bg-dissolve 0.5s ease both; }
+/* 换页＝转黑过渡（纪录片静照标准切法）：旧照 0.22s 沉入黑暗，新照隔 0.18s 亮起——
+   两张照片永不交叠，照片本身静止 */
+.reader-bg-base { position: fixed; inset: 0; z-index: -2; background: #0d0a06; }
+.reader-bg--back { animation: bg-out 0.22s ease both; }
+.reader-bg--front { animation: bg-in 0.45s ease 0.18s both; }
+@keyframes bg-out { to { opacity: 0; } }
+@keyframes bg-in { from { opacity: 0; } to { opacity: 1; } }
+.reader-bg--full.reader-bg--front { animation: bg-in 0.3s ease both; }
 /* 纸纹颗粒：全局一层极淡噪点，压住数字感 */
 body::before {
   content: ''; position: fixed; inset: 0; z-index: 3; pointer-events: none; opacity: 0.05;
@@ -205,7 +209,7 @@ body::before {
 /* 卷首·十四年时间轴：每条切片一章，悬停亮起显年份章题；ch10 为全黑切片（影像从缺） */
 .home--photo { color: #f0ead9; background: #14100a; }
 .home-strip { position: fixed; inset: 0; display: flex; z-index: 0; }
-.home-slice { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-right: 1px solid rgba(20, 16, 10, 0.8); }
+.home-slice { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-right: 1px solid rgba(20, 16, 10, 0.8); cursor: pointer; }
 .home-slice img, .home-slice-void {
   width: 100%; height: 100%; object-fit: cover; display: block;
   filter: grayscale(1) sepia(0.25) brightness(0.42);
@@ -227,6 +231,10 @@ body::before {
   .home-slice { opacity: 0; animation: slice-in 0.6s ease forwards; }
   @keyframes slice-in { to { opacity: 1; } }
 }
+.home-stats { font-size: 0.78rem; letter-spacing: 0.12em; color: rgba(224, 214, 189, 0.75); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); margin-top: 2px; }
+/* 故事区不挡切片点击：让点击穿到时间轴，仅交互元素自身可点 */
+.home-story { pointer-events: none; }
+.home-story button, .home-story .home-seal { pointer-events: auto; }
 /* 故事区：书脊式竖排标题 + 朱砂印 */
 .home-story { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .home-title--spine {

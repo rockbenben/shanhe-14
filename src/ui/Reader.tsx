@@ -32,12 +32,14 @@ function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
   if (!layers.length) return null
   return (
     <>
+      {/* 黑底暗场：转黑过渡的底——旧照沉入黑暗、新照再亮起，两图永不交叠 */}
+      <div className="reader-bg-base" aria-hidden="true" />
       {layers.map((l, i) => (
         <div
           key={l.key}
           className={
             (full ? 'reader-bg reader-bg--full' : 'reader-bg') +
-            (i === layers.length - 1 ? ' reader-bg--front' : '')
+            (i === layers.length - 1 ? ' reader-bg--front' : ' reader-bg--back')
           }
           style={{ backgroundImage: `url(${l.url})` }}
           aria-hidden="true"
