@@ -19,23 +19,21 @@ export default function Home({ stories, onStart, onContinue }: {
           ))}
         </div>
       )}
-      <h1 className="home-title">{tr('浮生长卷')}</h1>
-      <p className="home-sub">{tr('编排式叙事 · 每一次选择都被长卷记得')}</p>
       {stories.map((s) => {
         const saved = validProgress(s, loadProgress(s.id))
-        // 「续读」只在读到第二章之后出现——第一章内的进度不值得占一个按钮
+        // 「继续」只在读到第二章之后出现——第一章内的进度不值得占一个按钮
         const resumable = saved && !saved.ended && saved.chapter > 0
         return (
-          <section key={s.id} className="story-card">
-            <h2>{tr(s.title)}</h2>
-            <p>{tr(s.tagline)}</p>
+          <section key={s.id} className="home-story">
+            <h1 className="home-title">{tr(s.title)}</h1>
+            <p className="home-sub">{tr(s.tagline)}</p>
             <div className="story-actions">
               {resumable && (
                 <button className="story-primary" onClick={() => onContinue(s)}>
                   {tr(`继续 · 第 ${saved.chapter + 1} 章`)}
                 </button>
               )}
-              <button onClick={() => onStart(s)}>{tr(resumable ? '重新开始' : '开始')}</button>
+              <button onClick={() => onStart(s)}>{tr(resumable ? '重新开始' : '进入')}</button>
             </div>
           </section>
         )
