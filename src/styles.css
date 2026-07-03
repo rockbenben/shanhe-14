@@ -111,6 +111,53 @@ button:hover { background: var(--ink); color: var(--paper); }
 .ending-meta { color: var(--dim); font-size: 0.9rem; }
 .ending-actions { display: flex; gap: 12px; margin-top: 8px; }
 
+/* 常驻角标：简繁切换（右上）；览图/读文（右下） */
+.lang-toggle {
+  position: fixed; top: 14px; right: 14px; z-index: 10;
+  border: 1px solid rgba(122, 111, 95, 0.5); color: var(--dim); background: rgba(245, 241, 232, 0.5);
+  padding: 4px 10px; font-size: 0.85rem; border-radius: 2px;
+}
+.reader--immersive ~ .lang-toggle, .cover--photo ~ .lang-toggle { color: #cfc5ad; background: rgba(26, 21, 14, 0.4); border-color: rgba(207, 197, 173, 0.4); }
+.reader-viewtoggle {
+  position: fixed; right: 14px; bottom: 14px; z-index: 10;
+  border: 1px solid rgba(233, 225, 205, 0.45); color: #e9e1cd; background: rgba(26, 21, 14, 0.55);
+  padding: 5px 12px; font-size: 0.85rem; border-radius: 2px;
+}
+.reader-viewtoggle:hover { background: #e9e1cd; color: #1a150e; }
+/* 览图模式：全屏原画，不加暗化滤镜 */
+.reader--artonly { cursor: pointer; }
+.reader-bg--full { filter: none; }
+.reader--artonly::after { content: none; }
+
+/* 卷首：首页故事卡的档案照片主视觉 */
+.story-card--photo { position: relative; overflow: hidden; border-color: rgba(43, 38, 32, 0.5); }
+.story-card-photo {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center 30%;
+  filter: grayscale(1) sepia(0.25) brightness(0.5);
+}
+.story-card--photo::after { content: ''; position: absolute; inset: 0; background: rgba(20, 16, 10, 0.35); }
+.story-card-body { position: relative; z-index: 1; }
+.story-card--photo h2 { color: #f0ead9; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
+.story-card--photo p { color: #cfc5ad; }
+.story-card--photo .story-actions button { border-color: #f0ead9; color: #f0ead9; }
+.story-card--photo .story-actions button:hover { background: #f0ead9; color: #1a150e; }
+
+/* 卷末影像志：档案照片小影像馆 */
+.gallery { gap: 20px; max-width: 720px; }
+.gallery h2 { margin: 0; letter-spacing: 0.1em; }
+.gallery-sub { color: var(--dim); font-size: 0.9rem; margin: 0 0 8px; }
+.gallery-item { margin: 0; }
+.gallery-item img { width: 100%; display: block; border-radius: 2px; filter: grayscale(0.2) sepia(0.12); }
+.gallery-empty {
+  width: 100%; aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center;
+  background: #2b2620; color: #7a6f5f; letter-spacing: 0.3em; text-indent: 0.3em; border-radius: 2px;
+}
+.gallery-item figcaption { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
+.gallery-title { font-size: 0.95rem; }
+.gallery-credit { font-size: 0.78rem; color: var(--dim); }
+.gallery > button { align-self: flex-start; }
+
 .recap { gap: 8px; }
 .recap-chapter h3 { margin: 16px 0 4px; font-size: 1rem; }
 .recap-chapter ul { margin: 0; color: var(--dim); }

@@ -12,6 +12,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "opencc-js": "^1.4.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "zod": "^4.4.3"
@@ -24,5 +25,7 @@
     "vite": "^8.1.2",
     "vitest": "^4.1.9"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
