@@ -34,6 +34,11 @@ export const shanhe: Story = storySchema.parse({
     },
     {
       id: 'e-child',
+      photo: {
+        file: 'end-child.jpg',
+        credit: '奉天（沈阳）城郊街市俯瞰，约 1900 年 · 法国国家图书馆 · Wikimedia Commons · 公有领域（非该场景实拍）',
+        url: 'https://commons.wikimedia.org/wiki/File:Faubourg_de_Moukden.jpg',
+      },
       when: '携孤',
       title: '一起还乡',
       epilogue:
