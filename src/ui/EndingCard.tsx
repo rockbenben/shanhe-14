@@ -26,9 +26,7 @@ export default function EndingCard({ story, ending, log, onRestart, onRecap, onG
   const choices = log.filter((l) => l.choiceText).length
   return (
     <main className="ending">
-      <p className="ending-story">
-        {tr(story.title)} · {tr('终卷')}
-      </p>
+      <p className="ending-story">{tr(story.title)}</p>
       <h2 className="ending-title">{tr(ending.title)}</h2>
       <p className="ending-epilogue">{tr(ending.epilogue)}</p>
       <p className="ending-meta">{tr(`走过 ${story.chapters.length} 章，做出 ${choices} 次选择`)}</p>
