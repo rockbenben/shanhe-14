@@ -176,3 +176,13 @@
 - `ch08-b.jpg`（拍 b2 · event） · [文件页](https://commons.wikimedia.org/wiki/File:轟炸重慶_(cropped).jpg) · 许可：`{{PD-Japan-oldphoto}}`＋`{{PD-US}}`（公有领域，1957 年前刊行） · 作者/来源：朝日新闻社／清晰版取自中国国家图书馆数字馆藏 · 描述：1940 年 6 月，日机编队临空、炸弹在重庆半岛城区开花的空中俯拍（机翼可见日之丸），正是重庆大轰炸的真实影像——对应本拍五三跑洞、「天上那声石磨越转越沉」。源图 1055×779。
 - `ch08-c.jpg`（拍 b2x · event） · [文件页](https://commons.wikimedia.org/wiki/File:Chongqing_bomb.jpg) · 许可：公有领域（PD-ROC＋美国；原文「Public domain in the Republic of China and the United States」） · 作者/来源：中华民国档案 · 描述：1941 年，日机轰炸后重庆街市大火，消防员持水龙沿街扑救、浓烟蔽街——对应本拍解除警报出洞、市中心天是红的、烟柱冲天（无尸体）。源图 1741×1154。
 - `ch08-d.jpg`（拍 b3 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:0964.a.2063.tif) · 许可：`{{CC0}}`（CC0 1.0 公有领域奉献） · 作者/来源：佚名／瑞典行道会（Svenska Missionsförbundet）档案、民族学博物馆（Etnografiska museet／Världskulturmuseerna），经 Wikimedia Sverige 释出；Commons 归类「Bombing of Chongqing in 1940」 · 描述：1940 年重庆，三名着深色衣裙的妇女在轰炸后的断墙瓦砾间小心穿行——对应本拍市中心烧成白地、十家报馆合出《重庆各报联合版》（非联合版报馆实拍，同城同期废墟）。源图 6224×4004，缩放至 1920px。
+
+
+---
+
+## 结局影像 · 四结局整屏背景（核验日期：2026-07-03，见 `scripts/_photos_endings.json`）
+
+- `end-pen.jpg`（结局 e-pen「秉笔十四年」） · [文件页](https://commons.wikimedia.org/wiki/File:Chinese_correspondents,_12-11-21_LOC_npcc.05537.jpg) · 许可：`{{PD}}`（公有领域，美国国会图书馆无已知版权限制） · 作者/来源：美国国家照相公司（National Photo Company Collection）／美国国会图书馆（LOC item 2016831879，hdl loc.pnp/npcc.05537） · 描述：1921 年 12 月 11 日，一群在美中国报界记者（correspondents）着深色大衣立于台阶前的群像——对应结局「战后清点旧稿……十四年了，笔比你勇敢」的报人意境（1921 年华盛顿摄·非该场景/年代，用作氛围）。源图 5364×4345，缩放至 1920px。
+- `end-sword.jpg`（结局 e-sword「投笔之后」） · [文件页](https://commons.wikimedia.org/wiki/File:SC_193045-S_-_Chinese_soldiers_march_to_front_crossing_treacherous_Salween_River_by_means_of_temporary_suspension_bridge._Bridge_was_blown_up_two_years_ago_by_Chinese_as_defense_measure_against_Jap_advance._(53400587055).jpg) · 许可：`{{PD-USGov-Military-Army}}`（美军作品，公有领域） · 作者/来源：摄影 T/Sgt. Schaifer／美国陆军通信兵（Signal Corps）SC 193045-S · 描述：1944 年 7 月 15 日，中国士兵携械与工具徒步过怒江临时吊桥开赴前线（原桥两年前由中方炸断以阻日军），一列人影沿索桥过江——对应结局「投笔之后……黔南的工事……只有一枚弹壳」（怒江/滇西战场·非黔南实拍，无尸体无惨状）。源图 5090×4145，缩放至 1920px。
+- `end-home.jpg`（结局 e-home「还乡」） · [文件页](https://commons.wikimedia.org/wiki/File:Mukden_Station_02.jpg) · 许可：`{{PD-Japan-oldphoto}}`（公有领域，战前日本刊行） · 作者/来源：佚名／满铁沿线明信片（hdl 123456789/27048） · 描述：战前（1945 年前）奉天驿（沈阳站）站前广场，一名旅人提行李独自走过红砖站舍前的空旷广场——对应结局「你回到了出发的月台……放下行李，站了一会儿，走出站去，像每一个还乡的人」。系与终章 ch12-d（Mukden Station 01）同站、不同影像；战前手工上色明信片影像，非该场景实拍。源图 1610×979。
+- 结局 e-child「一起还乡」（携孤儿回沈阳老宅、雪）：**宁缺，保持素纸。** Commons/LOC/NARA 上核验：沈阳「Shenyang by year」仅存 1928/1931 影像，无 1945–46 战后市街/民居；1940s 东北雪景老宅照付之阙如；而同期「儿童」题材真实照片几乎全为南京大屠杀惨状或日方占领区宣传照（着孩童受降糖等），无一张符合「克制、无惨状、孩童与成人同行还乡」之意境。按铁律「查不实宁缺」，此结局暂留素纸。

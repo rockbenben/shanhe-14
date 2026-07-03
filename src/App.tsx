@@ -91,7 +91,6 @@ function Shell() {
           <EndingCard
             story={story}
             ending={ending}
-            log={state.log}
             onRestart={() => {
               setEndView('card')
               setSession(null)
