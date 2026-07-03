@@ -43,6 +43,7 @@ const beatSchema = z.object({
 const chapterSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
+  era: z.string().optional(), // 年代戳（如「1931」）——卷首时间轴与章封眉标用
   epigraph: z.string().optional(), // 章引
   historyNote: z.string().optional(), // 史实注：本章的真实底本与出处线索
   art: z.string().optional(), // 章封影像文件名（public/covers/<art>，含扩展名）；历史题材用真实档案照片
