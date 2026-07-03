@@ -6,6 +6,7 @@
   --accent: #8c3f2b;
 }
 * { box-sizing: border-box; }
+html { background: var(--paper); }
 body { margin: 0; font-family: 'Noto Serif SC', 'Songti SC', serif; background: var(--paper); color: var(--ink); }
 main { max-width: 640px; margin: 0 auto; padding: 48px 24px; min-height: 100dvh; display: flex; flex-direction: column; }
 button { font: inherit; cursor: pointer; border: 1px solid var(--ink); background: transparent; color: var(--ink); padding: 10px 20px; border-radius: 2px; }
