@@ -148,7 +148,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       <main className={cls} onClick={onSurfaceClick}>
         <ReaderBg url={img} />
         <header className="reader-chapter">
-          {tr(`第${state.chapter + 1}章`)} · {tr(chapter.title)}
+          {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}
         </header>
         <article className="reader-reaction">
           <p className="reader-reaction-choice">
@@ -169,7 +169,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
     <main className={cls} onClick={onSurfaceClick}>
       <ReaderBg url={img} />
       <header className="reader-chapter">
-        {tr(`第${state.chapter + 1}章`)} · {tr(chapter.title)}
+        {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}
       </header>
       <article className="reader-narrative">
         {beat.echo && (

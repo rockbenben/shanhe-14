@@ -1,4 +1,5 @@
 import type { Story } from '../stories/schema'
+import { useEffect } from 'react'
 import { useLang } from './lang'
 
 interface Props {
@@ -9,9 +10,16 @@ interface Props {
 // 卷末影像志：十二章章封所用历史档案照片的小影像馆——图、章题、出处一体呈现
 export default function Gallery({ story, onBack }: Props) {
   const { tr } = useLang()
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (['Escape', 'ArrowLeft', 'ArrowUp', 'Backspace'].includes(e.key)) { e.preventDefault(); onBack() }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onBack])
   return (
     <main className="gallery">
-      <h2>{tr('影像志')} · {tr(story.title)}</h2>
+      <h2>{tr('历史影像')} · {tr(story.title)}</h2>
       <p className="gallery-sub">
         {tr('各章章封影像均取自公有领域档案（Wikimedia Commons 等），出处随图注明。')}
       </p>
@@ -24,7 +32,7 @@ export default function Gallery({ story, onBack }: Props) {
           )}
           <figcaption>
             <span className="gallery-title">
-              {tr(`第${i + 1}章`)} · {tr(ch.title)}
+              {tr(`第 ${i + 1} 章`)} · {tr(ch.title)}
             </span>
             {ch.artCredit && <span className="gallery-credit">{tr(ch.artCredit)}</span>}
           </figcaption>

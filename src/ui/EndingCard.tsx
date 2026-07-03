@@ -1,5 +1,6 @@
 import type { Ending, Story } from '../stories/schema'
 import type { LogEntry } from '../engine/types'
+import { useEffect } from 'react'
 import { useLang } from './lang'
 
 interface Props {
@@ -13,6 +14,15 @@ interface Props {
 
 export default function EndingCard({ story, ending, log, onRestart, onRecap, onGallery }: Props) {
   const { tr } = useLang()
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ([' ', 'Enter', 'ArrowRight', 'ArrowDown'].includes(e.key) && !(document.activeElement instanceof HTMLButtonElement)) {
+        e.preventDefault(); onRecap()
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onRecap])
   const choices = log.filter((l) => l.choiceText).length
   return (
     <main className="ending">

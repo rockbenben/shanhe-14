@@ -44,7 +44,7 @@ export default function Home({ stories, onStart, onContinue }: {
                 {tr(`继续 · 第 ${saved!.chapter + 1} 章`)}
               </button>
             )}
-            <button onClick={() => onStart(story)}>{tr(resumable ? '重新开始' : '进入')}</button>
+            <button onClick={() => { const ch1 = saved && !saved.ended && saved.chapter === 0 && saved.beatId !== null; if (ch1) onContinue(story); else onStart(story) }}>{tr(resumable ? '重新开始' : '进入')}</button>
           </div>
         </section>
       )}
