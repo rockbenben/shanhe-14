@@ -31,13 +31,14 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      // 空格是「快进键」：永远只做推进，到选择点一律吞掉——
-      // 否则连按空格会激活残留焦点的选项按钮，替快进的读者做出选择
-      if (e.key === ' ') {
+      // 空格/↓/→ 是「放剧情键」：普通拍推进；到选择点自动替读者选一项（随机），
+      // 照常走「你的选择+回应」流程——只想看故事的人可以一键到底
+      if (e.key === ' ' || e.key === 'ArrowDown' || e.key === 'ArrowRight') {
         e.preventDefault()
         ;(document.activeElement as HTMLElement | null)?.blur?.()
         if (artOnly) onToggleArt()
         else if (canAdvance) onAdvance()
+        else if (beat.choices) onChoose(Math.floor(Math.random() * beat.choices.length))
         return
       }
       if (artOnly && (e.key === 'Escape' || e.key === 'Enter')) {
@@ -53,7 +54,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [canAdvance, artOnly, onAdvance, onToggleArt])
+  }, [canAdvance, artOnly, beat, onAdvance, onToggleArt, onChoose])
 
   const img = beat.art ? artUrl(beat.art) : undefined
 

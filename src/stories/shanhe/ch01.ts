@@ -9,6 +9,7 @@ export const ch01: Chapter = {
     '1931 年 9 月 18 日夜 10 时 20 分许，日军自行炸毁沈阳城北柳条湖附近的南满铁路路轨，反诬中国军队所为，随即炮击北大营；19 日晨，沈阳一夜易手，东北各地相继沦陷，大批学生市民自此流亡入关。时间线据沈阳「九一八」历史博物馆陈列及当年《大公报》等报道，入关列车上便衣以帽箍印、手心茧甄别学生兵员，据亲历者回忆文字。本章人物为虚构。',
   art: 'ch01.jpg',
   artCredit: '九一八后沈阳近郊的日军，1931 年 10 月 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域',
+  artExtra: [{ file: 'ch01-b.jpg', credit: '奉天城内同仁药局前守备的日军，1931 · 《满洲事变大写真帖》 · Wikimedia Commons · 公有领域'  }, { file: 'ch01-c.jpg', credit: '架设于奉天城下的日军机枪阵地，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域'  }],
   entry: 'b1',
   beats: [
     {

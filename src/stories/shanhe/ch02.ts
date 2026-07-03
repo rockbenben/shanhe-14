@@ -9,6 +9,7 @@ export const ch02: Chapter = {
     '1932 年 1 月 28 日深夜，日军进攻上海闸北，守军起而抵抗，史称一二八事变。1 月 29 日，日机轰炸宝山路商务印书馆总厂；2 月 1 日，商务所属东方图书馆遭纵火焚毁，四十六万册藏书尽成灰烬，纸灰蔽空，飘飞十里之外，落满半城。3 月初战事渐止，5 月签订淞沪停战协定。纸灰入租界诸细节，见诸当年沪上报刊与商务同人回忆。',
   art: 'ch02.jpg',
   artCredit: '一二八事变后夷为废墟的闸北，1932 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域',
+  artExtra: [{ file: 'ch02-b.jpg', credit: '闸北前线与日军交火的十九路军，1932 · 佚名 · Wikimedia Commons · 公有领域'  }, { file: 'ch02-c.jpg', credit: '上海街头的巷战路障，1932 年 2 月 · Mondial 通讯社／法国国家图书馆 · Wikimedia Commons · 公有领域'  }],
   entry: 'b1',
   beats: [
     {

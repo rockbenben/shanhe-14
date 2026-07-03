@@ -28,6 +28,12 @@ export default function Gallery({ story, onBack }: Props) {
             </span>
             {ch.artCredit && <span className="gallery-credit">{tr(ch.artCredit)}</span>}
           </figcaption>
+          {ch.artExtra?.map((ex) => (
+            <div key={ex.file} className="gallery-extra">
+              <img src={`${import.meta.env.BASE_URL}covers/${ex.file}`} alt="" loading="lazy" />
+              <span className="gallery-credit">{tr(ex.credit)}</span>
+            </div>
+          ))}
         </figure>
       ))}
       <button onClick={onBack}>{tr('返回')}</button>

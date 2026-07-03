@@ -167,6 +167,8 @@ button:hover { background: var(--ink); color: var(--paper); }
 .gallery-item figcaption { display: flex; flex-direction: column; gap: 2px; margin-top: 8px; }
 .gallery-title { font-size: 0.95rem; }
 .gallery-credit { font-size: 0.78rem; color: var(--dim); }
+.gallery-extra { margin-top: 14px; display: flex; flex-direction: column; gap: 4px; }
+.gallery-extra img { width: 100%; display: block; border-radius: 2px; filter: grayscale(0.2) sepia(0.12); }
 .gallery > button { align-self: flex-start; }
 
 .recap { gap: 8px; }
