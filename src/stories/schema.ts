@@ -28,6 +28,8 @@ const choiceSchema = z.object({
 const beatSchema = z.object({
   id: z.string().min(1),
   narrative: z.string().min(1),
+  // 回响徽记：本拍是早前选择的条件变体时，一句「因为你……」——让跨章回响在兑现时被看见
+  echo: z.string().optional(),
   art: z.string().optional(),
   gen: z.enum(['flux', 'gemini']).optional(),
   choices: z.array(choiceSchema).min(2).max(4).optional(),

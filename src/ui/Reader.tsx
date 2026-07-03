@@ -4,11 +4,16 @@ import type { ReaderState } from '../engine/types'
 import { currentBeat } from '../engine/reader'
 import { artUrl } from './art'
 
+// 选择后的即时回应：非空时先显示「你的选择 + 回应」，推进后才展开本拍正文
+export interface Reaction {
+  choiceText: string
+  text: string
+}
+
 interface Props {
   story: Story
   state: ReaderState
-  // 选择后的即时回应：非空时整屏只显示这一行，推进后才翻到下一拍
-  reaction: string | null
+  reaction: Reaction | null
   onChoose: (index: number) => void
   onAdvance: () => void
 }
@@ -37,13 +42,21 @@ export default function Reader({ story, state, reaction, onChoose, onAdvance }: 
     onAdvance()
   }
 
+  // 回应页与正文共用当前拍的整屏背景——选择的着落发生在同一个画面里
+  const img = beat.art ? artUrl(beat.art) : undefined
+  const cls = `reader${canAdvance ? ' reader--advance' : ''}${img ? ' reader--immersive' : ''}`
+
   if (reaction) {
     return (
-      <main className="reader reader--advance" onClick={onSurfaceClick}>
+      <main className={cls} onClick={onSurfaceClick}>
+        {img && <div className="reader-bg" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />}
         <header className="reader-chapter">
           第{state.chapter + 1}章 · {chapter.title}
         </header>
-        <article className="reader-reaction">{reaction}</article>
+        <article className="reader-reaction">
+          <p className="reader-reaction-choice">你的选择 · {reaction.choiceText}</p>
+          {reaction.text}
+        </article>
         <button className="reader-continue" onClick={onAdvance}>
           继续 ▸
         </button>
@@ -51,18 +64,16 @@ export default function Reader({ story, state, reaction, onChoose, onAdvance }: 
     )
   }
 
-  const img = beat.art ? artUrl(beat.art) : undefined
-
   return (
-    <main
-      className={`reader${canAdvance ? ' reader--advance' : ''}${img ? ' reader--immersive' : ''}`}
-      onClick={onSurfaceClick}
-    >
+    <main className={cls} onClick={onSurfaceClick}>
       {img && <div className="reader-bg" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />}
       <header className="reader-chapter">
         第{state.chapter + 1}章 · {chapter.title}
       </header>
-      <article className="reader-narrative">{beat.narrative}</article>
+      <article className="reader-narrative">
+        {beat.echo && <p className="reader-echo">◈ 回响 —— {beat.echo}</p>}
+        {beat.narrative}
+      </article>
       {beat.choices ? (
         <div className="reader-choices">
           {beat.choices.map((c, i) => (

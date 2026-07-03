@@ -50,7 +50,14 @@ button:hover { background: var(--ink); color: var(--paper); }
 /* 可推进画面（无分支/回应页/章封）：整屏可点，指针提示 */
 .reader--advance, .cover { cursor: pointer; }
 .reader--advance button, .cover button { cursor: pointer; }
-.cover-enter { margin-top: 16px; }
+/* 开卷：去方框，作一枚安静的字——整屏本就可点，按钮只是视线的落点 */
+.cover-enter {
+  margin-top: 20px; border: none; background: transparent;
+  font-size: 1.15rem; letter-spacing: 0.5em; text-indent: 0.5em;
+  padding: 8px 12px 10px; border-bottom: 1px solid currentColor; border-radius: 0;
+}
+.cover-enter:hover { background: transparent; color: var(--accent); }
+.cover--photo .cover-enter:hover { background: transparent; color: #ffffff; }
 .cover-note { margin-top: 24px; max-width: 36em; }
 .cover-note-toggle { border: none; color: var(--accent); padding: 4px 8px; }
 .cover-note-toggle:hover { background: transparent; color: var(--accent); text-decoration: underline; }
@@ -70,17 +77,26 @@ button:hover { background: var(--ink); color: var(--paper); }
   background: radial-gradient(ellipse at center, rgba(20, 16, 10, 0.12) 30%, rgba(20, 16, 10, 0.6) 100%);
 }
 .reader--immersive .reader-chapter { color: #cfc5ad; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+/* 浮层随画走：深墨底+羊皮纸字，与压暗的版画同一色系（此前米白卡片与暗图撞色） */
 .reader--immersive .reader-narrative,
 .reader--immersive .reader-reaction {
-  background: rgba(245, 241, 232, 0.92); padding: 22px 26px; border-radius: 3px;
-  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  background: rgba(26, 21, 14, 0.72); color: #e9e1cd;
+  padding: 22px 26px; border-radius: 3px;
+  backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
 }
+.reader--immersive .reader-reaction { border-left-color: #d8a37a; color: #ecd9bd; }
 .reader--immersive .reader-choices button {
-  background: rgba(245, 241, 232, 0.92); border-color: rgba(43, 38, 32, 0.65);
+  background: rgba(26, 21, 14, 0.72); border-color: rgba(233, 225, 205, 0.55); color: #e9e1cd;
+  backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
 }
-.reader--immersive .reader-choices button:hover { background: var(--ink); color: var(--paper); }
+.reader--immersive .reader-choices button:hover { background: #e9e1cd; color: #1a150e; border-color: #e9e1cd; }
 .reader--immersive .reader-continue { color: #f0ead9; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
 .reader--immersive .reader-continue:hover { color: #f0ead9; }
+/* 回应页页眉：所选项的落款 */
+.reader-reaction-choice { margin: 0 0 10px; font-size: 0.82rem; letter-spacing: 0.08em; opacity: 0.75; }
+/* 回响徽记：跨章兑现的选择在此记功 */
+.reader-echo { margin: 0 0 12px; font-size: 0.82rem; letter-spacing: 0.06em; color: #d8a37a; }
 /* 选择的即时回应：稍抬字号、缀以行首竖线，像书页边上的一声轻响 */
 .reader-reaction { font-size: 1.1rem; line-height: 2.2; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 16px; font-style: normal; }
 .reader-choices { display: flex; flex-direction: column; gap: 12px; }

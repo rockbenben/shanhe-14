@@ -44,7 +44,7 @@ export default function ChapterCover({ story, state, onEnter }: Props) {
         <h2 className="cover-title">{ch.title}</h2>
         {ch.epigraph && <Epigraph text={ch.epigraph} />}
         <button className="cover-enter" onClick={onEnter}>
-          {state.chapter === 0 ? '开卷 ▸' : '继续读下去 ▸'}
+          {state.chapter === 0 ? '开卷' : '续读'}
         </button>
         {ch.historyNote && (
           <div className="cover-note">
