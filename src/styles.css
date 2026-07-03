@@ -118,6 +118,14 @@ button:hover { background: var(--ink); color: var(--paper); }
 .reader-continue:hover { background: transparent; color: var(--accent); text-decoration: underline; }
 
 .ending { align-items: center; justify-content: center; text-align: center; gap: 12px; }
+/* 结局档案照片幕：沿用章封处理，文字提亮 */
+.ending.cover--photo { color: #f0ead9; }
+.ending.cover--photo .ending-story, .ending.cover--photo .ending-meta { color: #cfc5ad; }
+.ending.cover--photo .ending-title { text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); }
+.ending.cover--photo .ending-epilogue { text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75); }
+.ending.cover--photo .ending-actions button { border-color: #f0ead9; color: #f0ead9; }
+.ending.cover--photo .ending-actions button:hover { background: #f0ead9; color: #1a150e; }
+.cover-credit a { color: inherit; text-decoration: underline dotted; text-underline-offset: 3px; pointer-events: auto; }
 .ending-story { color: var(--dim); letter-spacing: 0.2em; }
 .ending-title { font-size: 1.8rem; margin: 0; letter-spacing: 0.1em; }
 .ending-epilogue { line-height: 2.1; max-width: 34em; text-align: left; }

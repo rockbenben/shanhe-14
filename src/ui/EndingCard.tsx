@@ -25,7 +25,14 @@ export default function EndingCard({ story, ending, log, onRestart, onRecap, onG
   }, [onRecap])
   const choices = log.filter((l) => l.choiceText).length
   return (
-    <main className="ending">
+    <main className={ending.photo ? 'ending cover--photo' : 'ending'}>
+      {ending.photo && (
+        <div
+          className="cover-photo"
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}covers/${ending.photo.file})` }}
+          aria-hidden="true"
+        />
+      )}
       <p className="ending-story">{tr(story.title)}</p>
       <h2 className="ending-title">{tr(ending.title)}</h2>
       <p className="ending-epilogue">{tr(ending.epilogue)}</p>
@@ -35,6 +42,15 @@ export default function EndingCard({ story, ending, log, onRestart, onRecap, onG
         <button onClick={onGallery}>{tr('历史影像')}</button>
         <button onClick={onRestart}>{tr('重新开始')}</button>
       </div>
+      {ending.photo && (
+        <p className="cover-credit">
+          {ending.photo.url ? (
+            <a href={ending.photo.url} target="_blank" rel="noopener noreferrer">{tr(ending.photo.credit)}</a>
+          ) : (
+            tr(ending.photo.credit)
+          )}
+        </p>
+      )}
     </main>
   )
 }

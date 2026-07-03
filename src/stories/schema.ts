@@ -62,6 +62,8 @@ const endingSchema = z.object({
   title: z.string().min(1),
   epilogue: z.string().min(1),
   art: z.string().optional(),
+  // 结局档案照片：整屏为幕+出处署名（与章封/正文照片拍同规）
+  photo: z.object({ file: z.string().min(1), credit: z.string().min(1), url: z.string().optional() }).optional(),
 })
 
 export const storySchema = z
