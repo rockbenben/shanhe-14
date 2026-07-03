@@ -31,12 +31,22 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (artOnly && (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter')) {
+      // 空格是「快进键」：永远只做推进，到选择点一律吞掉——
+      // 否则连按空格会激活残留焦点的选项按钮，替快进的读者做出选择
+      if (e.key === ' ') {
+        e.preventDefault()
+        ;(document.activeElement as HTMLElement | null)?.blur?.()
+        if (artOnly) onToggleArt()
+        else if (canAdvance) onAdvance()
+        return
+      }
+      if (artOnly && (e.key === 'Escape' || e.key === 'Enter')) {
         e.preventDefault()
         onToggleArt()
         return
       }
-      if (canAdvance && (e.key === ' ' || e.key === 'Enter')) {
+      // 回车保留浏览器默认：聚焦某个选项按钮时回车＝键盘用户的明确选择
+      if (canAdvance && e.key === 'Enter' && !(document.activeElement instanceof HTMLButtonElement)) {
         e.preventDefault()
         onAdvance()
       }
