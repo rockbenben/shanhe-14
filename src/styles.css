@@ -59,8 +59,28 @@ button:hover { background: var(--ink); color: var(--paper); }
 .reader { justify-content: center; gap: 24px; }
 .reader-chapter { color: var(--dim); letter-spacing: 0.15em; font-size: 0.9rem; }
 .reader-narrative { font-size: 1.05rem; line-height: 2.1; white-space: pre-wrap; }
-/* 节点插画（水墨/版画）：multiply 让墨色沉进纸面，与档案照片章封形成明确的风格区隔 */
-.reader-art { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 2px; mix-blend-mode: multiply; }
+/* 沉浸式插画：整屏版画为幕、卷文浮层（呼应千世书范式）；无图节点保持素纸样式 */
+.reader-bg {
+  position: fixed; inset: 0; z-index: -1;
+  background-size: cover; background-position: center;
+  filter: brightness(0.5) saturate(0.85);
+}
+.reader--immersive::after {
+  content: ''; position: fixed; inset: 0; z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(20, 16, 10, 0.12) 30%, rgba(20, 16, 10, 0.6) 100%);
+}
+.reader--immersive .reader-chapter { color: #cfc5ad; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+.reader--immersive .reader-narrative,
+.reader--immersive .reader-reaction {
+  background: rgba(245, 241, 232, 0.92); padding: 22px 26px; border-radius: 3px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+.reader--immersive .reader-choices button {
+  background: rgba(245, 241, 232, 0.92); border-color: rgba(43, 38, 32, 0.65);
+}
+.reader--immersive .reader-choices button:hover { background: var(--ink); color: var(--paper); }
+.reader--immersive .reader-continue { color: #f0ead9; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+.reader--immersive .reader-continue:hover { color: #f0ead9; }
 /* 选择的即时回应：稍抬字号、缀以行首竖线，像书页边上的一声轻响 */
 .reader-reaction { font-size: 1.1rem; line-height: 2.2; color: var(--accent); border-left: 3px solid var(--accent); padding-left: 16px; font-style: normal; }
 .reader-choices { display: flex; flex-direction: column; gap: 12px; }

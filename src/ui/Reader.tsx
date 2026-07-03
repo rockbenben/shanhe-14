@@ -54,11 +54,14 @@ export default function Reader({ story, state, reaction, onChoose, onAdvance }: 
   const img = beat.art ? artUrl(beat.art) : undefined
 
   return (
-    <main className={canAdvance ? 'reader reader--advance' : 'reader'} onClick={onSurfaceClick}>
+    <main
+      className={`reader${canAdvance ? ' reader--advance' : ''}${img ? ' reader--immersive' : ''}`}
+      onClick={onSurfaceClick}
+    >
+      {img && <div className="reader-bg" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />}
       <header className="reader-chapter">
         第{state.chapter + 1}章 · {chapter.title}
       </header>
-      {img && <img className="reader-art" src={img} alt="" />}
       <article className="reader-narrative">{beat.narrative}</article>
       {beat.choices ? (
         <div className="reader-choices">
