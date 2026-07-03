@@ -54,6 +54,7 @@ export const ch09: Chapter = {
     },
     {
       id: 'b2',
+      photo: { file: 'ch09-c.jpg', credit: '日军特别陆战队占领美国海军炮舰「威克」号（USS Wake PR-3），上海，1941 年 12 月 8 日 · 美国海军（NHHC · NH 96568） · Wikimedia Commons · 公有领域（美国政府作品）' },
       source: '一九四一年十二月八日晨日军进占公共租界，《申报》等报馆当日被封停——据上海孤岛新闻史料',
       art: 'dx-letter',
       narrative:

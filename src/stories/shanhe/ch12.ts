@@ -40,6 +40,7 @@ export const ch12: Chapter = {
     },
     {
       id: 'b1x',
+      photo: { file: 'ch12-e.jpg', credit: '重庆《扫荡报》头版（报道日本投降），1945 年 8 月 16 日 · 重庆扫荡报社 · Wikimedia Commons · 公有领域（当日报纸版面·非场景照）' },
       source: '重庆八月十日夜先得乞降讯、彻夜狂欢，正式诏书犹待十五日正午——据当年重庆各报号外与《大公报》记者纪盛',
       art: 'hx-night',
       narrative:

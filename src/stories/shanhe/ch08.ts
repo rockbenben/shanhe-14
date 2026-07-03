@@ -52,6 +52,7 @@ export const ch08: Chapter = {
     },
     {
       id: 'b2',
+      photo: { file: 'ch08-b.jpg', credit: '日机编队临空、炸弹在重庆城区开花的空中俯拍，1940 年 6 月 · 朝日新闻社／中国国家图书馆藏 · Wikimedia Commons · 公有领域' },
       source: '一九三九年五月三日午后日机大编队炸入市区，据重庆大轰炸档案文献与亲历者口述',
       art: 'wd-cave',
       narrative:
@@ -75,6 +76,7 @@ export const ch08: Chapter = {
     },
     {
       id: 'b2x',
+      photo: { file: 'ch08-c.jpg', credit: '日机轰炸后重庆街市起火、消防员持水龙扑救，1941 · 中华民国档案 · Wikimedia Commons · 公有领域' },
       source: '五三轰炸当日市区大火、烟柱冲天隔江可见，翌日日机再袭，据重庆大轰炸档案与亲历者口述',
       art: 'wd-cave',
       narrative:
@@ -83,6 +85,7 @@ export const ch08: Chapter = {
     },
     {
       id: 'b3',
+      photo: { file: 'ch08-d.jpg', credit: '三名妇女在轰炸后的瓦砾间穿行，重庆，1940 · 瑞典行道会档案／民族学博物馆 · Wikimedia Commons · CC0（非联合版报馆实拍）' },
       source: '十家报馆 1939 年 5 月 6 日合出《重庆各报联合版》、编辑部设于防空洞、由幸存印厂代印，出至 8 月 12 日共 99 期，据重庆十报联合版出版纪实',
       art: 'wd-ember',
       narrative:

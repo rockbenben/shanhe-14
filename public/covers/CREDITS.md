@@ -19,6 +19,9 @@
   - `ch01-d.jpg`（拍 b2 · event） · [文件页](https://commons.wikimedia.org/wiki/File:Incendie_de_fermes_%C3%A0_Moukden,_par_les_torpilles_lanc%C3%A9es_par_des_avions_japonais_-_btv1b9047724d.jpg) · 许可：`{{PD-France}}`＋`{{PD-anon-70-EU}}`（公有领域） · 来源：Agence de presse Meurisse／法国国家图书馆 BnF Gallica · 描述：1931年，奉天近郊被日军飞机投弹焚烧的农舍——对应"北面的天慢慢红起来"一拍。源图 7000×5178。
   - `ch01-e.jpg`（拍 b3 · event） · [文件页](https://commons.wikimedia.org/wiki/File:Soldats_japonais_tirant_du_palais_du_g%C3%A9n%C3%A9ral_Chang_Hsueh_Hiang_-_japonais_sous_Moukden_-_btv1b9047696j.jpg) · 许可：`{{PD-France}}`＋`{{PD-anon-70-EU}}`（公有领域） · 来源：Agence de presse Meurisse／法国国家图书馆 BnF Gallica · 描述：1931年，日军自张学良将军官邸（奉天）向外射击——对应清早街口的黄呢军装日兵一拍。源图 7000×5366。
   - `ch01-f.jpg`（拍 b5x · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:%E4%BA%9C%E6%9D%B1%E5%8D%B0%E7%94%BB%E8%BC%AF_%E4%BA%AC%E5%A4%A7023_043_%22%E5%A4%A9%E4%B8%8B%E7%AC%AC%E4%B8%80%E9%97%9C%EF%BC%88%E5%B1%B1%E6%B5%B7%E9%97%9C%EF%BC%89%22.jpg) · 许可：`{{PD}}`（公有领域，战前刊行） · 来源：亜東印画协会《亜東印画辑》京大第23册 · 描述：1920–30年代，「天下第一关」山海关城楼——同地域时代氛围照，对应"看见城楼从车顶上缓缓过去"一拍（非该场景实拍）。源图 1257×1782。
+- 第二轮扫荡新增（见 `scripts/_photos2_ch01-04.json`）：
+  - `ch01-g.jpg`（拍 b1 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:Street_Outside_Mukden_Gate,_Mukden,_Manchuria,_ca._1882-ca._1936_(imp-cswc-GB-237-CSWC47-LS8-007).jpg) · 许可：`{{PD-old-70-expired}}`＋`{{CC-PD-Mark}}`（公有领域，作者不详逾70年） · 来源：国际传教摄影档案（南加州大学数字图书馆），苏格兰长老会 Dugald Christie 相关幻灯片 · 描述：约1900–1930年代，奉天（沈阳）城门外的街市——同城时代氛围照，对应事变前沈阳城中的一拍（非该场景实拍）。原幻灯片经手工上色，已裁去镜框题字并转灰度；源图 4870×4862。
+  - `ch01-h.jpg`（拍 b5 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:North_east_corner_of_the_city_wall_and_moat,_Mukden,_Manchuria,_ca._1882-ca._1936_(imp-cswc-GB-237-CSWC47-LS8-005).jpg) · 许可：`{{PD-old-70-expired}}`＋`{{CC-PD-Mark}}`（公有领域） · 来源：国际传教摄影档案（南加州大学数字图书馆） · 描述：约1900–1930年代，奉天（沈阳）东北城角的城墙与角楼——对应皇姑屯开车"城墙退过去"一拍的同城氛围照（非该场景实拍）。原幻灯片经手工上色，已裁框转灰度；源图 4870×4911。
 
 ## ch02 · 一二八（1932 闸北废墟）
 - 文件名：`Chinese residential area in Zhabei completely destroyed by bombing.jpg`
@@ -33,8 +36,9 @@
   - `ch02-d.jpg`（拍 b3 · event） · [文件页](https://commons.wikimedia.org/wiki/File:Commercial_Press_Ruins_Shanghai,_1932,_from_Japanese_postcard.jpg) · 许可：`{{PD}}`（公有领域，佚名） · 来源：1932年日本明信片（Lafayette College East Asia Image Collection 转录） · 描述：一二八事变后被炸焚成废墟的上海商务印书馆——对应"东方图书馆烧了整整一天、纸灰飞出十里"一拍。源图 1024×667。
   - `ch02-e.jpg`（拍 b3b · event） · [文件页](https://commons.wikimedia.org/wiki/File:Chinois_se_r%C3%A9fugiant_dans_la_concession_fran%C3%A7aise_-_btv1b9026791z.jpg) · 许可：`{{PD-old}}`（公有领域） · 来源：Agence Mondial／法国国家图书馆 BnF Gallica · 描述：1932年，一二八事变中避入法租界的上海华人——对应收容所里"过界的难民一天多过一天"一拍。源图 7000×5209。
   - `ch02-f.jpg`（拍 b2 · event） · [文件页](https://commons.wikimedia.org/wiki/File:British_troops_defending_the_entrance_to_the_International_Settlement_near_Shanghai_North_Station.jpg) · 许可：`{{PD}}`（公有领域，佚名，1932） · 来源：波兰国家数字档案馆（NAC，audiovis.nac.gov.pl 236401） · 描述：1932年，在上海北站一带守卫公共租界入口的英军——对应"路口的铁门拉上了，巡捕把界内界外分成两个世界"一拍。源图 3480×2500。
-
-## ch03 · 一二九（1935 北平学生游行）
+- 第二轮扫荡新增（见 `scripts/_photos2_ch01-04.json`）：
+  - `ch02-h.jpg`（拍 b1 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:%E4%BA%9C%E6%9D%B1%E5%8D%B0%E7%94%BB%E8%BC%AF_10_102_%22%E5%91%89%E6%B7%9E%E8%B7%AF%EF%BC%88%E4%B8%8A%E6%B5%B7%EF%BC%89%22.jpg) · 许可：`{{PD-Japan-oldphoto}}`＋`{{PD-1996}}`（公有领域，战前日本刊行） · 来源：亜東印画协会《亜東印画辑》第10册 · 描述：1930年代上海吴淞路（虹口）街景，人力车、脚踏车、汽车与商招并陈——上海租界街市氛围照，对应初到租界、弄堂烟纸店帮工一拍（非该场景实拍）。源图 1130×797。
+  - `ch02-g.jpg`（拍 b4 · event） · [文件页](https://commons.wikimedia.org/wiki/File:National_Labor_University_in_Shanghai_destroyed_by_bombing_(1932).jpg) · 许可：`{{PD-old}}`＋`{{CC-PD-Mark}}`（公有领域） · 来源：Meurisse 新闻社／法国国家图书馆 BnF Gallica · 描述：1932年3月，遭日军轰炸损毁、仅存钟楼残墙的上海国立劳动大学——对应停战后踏勘闸北"寻不出一间完整的屋子"一拍（无尸体）。源图 5650×4100。 · 一二九（1935 北平学生游行）
 - 文件名：`NEU students marching in the December 9th Movement.jpg`
 - 文件页：https://commons.wikimedia.org/wiki/File:NEU_students_marching_in_the_December_9th_Movement.jpg
 - 许可：`{{PD-China-1996}}`（公有领域）
@@ -56,7 +60,10 @@
 - 正文影像（逐拍配图，见 `scripts/_photos_ch04-06.json`）：
   - `ch04-d.jpg`（拍 b2x · event） · [文件页](https://commons.wikimedia.org/wiki/File:1937_%E5%8D%A2%E6%B2%9F%E6%A1%A5%E7%9A%84%E5%AE%88%E5%86%9B.jpg) · 许可：`{{PD-China}}`（公有领域，版权期满；Commons 机读标注 Public domain） · 来源：佚名，刊《中华》(上海)1937 年第 56 期「坚守芦沟桥之我军」 · 描述：1937年7月，坚守卢沟桥的中国士兵立于沙袋工事间，画面左侧可见桥栏石狮——对应"宛平城墙弹痕、桥栏石狮子、守桥的兵"一拍。源图 1233×1663。
   - `ch04-e.jpg`（拍 b2 · event） · [文件页](https://commons.wikimedia.org/wiki/File:1937_%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%86%9B%E5%9C%A8%E5%8D%A2%E6%B2%9F%E6%A1%A5%E5%A4%B4%E5%90%91%E4%BE%B5%E7%95%A5%E8%80%85%E7%9A%84%E8%BF%98%E5%87%BB.jpg) · 许可：`{{PD-China}}`（公有领域，版权期满；Commons 机读标注 Public domain） · 来源：佚名，刊《中华》(上海)1939 年第 79 期（七七两周年纪念，画面为 1937 年事发时） · 描述：1937年7月，二十九军在卢沟桥头据沙袋工事向侵略者还击，桥栏石狮历历——对应"后半夜枪响了，跟着是炮"一拍。源图 972×719。
-  - 拍 b4/b4x/b5（出城卡口、月台候车、南下列车）未配上：Commons 上 1937 平津方向车站/难民列车之公有领域大图未觅得合规者，宁缺。另记：AP 摄"日军入北平"(1937.8.13) 一照仅有 `{{PD-China}}` 标签，其来源国为美国、美国版权状态未清，按"查不实宁缺"核验后弃用。
+  - 拍 b4/b4x/b5（出城卡口、月台候车、南下列车）未配上：Commons 上 1937 平津方向车站/难民列车之公有领域大图未觅得合规者，宁缺。另记：AP 摄"日军入北平"(1937.8.13) 一照仅有 `{{PD-China}}` 标签，其来源国为美国、美国版权状态未清，按"查不实宁缺"核验后弃用（第二轮复查再次确认弃用）。
+- 第二轮扫荡新增（见 `scripts/_photos2_ch01-04.json`）：
+  - `ch04-f.jpg`（拍 b1 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:Chien_Men_Street,_Peking_(NYPL_Hades-2359344-4043700).jpg) · 许可：`{{PD}}`（公有领域，佚名，约1920年代） · 来源：纽约公共图书馆(NYPL) · 描述：约1920年代前门（正阳门）大街街景，箭楼在望、人力车与马车往来——战前北平街市氛围照，对应领到记者证、七月北平城的一拍（非该场景实拍）。原为彩色网点明信片，已裁去白边题字并转灰度；源图 4666×2980。
+  - `ch04-g.jpg`（拍 b3 · event） · [文件页](https://commons.wikimedia.org/wiki/File:Street_battle_in_Tianjin_-_July_1937.png) · 许可：`{{PD-Japan-oldphoto}}`＋`{{PD-1996}}`（公有领域，战前日本刊行） · 来源：佚名（原题「北支事変における天津市内日本人租界での戦闘」） · 描述：1937年7月，北支事变（平津作战）中天津日租界内的巷战，士兵据沙袋工事、街面腾起烟尘——同期平津战事实拍，对应"南苑方向的炮响了一整天"一拍（天津实拍，非南苑；无尸体）。源为 PNG，转存灰度 JPEG；源图 1541×905。
 
 ## ch05 · 淞沪（1937 上海战事）
 - 文件名：`0964.a.2505.tif`
@@ -116,9 +123,12 @@
 - 补充影像：暂缺——1941年日军进占租界（南京路巡逻／外滩戒严）之公有领域大图未觅得合规者，宁缺。
 - 正文影像（逐拍配图，见 `scripts/_photos_ch07-09.json`）：
   - `ch09-b.jpg`（拍 b1y · event） · [文件页](https://commons.wikimedia.org/wiki/File:1941_Chinese_War_Declaration_vs_Japan.jpg) · 许可：`{{PD-ROC-exempt}}`＋`{{PD-PRC-exempt}}`（公有领域，官方公文不受著作权保护） · 来源：中华民国国民政府（重庆）·《国民政府对日宣战布告》 · 描述：1941年12月9日《国民政府对日宣战布告》全文——正是本拍"宣战的布告到了……昭告中外，正式对日宣战"所记的那纸布告。源图 1368×1023。
+- 第二轮扫荡新增（见 `scripts/_photos2_ch09-12.json`）：
+  - `ch09-c.jpg`（拍 b2 · event） · [文件页](https://commons.wikimedia.org/wiki/File:Japanese_soldiers_aboard_USS_Wake_(PR-3)_at_Shanghai,_China,_8_December_1941_(NH_96568).jpg) · 许可：`{{PD-USGov-Military-Navy}}`（美国政府作品，公有领域） · 作者/来源：美国海军历史与遗产司令部（NHHC）NH 96568 · 描述：1941年12月8日太平洋战争首日，日本海军陆战队在上海俘获美军炮舰"威克号"——正是本拍"租界完了，八日那天早上，桥上过不去人了"所记那个上海陷落的清晨。源图 5587×4436，缩存 1920×1524。
 
 ## ch10 · 1942 河南饥荒 —（设计决定：本章不配影像）
 - 本章有意不配影像：当年的灾情影像或被封锁、或版权未清，影像的缺席本身即是这段历史的一部分。
+- 第二轮专项攻坚章封（2026-07-03 复查）仍留白：① 优先目标《大公报》1943-02-01《豫灾实录》／社评《看重庆，念中原！》版面扫描——Commons 全文检索与「Ta Kung Pao 1943 / 大公报 豫灾」均无该版面转存；② 克制影像（逃荒行列／干裂田地／蝗灾／陇海线扒车）——「Henan famine 1942/1943」分类为空，相关检索仅命中书籍 PDF，无独立照片；存世名作多系 Forman／White 摄影（版权存疑，已排除）。三重门槛（出处可信＋许可清白＋克制取景）无一满足者，遵"查不实宁缺"，章封与正文均保持留白。
 
 ## ch11 · 1944 豫湘桂/湘桂大撤退
 - 文件名：`EvacuaciónDeLiuchowNoviembre1944.jpg`
@@ -142,6 +152,19 @@
   - `ch12-c.jpg` · [文件页](https://commons.wikimedia.org/wiki/File:SC_334926_-_High_Chinese_officials%2C_attending_War_Transportation_Board_dinner_at_Chungking_in_victory_celebration%2C_stand_in_front_of_crossed_flags_of_two_nations_and_pictures_of_Truman_and_Chiang_Kai-Shek._%2852219374595%29.jpg) · 许可：`{{PD-USGov-Military-Army}}`（美军作品，公有领域） · 来源：美国陆军通信兵（Signal Corps）SC 334926 · 描述：1945年8月，重庆胜利庆祝宴上、立于中美两国交叉旗与两国领袖像前的中国政要。源图 5356×4269。
 - 正文影像（逐拍配图，见 `scripts/_photos_ch10-12.json`）：
   - `ch12-d.jpg`（拍 b4 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:Mukden_Station_01.jpg) · 许可：`{{PD-Japan-oldphoto}}`（公有领域，战前日本刊行） · 作者/来源：佚名／满铁沿线明信片（hdl 123456789/26919） · 描述：1945年前的奉天驿（沈阳站）站舍全景——同地域时代氛围照，对应终章"进沈阳站……月台还是那个月台"一拍（战前影像，非该场景实拍）。源图 1661×1050。
+- 第二轮扫荡新增（见 `scripts/_photos2_ch09-12.json`）：
+  - `ch12-e.jpg`（拍 b1x · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:1945%E5%B9%B48%E6%9C%8816%E6%97%A5%E9%87%8D%E6%85%B6%E6%8E%83%E8%95%A9%E5%A0%B1.jpg) · 许可：`{{PD-scan-two}}`→`{{PD-CN}}`＋`{{PD-1996}}`（公有领域，中国逾期作品） · 作者/来源：重庆扫荡报社（转录自 1978《扫荡二十年——扫荡报的历史记录》p.13） · 描述：1945年8月16日重庆《扫荡报》头版，报道日本投降——对应本拍"报馆也……愿回北方的开路条""把十四年来写满的采访簿一本一本码在桌上，等着"（当日报纸版面·非场景照）。源图 897×580。
 
 ## ch10 · 1942 河南饥荒（正文影像：设计决定不配图）
 - 本章正文亦不配影像，延续封面的设计决定：1942 河南灾情的存世影像或当年被封锁、或版权未清（Forman／White 等摄影多有版权疑点），逐张核验后无满足"来源可信＋许可清白＋克制取景（禁尸体禁惨状）"三重要求者。宁缺——影像的缺席本身即是这段历史的一部分。
+
+---
+
+## 第二轮正文补图 · ch05–08（核验日期：2026-07-03，见 `scripts/_photos2_ch05-08.json`）
+
+- `ch05-g.jpg`（拍 b5 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:Nantao_Blazing_(14619960513).jpg) · 许可：Flickr Commons「No known copyright restrictions（无已知版权限制）」 · 作者/来源：Elias Victor Sassoon（1881–1961）／SMU Central University Libraries · 描述：1937 年 11 月 6 日，黄浦江对岸南市方向腾起的浓烟，江面停泊挂满旗号的军舰与轮驳——对应本拍报馆西撤、天井烧稿、纸灰打旋（非报馆实拍，同城同期）。源图 1000×760。
+- `ch07-d.jpg`（拍 b2x · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:1938_抗戰戲劇：無錫靑年抗敵工作團在漢口街頭演劇.jpg) · 许可：`{{PD-China}}`（公有领域） · 作者/来源：《东方画刊》1938 年第 1 卷第 4 期 · 描述：1938 年汉口街头，无锡青年抗敌工作团演出抗敌戏剧，横幅「青年抗敵工作團」、市民层层围观——对应本拍「七七」全城献金、街头动员的氛围（非献金台实拍）。源图 679×505。
+- `ch07-e.jpg`（拍 b4 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:Harbor_of_Shanghai_with_Warship_and_Freighters_(14599259762).jpg) · 许可：Flickr Commons「No known copyright restrictions」 · 作者/来源：Elias Victor Sassoon／SMU Central University Libraries · 描述：1937 年上海港，泊满轮船、货船与成群舢板小艇的江面——对应本拍夜里开船、江面全是西行的船（非长江西撤实拍，江海轮船氛围）。源图 1000×770。
+- `ch08-b.jpg`（拍 b2 · event） · [文件页](https://commons.wikimedia.org/wiki/File:轟炸重慶_(cropped).jpg) · 许可：`{{PD-Japan-oldphoto}}`＋`{{PD-US}}`（公有领域，1957 年前刊行） · 作者/来源：朝日新闻社／清晰版取自中国国家图书馆数字馆藏 · 描述：1940 年 6 月，日机编队临空、炸弹在重庆半岛城区开花的空中俯拍（机翼可见日之丸），正是重庆大轰炸的真实影像——对应本拍五三跑洞、「天上那声石磨越转越沉」。源图 1055×779。
+- `ch08-c.jpg`（拍 b2x · event） · [文件页](https://commons.wikimedia.org/wiki/File:Chongqing_bomb.jpg) · 许可：公有领域（PD-ROC＋美国；原文「Public domain in the Republic of China and the United States」） · 作者/来源：中华民国档案 · 描述：1941 年，日机轰炸后重庆街市大火，消防员持水龙沿街扑救、浓烟蔽街——对应本拍解除警报出洞、市中心天是红的、烟柱冲天（无尸体）。源图 1741×1154。
+- `ch08-d.jpg`（拍 b3 · atmosphere） · [文件页](https://commons.wikimedia.org/wiki/File:0964.a.2063.tif) · 许可：`{{CC0}}`（CC0 1.0 公有领域奉献） · 作者/来源：佚名／瑞典行道会（Svenska Missionsförbundet）档案、民族学博物馆（Etnografiska museet／Världskulturmuseerna），经 Wikimedia Sverige 释出；Commons 归类「Bombing of Chongqing in 1940」 · 描述：1940 年重庆，三名着深色衣裙的妇女在轰炸后的断墙瓦砾间小心穿行——对应本拍市中心烧成白地、十家报馆合出《重庆各报联合版》（非联合版报馆实拍，同城同期废墟）。源图 6224×4004，缩放至 1920px。

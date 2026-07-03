@@ -1,0 +1,44 @@
+[
+  {
+    "ch": "ch05",
+    "beat": "b5",
+    "file": "ch05-g.jpg",
+    "match": "atmosphere",
+    "credit": "上海南市方向腾起的浓烟，黄浦江上停泊军舰与轮驳，1937 年 11 月 6 日 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非报馆西撤实拍）"
+  },
+  {
+    "ch": "ch07",
+    "beat": "b2x",
+    "file": "ch07-d.jpg",
+    "match": "atmosphere",
+    "credit": "无锡青年抗敌工作团在汉口街头演剧、市民围观，1938 · 《东方画刊》1938 年第 1 卷第 4 期 · Wikimedia Commons · 公有领域（非七七献金台实拍）"
+  },
+  {
+    "ch": "ch07",
+    "beat": "b4",
+    "file": "ch07-e.jpg",
+    "match": "atmosphere",
+    "credit": "泊满轮船、货船与舢板的上海港，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非长江西撤实拍）"
+  },
+  {
+    "ch": "ch08",
+    "beat": "b2",
+    "file": "ch08-b.jpg",
+    "match": "event",
+    "credit": "日机编队临空、炸弹在重庆城区开花的空中俯拍，1940 年 6 月 · 朝日新闻社／中国国家图书馆藏 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch08",
+    "beat": "b2x",
+    "file": "ch08-c.jpg",
+    "match": "event",
+    "credit": "日机轰炸后重庆街市起火、消防员持水龙扑救，1941 · 中华民国档案 · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch08",
+    "beat": "b3",
+    "file": "ch08-d.jpg",
+    "match": "atmosphere",
+    "credit": "三名妇女在轰炸后的瓦砾间穿行，重庆，1940 · 瑞典行道会档案／民族学博物馆 · Wikimedia Commons · CC0（非联合版报馆实拍）"
+  }
+]

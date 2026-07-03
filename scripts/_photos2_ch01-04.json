@@ -1,0 +1,44 @@
+[
+  {
+    "ch": "ch01",
+    "beat": "b1",
+    "file": "ch01-g.jpg",
+    "match": "atmosphere",
+    "credit": "奉天（沈阳）城门外的街市，约 1900–1930 年代 · 国际传教摄影档案（南加州大学数字图书馆，苏格兰长老会 Dugald Christie 相关幻灯片）· Wikimedia Commons · 公有领域（原幻灯片经手工上色，已裁去镜框题字并转灰度）——同城时代氛围照，非事变夜实拍"
+  },
+  {
+    "ch": "ch01",
+    "beat": "b5",
+    "file": "ch01-h.jpg",
+    "match": "atmosphere",
+    "credit": "奉天（沈阳）东北城角的城墙与角楼，约 1900–1930 年代 · 国际传教摄影档案（南加州大学数字图书馆）· Wikimedia Commons · 公有领域（原幻灯片经手工上色，已裁框转灰度）——对应「城墙退过去」一拍的同城氛围照，非皇姑屯车站实拍"
+  },
+  {
+    "ch": "ch02",
+    "beat": "b1",
+    "file": "ch02-h.jpg",
+    "match": "atmosphere",
+    "credit": "上海吴淞路（虹口）街景，1930 年代 · 亜東印画协会《亜東印画辑》第 10 册 · Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——上海租界街市氛围照，非该场景实拍"
+  },
+  {
+    "ch": "ch02",
+    "beat": "b4",
+    "file": "ch02-g.jpg",
+    "match": "event",
+    "credit": "遭日军轰炸损毁的上海国立劳动大学，1932 年 3 月 · Meurisse 新闻社／法国国家图书馆 BnF Gallica · Wikimedia Commons · 公有领域"
+  },
+  {
+    "ch": "ch04",
+    "beat": "b1",
+    "file": "ch04-f.jpg",
+    "match": "atmosphere",
+    "credit": "前门（正阳门）大街街景，约 1920 年代 · 纽约公共图书馆(NYPL) · Wikimedia Commons · 公有领域（原为彩色网点明信片，已裁去白边题字并转灰度）——战前北平街市氛围照，非该场景实拍"
+  },
+  {
+    "ch": "ch04",
+    "beat": "b3",
+    "file": "ch04-g.jpg",
+    "match": "event",
+    "credit": "北支事变（平津作战）中天津日租界内的巷战，1937 年 7 月 · 佚名（战前日本刊行照片）· Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——同期平津战事实拍，非南苑实拍"
+  }
+]

@@ -15,6 +15,7 @@ export const ch02: Chapter = {
   beats: [
     {
       id: 'b1',
+      photo: { file: 'ch02-h.jpg', credit: '上海吴淞路（虹口）街景，1930 年代 · 亜東印画协会《亜東印画辑》第 10 册 · Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——上海租界街市氛围照，非该场景实拍' },
       art: 'sh-loft',
       narrative:
         '远房亲戚的亭子间在租界的弄堂里，一张床，一张桌，晚上再打个地铺，就是你的落脚处。白天你在弄堂口的烟纸店帮工：理货，记账，看铺子。上海话你听得半懂，人家问你是哪里人，你说沈阳，对方哦一声，便不再问了。夜里你给家里写信，写好了却没处寄——关外的邮路时通时断。信越攒越厚，你都收在枕头底下，睡觉的时候枕着。',
@@ -91,6 +92,7 @@ export const ch02: Chapter = {
     },
     {
       id: 'b4',
+      photo: { file: 'ch02-g.jpg', credit: '遭日军轰炸损毁的上海国立劳动大学，1932 年 3 月 · Meurisse 新闻社／法国国家图书馆 BnF Gallica · Wikimedia Commons · 公有领域' },
       source: '停战后记者踏勘闸北：自宝山路至永兴路残垣断壁、无一完整屋宇，坍屋斜墙塞断路途，据《时事新报》战地记者报道（1932）',
       art: 'sh-street',
       narrative:
