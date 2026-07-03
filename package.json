@@ -1,7 +1,7 @@
 {
-  "name": "floating-life",
+  "name": "shanhe-14",
   "version": "0.1.0",
-  "description": "浮生长卷 — 编排式叙事游戏框架：作者编排故事，引擎负责推进与记忆",
+  "description": "山河十四年 · This Land, Fourteen Years — 据史实与亲历记载改编的互动叙事（引擎：浮生长卷 floating-life）",
   "author": "rockbenben",
   "license": "MIT",
   "type": "module",
