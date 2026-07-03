@@ -120,7 +120,7 @@ button:hover { background: var(--ink); color: var(--paper); }
   border: 1px solid rgba(122, 111, 95, 0.5); color: var(--dim); background: rgba(245, 241, 232, 0.5);
   padding: 4px 10px; font-size: 0.85rem; border-radius: 2px;
 }
-.reader--immersive ~ .lang-toggle, .cover--photo ~ .lang-toggle { color: #cfc5ad; background: rgba(26, 21, 14, 0.4); border-color: rgba(207, 197, 173, 0.4); }
+.reader--immersive ~ .lang-toggle, .cover--photo ~ .lang-toggle, .home--photo ~ .lang-toggle { color: #f0ead9; background: rgba(26, 21, 14, 0.55); border-color: rgba(240, 234, 217, 0.55); }
 .reader-viewtoggle {
   position: fixed; right: 14px; bottom: 14px; z-index: 10;
   border: 1px solid rgba(233, 225, 205, 0.45); color: #e9e1cd; background: rgba(26, 21, 14, 0.55);
