@@ -40,7 +40,7 @@ export const ch12: Chapter = {
     },
     {
       id: 'b1x',
-      photo: { file: 'ch12-e.jpg', credit: '重庆《扫荡报》头版（报道日本投降），1945 年 8 月 16 日 · 重庆扫荡报社 · Wikimedia Commons · 公有领域（当日报纸版面·非场景照）' },
+      photo: { file: 'ch12-e.jpg', credit: '重庆《扫荡报》头版（报道日本投降），1945 年 8 月 16 日 · 重庆扫荡报社 · Wikimedia Commons · 公有领域（当日报纸版面·非场景照）', url: 'https://commons.wikimedia.org/wiki/File:1945%E5%B9%B48%E6%9C%8816%E6%97%A5%E9%87%8D%E6%85%B6%E6%8E%83%E8%95%A9%E5%A0%B1.jpg' },
       source: '重庆八月十日夜先得乞降讯、彻夜狂欢，正式诏书犹待十五日正午——据当年重庆各报号外与《大公报》记者纪盛',
       art: 'hx-night',
       narrative:
@@ -94,7 +94,7 @@ export const ch12: Chapter = {
     },
     {
       id: 'b4',
-      photo: { file: 'ch12-d.jpg', credit: '奉天驿（沈阳站）站舍全景，1945 年前 · 佚名／满铁沿线明信片 · Wikimedia Commons · 公有领域（战前日本刊行·非该场景实拍）' },
+      photo: { file: 'ch12-d.jpg', credit: '奉天驿（沈阳站）站舍全景，1945 年前 · 佚名／满铁沿线明信片 · Wikimedia Commons · 公有领域（战前日本刊行·非该场景实拍）', url: 'https://commons.wikimedia.org/wiki/File:Mukden_Station_01.jpg' },
       art: 'hx-gate',
       narrative:
         '火车过山海关的时候，天刚亮，满车的人都挤到了窗口。关外的地一展一展铺开，高粱红了，跟你走的那一年一个颜色。进沈阳站，车还没有停稳，你已经认出来了——是那年的月台。站牌换过了，字是新写的；月台还是那个月台，父亲当年跟着车走了几步、又站住的地方，你隔着车窗一眼就认了出来。你提着箱子下车，在那个位置站了一会儿。出站的人流从你身边过去，没有人催你。十四年，三千里，你把最后这一步跨了下去。',

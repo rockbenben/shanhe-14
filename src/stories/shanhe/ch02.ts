@@ -15,7 +15,7 @@ export const ch02: Chapter = {
   beats: [
     {
       id: 'b1',
-      photo: { file: 'ch02-h.jpg', credit: '上海吴淞路（虹口）街景，1930 年代 · 亜東印画协会《亜東印画辑》第 10 册 · Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——上海租界街市氛围照，非该场景实拍' },
+      photo: { file: 'ch02-h.jpg', credit: '上海吴淞路（虹口）街景，1930 年代 · 亜東印画协会《亜東印画辑》第 10 册 · Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——上海租界街市氛围照，非该场景实拍', url: 'https://commons.wikimedia.org/wiki/File:%E4%BA%9C%E6%9D%B1%E5%8D%B0%E7%94%BB%E8%BC%AF_10_102_%22%E5%91%89%E6%B7%9E%E8%B7%AF%EF%BC%88%E4%B8%8A%E6%B5%B7%EF%BC%89%22.jpg' },
       art: 'sh-loft',
       narrative:
         '远房亲戚的亭子间在租界的弄堂里，一张床，一张桌，晚上再打个地铺，就是你的落脚处。白天你在弄堂口的烟纸店帮工：理货，记账，看铺子。上海话你听得半懂，人家问你是哪里人，你说沈阳，对方哦一声，便不再问了。夜里你给家里写信，写好了却没处寄——关外的邮路时通时断。信越攒越厚，你都收在枕头底下，睡觉的时候枕着。',
@@ -44,8 +44,9 @@ export const ch02: Chapter = {
     },
     {
       id: 'b2',
-      photo: { file: 'ch02-f.jpg', credit: '在上海北站一带守卫公共租界入口的英军，1932 · 佚名／波兰国家数字档案馆(NAC) · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch02-f.jpg', credit: '在上海北站一带守卫公共租界入口的英军，1932 · 佚名／波兰国家数字档案馆(NAC) · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:British_troops_defending_the_entrance_to_the_International_Settlement_near_Shanghai_North_Station.jpg' },
       source: '1 月 28 日夜 11 时半日军攻闸北，租界当即戒严、界口设障拦查，据工部局《1932 年上海中日武装冲突》备忘录及当年沪报',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/一·二八事變',
       art: 'sh-guns',
       narrative:
         '一月末的一个深夜，闸北方向响起了炮。这声音你认得——隔了一年多，它又追到了这里。租界的街上反倒热闹起来，人们披着衣裳出来看，说着各样口音的话。路口的铁门拉上了，巡捕把界内界外分成两个世界：界外火光冲天，界内电车照常收班回厂。你站在弄堂口望着那片红光，手一直插在袖筒里，没有拿出来。第二天铺子照常开门，只是过界来的人一天多过一天，拖家带口，像去年的你一样。',
@@ -53,8 +54,9 @@ export const ch02: Chapter = {
     },
     {
       id: 'b3',
-      photo: { file: 'ch02-d.jpg', credit: '一二八事变后被炸焚成废墟的上海商务印书馆，1932（日本明信片） · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch02-d.jpg', credit: '一二八事变后被炸焚成废墟的上海商务印书馆，1932（日本明信片） · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Commercial_Press_Ruins_Shanghai,_1932,_from_Japanese_postcard.jpg' },
       source: '东方图书馆 46 万册藏书尽焚，纸灰飘落十里外租界、焦页犹可辨出《辞源》《廿四史》，据张元济回忆及商务印书馆馆史',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/東方圖書館',
       art: 'sh-ash',
       narrative:
         '过了几天，天上开始落灰。起初你当是下雪，伸手接了一片，指头一捻就黑了——是纸灰，有的上面还看得出铅字的印子。后来有人在弄堂里拾着整片焦黄的，凑近了看，认得出是《辞源》上的书页。人们说，宝山路的商务印书馆先叫飞机炸了，这回烧的是东方图书馆，几十万册书，烧了整整一天，灰飞出去十里地。纸灰落在租界的屋顶上、晾衣杆上、行人的肩上，扫了又落。战事一起，到处缺人手：亲戚相熟的报馆赶着出号外，抄电讯的先生忙不过来；巷尾的收容所里，过界的难民一天多过一天。',
@@ -83,8 +85,9 @@ export const ch02: Chapter = {
     },
     {
       id: 'b3b',
-      photo: { file: 'ch02-e.jpg', credit: '一二八事变中避入法租界的上海华人，1932 · Mondial 通讯社／法国国家图书馆 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch02-e.jpg', credit: '一二八事变中避入法租界的上海华人，1932 · Mondial 通讯社／法国国家图书馆 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Chinois_se_r%C3%A9fugiant_dans_la_concession_fran%C3%A7aise_-_btv1b9026791z.jpg' },
       source: '一二八战起，闸北五六十万居民流离过界、赖学校庙宇改设的收容所栖身，据《淞沪抗日战役史料》及饶家驹 1932 年收容难民事迹',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/饒家駒',
       art: 'sh-ash',
       narrative:
         '收容所设在一处小学的课堂里，课桌摞到墙边，地上排开铺板。人是半夜里最多：过界的路一个白天走不完，铁门还要看巡捕的脸色。你提着风灯登记，姓名，籍贯，几口人。有的报完名字就蹲下去不动了；有的翻来覆去说房子，说走的时候锅还坐在灶上。一个老太太拉住你的袖子，问闸北的火几时能灭。你说快了，快了。烧水的大锅一夜没有停，你添了几回柴，天亮时看见满地的人挤着睡熟了，像一场大水退过去，把人搁在了这里。',
@@ -92,8 +95,9 @@ export const ch02: Chapter = {
     },
     {
       id: 'b4',
-      photo: { file: 'ch02-g.jpg', credit: '遭日军轰炸损毁的上海国立劳动大学，1932 年 3 月 · Meurisse 新闻社／法国国家图书馆 BnF Gallica · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch02-g.jpg', credit: '遭日军轰炸损毁的上海国立劳动大学，1932 年 3 月 · Meurisse 新闻社／法国国家图书馆 BnF Gallica · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:National_Labor_University_in_Shanghai_destroyed_by_bombing_(1932).jpg' },
       source: '停战后记者踏勘闸北：自宝山路至永兴路残垣断壁、无一完整屋宇，坍屋斜墙塞断路途，据《时事新报》战地记者报道（1932）',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/一·二八事變',
       art: 'sh-street',
       narrative:
         '打到三月头上，炮声停了。春天照旧来，租界里的梧桐照旧抽芽。有人回闸北去看老屋，回来的人都不大说话。你也跟着去过一回：街还是那几条街，门牌还钉在原处，可半条街只剩了墙；从宝山路望到永兴路，寻不出一间完整的屋子，坍下来的斜墙把马路塞断了好几处。路边的砖缝里还能拨出烧结成块的书页，一碰就散。修房的、寻人的、摆摊的，人都在动，只是比先前少了，也轻了——说话轻，走路也轻，像怕惊动了什么。',

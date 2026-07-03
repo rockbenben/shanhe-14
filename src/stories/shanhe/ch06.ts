@@ -25,7 +25,8 @@ export const ch06: Chapter = {
     {
       id: 'b1x',
       source: '南京难民区之筹设与收容施粥，据《拉贝日记》1937 年 11—12 月所记',
-      photo: { file: 'ch06-b.jpg', credit: '难民收容所内的施粥场景，1937 · 侵华日军南京大屠杀遇难同胞纪念馆藏 · Wikimedia Commons · 公有领域' },
+      sourceUrl: 'https://zh.wikipedia.org/wiki/拉贝日记',
+      photo: { file: 'ch06-b.jpg', credit: '难民收容所内的施粥场景，1937 · 侵华日军南京大屠杀遇难同胞纪念馆藏 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Porridge_factories_in_a_refugee_shelter_in_1937.jpg' },
       narrative:
         '候船的几天，你没有闲着。城西北一带，留下来的外国侨民和城里的士绅正在划一片难民区，说是仗真打进来的时候，好歹给走不了的人留一块地方。学校的空场上支起了席棚，粥厂先开了张：大锅一字排开，队排出去半条街，端碗的多是妇人、老人和孩子，轮到了，一人一勺，热气糊了满脸。管事的先生嗓子已经哑了，还在一遍一遍地喊：慢些，都有。你在队尾站了一阵，把锅数、棚数记在本子上。能走的人都在走；走不了的，往后就指望这几口锅了。',
       next: 'b1y',
@@ -53,7 +54,7 @@ export const ch06: Chapter = {
     {
       id: 'b2',
       source: '南京进入战时状态后船票黑市价高出原值十数倍、下关一票难求，据首都电话局话务领班王正元回忆',
-      photo: { file: 'ch06-d.jpg', credit: '携全部行李当街候立的难民，上海，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非下关码头实拍）' },
+      photo: { file: 'ch06-d.jpg', credit: '携全部行李当街候立的难民，上海，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非下关码头实拍）', url: 'https://commons.wikimedia.org/wiki/File:People_Waiting_(14596601461).jpg' },
       art: 'cj-dock',
       narrative:
         '开船的日子你到了下关。江边的人比江水还满，车马行李堵到码头一里地外，兵、职员、拖家带口的难民，人人手里攥着各样的凭证。船票早就断了市，黑市上一张票喊到原价的十几倍，照样有人抢。你的舱位是馆里排定的，票在内袋里焐了三天。挤到跳板跟前，一个抱孩子的妇人拦住你——不是拦，是问，声音低得几乎听不见：先生，能不能匀一个铺位，孩子病着，等不得下一班。她怀里的孩子烧得满脸通红，背上还睡着一个更小的。跳板上的水手在催，身后的人潮一阵一阵往前拥。',
@@ -75,7 +76,7 @@ export const ch06: Chapter = {
     },
     {
       id: 'b3',
-      photo: { file: 'ch06-e.jpg', credit: '铁栅栏后等待的人群，冬日的上海，1939 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非该场景实拍）' },
+      photo: { file: 'ch06-e.jpg', credit: '铁栅栏后等待的人群，冬日的上海，1939 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非该场景实拍）', url: 'https://commons.wikimedia.org/wiki/File:Crowd_Behind_Iron_Barricades_(14619962113).jpg' },
       art: 'cj-child',
       narrative:
         '码头上乱成一锅粥的时候，有人拽住了你的衣角。是个七八岁的孩子，棉袄大得不合身，袖口卷了好几道，脸冻得青紫，拽住了就不撒手。他说他叫小满，跟家里人挤散了，散了好几天了，问谁谁都摇头。他不哭——看得出是哭过了头，哭不动了，只是拽着你，眼睛一眨不眨地看你。不远处，难民救济会的先生支着张桌子登记失散的孩子，桌前排着队；江上的汽笛一声接一声地催。孩子的手很冷，攥着你衣角的那点力气，却大得出奇。',
@@ -97,7 +98,7 @@ export const ch06: Chapter = {
     },
     {
       id: 'b4',
-      photo: { file: 'ch06-f.jpg', credit: '停靠趸船码头的多层江轮与四围木船，上海，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非长江西撤实拍）' },
+      photo: { file: 'ch06-f.jpg', credit: '停靠趸船码头的多层江轮与四围木船，上海，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非长江西撤实拍）', url: 'https://commons.wikimedia.org/wiki/File:British_Ship_at_Dock_and_Sampans_(14413310629).jpg' },
       art: 'cj-rain',
       narrative:
         '船终于开了，逆着水，走得很慢。冬雨连天，江面灰白，两岸的山影在雨里若有若无。船过芜湖，过安庆，过九江，每一处码头都挤上来更多的人，甲板上转个身都难。舱里昼夜点着一盏小油灯，人们轮流凑在灯下看信、写信，没有人大声说话，船上的日子静得只剩机器声和雨声。你靠着舱壁，把过的码头一个个记在本子上。船上没有消息，只有传言；传言里那座留在身后的城，谁也不敢多问。江水在船底下不停地流，向东；船不停地走，向西。',
@@ -113,7 +114,7 @@ export const ch06: Chapter = {
     },
     {
       id: 'b5',
-      photo: { file: 'ch06-g.jpg', credit: '轮船与木船挤满江岸、人货拥塞的码头俯瞰，上海，1938 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非武汉码头实拍）' },
+      photo: { file: 'ch06-g.jpg', credit: '轮船与木船挤满江岸、人货拥塞的码头俯瞰，上海，1938 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非武汉码头实拍）', url: 'https://commons.wikimedia.org/wiki/File:Sampans_and_British_Ship_in_Harbor_(14599889335).jpg' },
       art: 'cj-wharf',
       narrative:
         '武汉到了，码头上照例是人山人海。安顿下来没多久，城陷的消息就传遍了三镇，报馆里没有人提，可人人都在等下文。又过了些日子，一个落雪的晚上，馆里的老校对领来一个人，说是从下关九死一生出来的，让你听听。那人四十上下，手一直拢在袖子里，讲话很慢，声音平得像在念别人的事。他讲了下关江边的那几天。不长，前后一袋烟的工夫。有几处他停下来，停很久，你们谁也没有催。讲完他说：先生是写报的，替我记下来吧，早晚有用得着的一天。那一夜你在灯下坐到天亮，稿纸铺开着，一个字也没有写出来。不是不想写——是你头一回知道，有些事，笔要慢慢才敢碰。',

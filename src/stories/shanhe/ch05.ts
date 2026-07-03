@@ -15,7 +15,7 @@ export const ch05: Chapter = {
   beats: [
     {
       id: 'b1',
-      photo: { file: 'ch05-f.jpg', credit: '为躲炮火涌过外白渡桥逃入租界的上海市民，1937 年 9 月 · 佚名 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch05-f.jpg', credit: '为躲炮火涌过外白渡桥逃入租界的上海市民，1937 年 9 月 · 佚名 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Citizens_of_Shanghai_fleeing_into_Shanghai_International_Settlement_-_Battle_of_Shanghai_(1937).png' },
       art: 'sz-band',
       narrative:
         '你到上海没几天，八月十三日，闸北的炮声又响了。这一回没有人隔岸观火——虹口、江湾、闸北，火线就在城市里蔓延。报馆发给你一条白布臂章，「战地记者」四个字是馆里先生亲笔写的，墨很浓。发臂章的先生说，戴上它子弹也不认得你，自己当心。五年前你在这里的弄堂口望过闸北的火光，手插在袖筒里没有拿出来；这一回你把臂章系紧，往火光的方向走。桥上迎面涌来逃难的人流，你逆着走，走得很慢，可没有停。',
@@ -24,7 +24,7 @@ export const ch05: Chapter = {
     {
       id: 'b1x',
       source: '八月中旬美国海军陆战队增援租界、难民潮涌入卡口，据当年沪上报刊报道',
-      photo: { file: 'ch05-b.jpg', credit: '增援守卫上海公共租界的美国海军陆战队，1937 年 8 月 · 美国海军历史与遗产司令部 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch05-b.jpg', credit: '增援守卫上海公共租界的美国海军陆战队，1937 年 8 月 · 美国海军历史与遗产司令部 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:NH_77800.jpg' },
       narrative:
         '租界成了大水当中的一座堤。通北面的路口都拉上了铁丝网，垒着沙袋，各国的兵把着卡口；八月中旬又开来一船美国的海军陆战队，钢盔擦得发亮，沿苏州河一线架起机枪——只朝里，不朝外。难民从卡口一天天涌进来，挑担的，抱孩子的，抬着老人的，巡捕数着人头放行。你在一处卡口外站了一个下午：铁丝网这边，电车照常打铃；那一边，天照常起烟。五年前把界内界外分成两个世界的那道铁门，如今把整座城拦腰分开了。',
       next: 'b1y',
@@ -32,7 +32,7 @@ export const ch05: Chapter = {
     {
       id: 'b1y',
       source: '日军援兵八月下旬起在吴淞、川沙口一带登陆，据当年沪上战讯报道',
-      photo: { file: 'ch05-c.jpg', credit: '淞沪会战中登陆作战的日本海军陆战队，1937 年 8 月 · 日本海军省 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch05-c.jpg', credit: '淞沪会战中登陆作战的日本海军陆战队，1937 年 8 月 · 日本海军省 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Japanese_Special_Naval_Landing_Forces_in_Battle_of_Shanghai_1937.jpg' },
       narrative:
         '八月下旬起，坏消息都打江口方向来：敌人的援兵在吴淞、川沙口一带登了陆，军舰的炮从江面上一路轰进来，杨树浦的火烧了几天几夜。分社的墙上钉着一张地图，编辑先生每天按战讯挪那几枚图钉，图钉一天一天往里挪。有跑船的人说，江口外的敌舰排开去望不到头，运兵船一艘接着一艘。你把这些都记下来，末了在本子上描了一道江岸线，把登陆的地名一个一个标上去。你头一回觉得，地图上的一寸，原来这么沉。',
       next: 'b2',
@@ -40,7 +40,8 @@ export const ch05: Chapter = {
     {
       id: 'b2',
       source: '罗店反复争夺、「苦战旬日，异常惨烈」，据第十八军《罗店十日战记》（1937 年 9 月油印）',
-      photo: { file: 'ch05-e.jpg', credit: '戴防毒面具、部署于上海郊外的中国守军班组，1937 · 佚名 · Wikimedia Commons · 公有领域' },
+      sourceUrl: 'https://zh.wikipedia.org/wiki/淞滬會戰',
+      photo: { file: 'ch05-e.jpg', credit: '戴防毒面具、部署于上海郊外的中国守军班组，1937 · 佚名 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:A_Chinese_squad_deployed_outside_Shanghai.jpg' },
       art: 'sz-front',
       narrative:
         '九月里你随运输的卡车去过一趟罗店方向。车到嘉定不能再往前，剩下的路，你跟着担架队走。都说前头那个镇子夺回来又丢，丢了再夺，军里油印的战记上只有八个字：苦战旬日，异常惨烈。迎面抬下来的伤兵一程接一程，绷带是旧布撕的，血洇透了，又糊上尘土。路边歇着一队往上开的新兵，南方口音，脸还是少年人的脸，绑腿打得很整齐。带队的军官借你的笔，替一个不识字的兵写了张家信的封皮，写完把笔还你：往北三里就是罗店，记者先生，写的时候，把这个地名写对。回程的车上你打开采访簿，把「罗店」两个字描了一遍，又描了一遍。',
@@ -70,7 +71,8 @@ export const ch05: Chapter = {
     {
       id: 'b4',
       source: '南岸民众隔河声援、以大黑板报敌兵动向、慰劳吃食堆满路口入夜运送过河，据四行仓库保卫战记载与当年《申报》报道',
-      photo: { file: 'ch05-d.jpg', credit: '炮火下的四行仓库，墙上「四行信托部上海分部仓库」字样可辨，1937 年 10 月 · 佚名 · Wikimedia Commons · 公有领域' },
+      sourceUrl: 'https://zh.wikipedia.org/wiki/四行倉庫保衛戰',
+      photo: { file: 'ch05-d.jpg', credit: '炮火下的四行仓库，墙上「四行信托部上海分部仓库」字样可辨，1937 年 10 月 · 佚名 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Sihang_warehouse_under_fire.jpg' },
       art: 'sz-river',
       narrative:
         '十月末的一个下午，你挤在苏州河南岸的人群里。对岸那座灰扑扑的仓库还在打，墙上的弹孔看得清清楚楚，枪声一阵紧似一阵。南岸这边人山人海，房顶上、电线杆上都是人，有人举着望远镜，有人喊哑了嗓子；几个学生把一块大黑板抬上房顶，看清对岸敌兵朝哪边聚，就用粉笔写成大字，朝仓库那面高高举起。人们说楼里有八百人，也有人说没有那么多——人数没有谁说得准，可每一声枪响，河这边就有人跟着攥一把拳。路口上堆着市民送来的吃食和药，说是入夜再设法运过河去；一个卖梨的小贩把整担梨也送了来，说什么也不肯收钱。你站在人群里记着，写字的手一直在抖，你由它抖。',
@@ -79,6 +81,7 @@ export const ch05: Chapter = {
     {
       id: 'b4x',
       source: '女童子军隔夜献旗、二十九日晨国旗升上四行仓库楼顶，据 1937 年 10 月 29 日《申报》《立报》报道',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/四行倉庫保衛戰',
       art: 'sz-river',
       narrative:
         '第二天你又去了。天刚亮，河边已经围满了人。忽然有人指着仓库楼顶喊了一声——一面旗升起来了，就在弹孔累累的楼顶上，迎着早晨的风。说是隔夜有个女童子军把旗送过了河；怎么送进去的，人群里一时传着好几种说法，可旗就在那里，谁都看得见。邻近的房顶上挤满了人，不知谁先喊起来，喊声顺着河面滚过去，一浪接一浪。你挤在人堆里，本子摊开在手上，半天没有落一个字。可稿子总是要写的，今晚就要发。',
@@ -99,7 +102,7 @@ export const ch05: Chapter = {
     },
     {
       id: 'b5',
-      photo: { file: 'ch05-g.jpg', credit: '上海南市方向腾起的浓烟，黄浦江上停泊军舰与轮驳，1937 年 11 月 6 日 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非报馆西撤实拍）' },
+      photo: { file: 'ch05-g.jpg', credit: '上海南市方向腾起的浓烟，黄浦江上停泊军舰与轮驳，1937 年 11 月 6 日 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非报馆西撤实拍）', url: 'https://commons.wikimedia.org/wiki/File:Nantao_Blazing_(14619960513).jpg' },
       art: 'sz-ash',
       narrative:
         '十一月初，西撤的令下来了：战线撑不住，报馆迁武汉，分批走，能带的东西有限。你收拾自己的桌子，其实没有什么可收拾的——几本采访簿，一沓没有发出去的稿子，半瓶墨水。稿纸最占分量，你蹲在地上一沓一沓地拣，拣出非带不可的，其余的送进天井烧掉。纸灰打着旋飘起来，落在你的肩上。五年前落满这座城的纸灰，如今轮到你自己来烧。你把拣出的那一沓用油布包了三层，塞进包袱最里面，贴着背。',

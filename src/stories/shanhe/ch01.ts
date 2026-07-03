@@ -15,7 +15,7 @@ export const ch01: Chapter = {
   beats: [
     {
       id: 'b1',
-      photo: { file: 'ch01-g.jpg', credit: '奉天（沈阳）城门外的街市，约 1900–1930 年代 · 国际传教摄影档案（南加州大学数字图书馆，苏格兰长老会 Dugald Christie 相关幻灯片）· Wikimedia Commons · 公有领域（原幻灯片经手工上色，已裁去镜框题字并转灰度）——同城时代氛围照，非事变夜实拍' },
+      photo: { file: 'ch01-g.jpg', credit: '奉天（沈阳）城门外的街市，约 1900–1930 年代 · 国际传教摄影档案（南加州大学数字图书馆，苏格兰长老会 Dugald Christie 相关幻灯片）· Wikimedia Commons · 公有领域（原幻灯片经手工上色，已裁去镜框题字并转灰度）——同城时代氛围照，非事变夜实拍', url: 'https://commons.wikimedia.org/wiki/File:Street_Outside_Mukden_Gate,_Mukden,_Manchuria,_ca._1882-ca._1936_(imp-cswc-GB-237-CSWC47-LS8-007).jpg' },
       art: 'sy-eve',
       narrative:
         '九月十八，夜里已经有些凉了。父亲坐在灯下修那支旧钢笔，笔尖歪了，他用小钳子一点一点地正，正一下，举到灯前看一眼。母亲在炕沿给你缝夹衣，线短了，她把针别在襟上，就着灯光续线。你趴在桌角写明天要交的作文。院里的老槐树落了几片叶子，打更的从巷口过去，梆子敲了两下。谁也没有说话。这样的夜晚过了许多年，你以为还会再过许多年。',
@@ -23,8 +23,9 @@ export const ch01: Chapter = {
     },
     {
       id: 'b2',
-      photo: { file: 'ch01-d.jpg', credit: '奉天近郊被日军飞机投弹焚烧的农舍，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch01-d.jpg', credit: '奉天近郊被日军飞机投弹焚烧的农舍，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Incendie_de_fermes_%C3%A0_Moukden,_par_les_torpilles_lanc%C3%A9es_par_des_avions_japonais_-_btv1b9047724d.jpg' },
       source: '事变夜柳条湖一声爆炸，城北民家窗瓦震响、有人自炕上震落，据沈阳居民胡广文等亲历口述（沈阳「九一八」历史博物馆征集）',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/九一八事變',
       art: 'sy-fire',
       narrative:
         '后半夜之前，地皮忽然沉沉一震，像远处有人推倒了一座山。窗纸嗡嗡地响，房上的瓦也跟着哗啦了一阵，你的笔尖在纸上顿出一个墨点。接着是枪声，起初稀，后来密，都从北面来。父亲把灯捻小了，母亲的针停在半空。巷子里有人跑动，狗叫成一片，又有人压着嗓子在喊什么。北面的天慢慢红起来，红得不像谁家失火，倒像天自己在烧。',
@@ -45,8 +46,9 @@ export const ch01: Chapter = {
     },
     {
       id: 'b3',
-      photo: { file: 'ch01-e.jpg', credit: '日军自张学良将军官邸向外射击，奉天，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch01-e.jpg', credit: '日军自张学良将军官邸向外射击，奉天，1931 · Meurisse 新闻社／法国国家图书馆 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Soldats_japonais_tirant_du_palais_du_g%C3%A9n%C3%A9ral_Chang_Hsueh_Hiang_-_japonais_sous_Moukden_-_btv1b9047696j.jpg' },
       source: '日军 19 日晨即占沈阳，街头张贴事先备妥、落款 9 月 19 日的关东军司令官布告——布告实物存沈阳「九一八」历史博物馆',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/九一八事變',
       art: 'sy-dawn',
       narrative:
         '那一夜是怎么熬过去的，你后来记不真了，只记得天亮得很慢，北面的红光到后半夜也没有暗下去。清早的街上安静得反常，安静里又有一种新的声音——皮靴，成队的皮靴。街口站着穿黄呢军装的兵，说的话你一句听不懂。墙上连夜贴出了告示，浆糊还没干透，人们隔着半条街看，没有人念出声。卖豆腐的没有出摊，学校的方向没有钟声。城还是那座城，一夜之间，路都不认得你了。',
@@ -104,7 +106,7 @@ export const ch01: Chapter = {
     },
     {
       id: 'b5',
-      photo: { file: 'ch01-h.jpg', credit: '奉天（沈阳）东北城角的城墙与角楼，约 1900–1930 年代 · 国际传教摄影档案（南加州大学数字图书馆）· Wikimedia Commons · 公有领域（原幻灯片经手工上色，已裁框转灰度）——对应「城墙退过去」一拍的同城氛围照，非皇姑屯车站实拍' },
+      photo: { file: 'ch01-h.jpg', credit: '奉天（沈阳）东北城角的城墙与角楼，约 1900–1930 年代 · 国际传教摄影档案（南加州大学数字图书馆）· Wikimedia Commons · 公有领域（原幻灯片经手工上色，已裁框转灰度）——对应「城墙退过去」一拍的同城氛围照，非皇姑屯车站实拍', url: 'https://commons.wikimedia.org/wiki/File:North_east_corner_of_the_city_wall_and_moat,_Mukden,_Manchuria,_ca._1882-ca._1936_(imp-cswc-GB-237-CSWC47-LS8-005).jpg' },
       source: '事变后皇姑屯车站挤满逃难人群、人山人海，据东北大学学生徐景明口述',
       art: 'sy-station',
       narrative:
@@ -113,7 +115,7 @@ export const ch01: Chapter = {
     },
     {
       id: 'b5x',
-      photo: { file: 'ch01-f.jpg', credit: '「天下第一关」山海关城楼，1920–30 年代 · 亜東印画协会《亜東印画辑》 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch01-f.jpg', credit: '「天下第一关」山海关城楼，1920–30 年代 · 亜東印画协会《亜東印画辑》 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:%E4%BA%9C%E6%9D%B1%E5%8D%B0%E7%94%BB%E8%BC%AF_%E4%BA%AC%E5%A4%A7023_043_%22%E5%A4%A9%E4%B8%8B%E7%AC%AC%E4%B8%80%E9%97%9C%EF%BC%88%E5%B1%B1%E6%B5%B7%E9%97%9C%EF%BC%89%22.jpg' },
       source: '入关列车的军警盘查（查帽箍印、看手心茧），据当年流亡学生回忆记述',
       art: 'sy-station',
       narrative:

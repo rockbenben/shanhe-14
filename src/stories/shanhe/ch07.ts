@@ -18,6 +18,7 @@ export const ch07: Chapter = {
     {
       id: 'b1',
       source: '一九三八年四月七日夜武汉三镇火炬游行、「火照红了长江两岸」，据郭沫若《洪波曲》所记',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/郭沫若',
       art: 'wh-news',
       narrative:
         '四月里的一个傍晚，号外满街飞。台儿庄——报童一路喊过去，嗓子都劈了。你们馆里也赶印了一版，你下班出来，街口已经买不着，还是一个不认识的人把手里那张分给你看的。爆竹从街这头响到街那头，硝烟味盖过了江风。入夜三镇都是火炬游行的队伍，火光把长江两岸都照红了，歌声、爆竹声、口号声搅在一处，江轮在码头上一齐拉笛。你站在人堆里，把那张借来的号外看了三遍，字都认得，就是不敢信。七年了，你头一回在报纸上看见这样的标题。你想把它抄下来，摸出笔，手抖得落不了纸。',
@@ -26,7 +27,8 @@ export const ch07: Chapter = {
     {
       id: 'b1x',
       source: '据范长江、陆诒一九三八年四月自徐州赴台儿庄前线的战地通讯与回忆',
-      photo: { file: 'ch07-b.jpg', credit: '攻入台儿庄、与日军展开巷战的中国军队，1938 · 佚名 · Wikimedia Commons · 公有领域' },
+      sourceUrl: 'https://zh.wikipedia.org/wiki/范長江',
+      photo: { file: 'ch07-b.jpg', credit: '攻入台儿庄、与日军展开巷战的中国军队，1938 · 佚名 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Battle_of_Taierzhuang.jpg' },
       narrative:
         '没过几日，特派员从徐州前线发回的通讯到了馆里，你帮着誊清。通讯里写的是巷战：一条街一条街地争，白天丢了，夜里再摸回去，逐屋掷弹，短兵相接，一座庄子打剩了断墙。随通讯寄来几张照片，制版的师傅捏着放大镜看了半天，谁也不催他。照片上的兵贴着墙根往前走，刺刀迎着光，脚底下全是碎砖。你誊到末一段，笔停了停——写通讯的人说，他是踩着瓦砾进的庄子，砖头上还留着火的温度。你把这一句原样誊了上去，一个字没有动。',
       next: 'b2',
@@ -40,7 +42,7 @@ export const ch07: Chapter = {
     },
     {
       id: 'b2x',
-      photo: { file: 'ch07-d.jpg', credit: '无锡青年抗敌工作团在汉口街头演剧、市民围观，1938 · 《东方画刊》1938 年第 1 卷第 4 期 · Wikimedia Commons · 公有领域（非七七献金台实拍）' },
+      photo: { file: 'ch07-d.jpg', credit: '无锡青年抗敌工作团在汉口街头演剧、市民围观，1938 · 《东方画刊》1938 年第 1 卷第 4 期 · Wikimedia Commons · 公有领域（非七七献金台实拍）', url: 'https://commons.wikimedia.org/wiki/File:1938_抗戰戲劇：無錫靑年抗敵工作團在漢口街頭演劇.jpg' },
       source: '据一九三八年七月武汉「七七」献金运动的报道与记载——全城设献金台，车夫倾尽一日车资',
       art: 'wh-news',
       narrative:
@@ -71,7 +73,8 @@ export const ch07: Chapter = {
     {
       id: 'b3',
       source: '田家镇要塞 1938 年 9 月末失守后武汉加紧撤运、《新华日报》坚持出报至 10 月 24 日撤离前夕，据武汉报史记载',
-      photo: { file: 'ch07-c.jpg', credit: '汉口码头（武汉轮渡），1929 · 《公用汇刊》 · Wikimedia Commons · 公有领域——同地域码头旧影，非该场景实拍' },
+      sourceUrl: 'https://zh.wikipedia.org/wiki/新華日報',
+      photo: { file: 'ch07-c.jpg', credit: '汉口码头（武汉轮渡），1929 · 《公用汇刊》 · Wikimedia Commons · 公有领域——同地域码头旧影，非该场景实拍', url: 'https://commons.wikimedia.org/wiki/File:1929%E5%B9%B4_%E6%AD%A6%E6%B1%89%E8%BD%AE%E6%B8%A1_%E6%B1%89%E5%8F%A3%E7%A0%81%E5%A4%B4.png' },
       art: 'wh-pier',
       narrative:
         '秋天说到就到。下游田家镇要塞失守的消息传来，城里的机关一处一处地搬空，码头上昼夜装船，机器、档案、学校的仪器，连医院的病床都拆了往船上抬。馆里的名单又一次排到你面前——这一回你不是新人了，先生问你：先走，还是留下？先走的随难民船入川；留下的跟最后一批走，把这座城是怎么一天一天撤空的写完，登在还没有停的报上。江边的汽笛没日没夜地叫。你看着名单上自己的名字，想起七年间你走过的每一个码头。',
@@ -93,7 +96,7 @@ export const ch07: Chapter = {
     },
     {
       id: 'b4',
-      photo: { file: 'ch07-e.jpg', credit: '泊满轮船、货船与舢板的上海港，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非长江西撤实拍）' },
+      photo: { file: 'ch07-e.jpg', credit: '泊满轮船、货船与舢板的上海港，1937 · Victor Sassoon／SMU 图书馆藏 · Flickr Commons · 无已知版权限制（非长江西撤实拍）', url: 'https://commons.wikimedia.org/wiki/File:Harbor_of_Shanghai_with_Warship_and_Freighters_(14599259762).jpg' },
       art: 'wh-lights',
       narrative:
         '船是夜里开的。江面上全是西行的船，轮船拖着木驳，一串连一串，灯火管制，谁也不点灯，只听得见机器声和水声。出了城好远，你回到甲板上往东看——武汉的灯火只剩一线了，贴着水，像灭剩的一炷香。舱里有人低声说，头前从上海撤，再从南京撤，这回从武汉撤，下一回呢？没有人接话。你把大衣裹紧，摸了摸贴身口袋里的采访簿，写满的又是厚厚一本。江水在船底下响，往东流。你往西去。',

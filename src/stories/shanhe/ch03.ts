@@ -15,7 +15,7 @@ export const ch03: Chapter = {
   beats: [
     {
       id: 'b1',
-      photo: { file: 'ch03-d.jpg', credit: '北平的小街，约 1930–1939 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch03-d.jpg', credit: '北平的小街，约 1930–1939 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Small_street_in_Peking,_by_unknown_photographer,_c._1930-1939,_from_the_Digital_Commonwealth,_Vincent_Starrett_Collection_-_commonwealth_1j92jz970.jpg' },
       art: 'bp-dust',
       narrative:
         '三年后，你在北平。报馆的分社收你打杂：剪报，跑腿，给编辑先生送校样，得空就溜去沙滩一带的课堂旁听。古都的日子像慢了半拍，可华北的空气一年比一年紧——报上的地名越来越近，先是关外，再是滦东，后来就是城外的县份。同学中间传着油印的小册子，茶馆里说话的人声音越压越低。这年冬天来得早，风一起，满街黄土，人人缩着脖子走路，像在等一件躲不开的事。',
@@ -23,8 +23,9 @@ export const ch03: Chapter = {
     },
     {
       id: 'b1x',
-      photo: { file: 'ch03-e.jpg', credit: '北平街头的骆驼，1935–1938 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch03-e.jpg', credit: '北平街头的骆驼，1935–1938 · 佚名／Vincent Starrett 收藏·Digital Commonwealth · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Camel_in_a_Peking_street,_by_an_unknown_photographer,_1935-1938,_from_the_Digital_Commonwealth,_Vincent_Starrett_Collection_-_commonwealth_gf06jv95p.jpg' },
       source: '1935 年 11 月北平各校秘密成立学联、串联择机行动，据中共中央党史和文献研究院《一二·九运动纪事》',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/一二·九运动',
       art: 'bp-dust',
       narrative:
         '入冬以后，同学的公寓里常常挤满人，炉子上烤着窝头，一屋子的烟气。争的总是那一件事：华北眼看要「自治」了，书还念不念得成？有人拍桌子，说读书人只剩一张嘴一支笔，再不出声，往后连出声的地方都没有了；有人冷冷地顶回去：游行顶什么用，白白叫人抓了去；也有人不说话，只是把炉门拨得哗哗响。听说各校已经在暗里串联，选了代表，攒着一股劲，只等一个日子。你坐在靠窗的一角，窗纸叫风打得一鼓一鼓的。',
@@ -46,6 +47,7 @@ export const ch03: Chapter = {
     {
       id: 'b2',
       source: '12 月 8 日夜各校代表连夜通传次晨行动，燕大学生当夜将宣言、路线与集合点告知斯诺夫妇代为传报外国报界，据斯诺夫妇记述',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/一二·九运动',
       art: 'bp-note',
       narrative:
         '十二月八日夜里，同学来敲你的门。他进来先哈了口白气，从棉袍里摸出一张叠得极小的纸条：明天一早，各校在城里集合，去新华门请愿——要说的是什么，你们彼此都清楚，就是报上不许排出来的那几个字。他说，去不去你自己定，明早在老地方等你，等到辰时不来就走。他走了以后，你在屋里站了很久。桌上摊着分社明天要发的电稿，窗外的北风刮了一夜。',
@@ -68,6 +70,7 @@ export const ch03: Chapter = {
     {
       id: 'b3a',
       source: '12·9 当日王府井南口遭水龙、大刀、皮鞭拦打，湿衣当街结成冰甲、女学生发梢挂冰，据《一二九运动回忆录》辑录的亲历者回忆',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/一二·九运动',
       art: 'bp-street',
       narrative:
         '队伍比你想的长，也比你想的静，脚步声一阵一阵，呼声也一阵一阵。走到王府井南口，前头忽然乱了——军警的水龙横扫过来。十二月的水，浇在身上像鞭子，你结结实实挨了一柱，棉袍当场硬了半边，走两步就咔咔地响；前排有女学生的头发浇透了，结成一绺一绺的冰。巷口列着挎大刀的队伍，刀背在冬天的太阳底下白晃晃的。人群退下来的时候，一条横幅被扯落在地，你弯腰撕下一角，塞进怀里。布是湿的，贴着心口，一路慢慢结成了冰。回去的路上没有人说话，可谁的眼睛都是亮的。',
@@ -76,6 +79,7 @@ export const ch03: Chapter = {
     {
       id: 'b3a2',
       source: '一二·一六天桥市民大会实录——万人合流、决议反对冀察政务委员会',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/一二·九运动',
       art: 'bp-dust',
       narrative:
         '十二月十六，你又去了。这一回队伍更大，学生之外添了许多市民，往天桥去。破晓前各校就出了门，绕开戒严的街口，专拣小巷走，墙也翻了几道。天桥的空场上人一层一层地合拢来，怕有上万，口号从场子这头滚到那头，像风过麦地。会上一条一条地通过决议，反对的就是那个眼看要成立的委员会。散场以后照例是水龙和棍子，你的棉袍又湿了半边。可过后你听说：那个委员会，到底没能按原定的日子成立。回去的路上你走得很慢。',

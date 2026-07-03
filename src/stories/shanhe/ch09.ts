@@ -32,8 +32,9 @@ export const ch09: Chapter = {
     },
     {
       id: 'b1y',
-      photo: { file: 'ch09-b.jpg', credit: '《国民政府对日宣战布告》，1941 年 12 月 9 日 · 中华民国国民政府（重庆） · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch09-b.jpg', credit: '《国民政府对日宣战布告》，1941 年 12 月 9 日 · 中华民国国民政府（重庆） · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:1941_Chinese_War_Declaration_vs_Japan.jpg' },
       source: '据一九四一年十二月九日《国民政府对日宣战布告》',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:1941_Chinese_War_Declaration_vs_Japan.jpg',
       art: 'dx-key',
       narrative:
         '第二天，宣战的布告到了：昭告中外，正式对日宣战；所有中日间的条约、协定、合同，一律废止。电讯房把全文接下来，一个字一个字地校，校完了没有人先起身。你把它从头读了一遍——开衅四年有半，仗打了几千里地，到这一日，纸面上才算有了宣战两个字。街口贴布告的墙前围满了人，识字的念给不识字的听，念到一律废止，人群里有人重重地应了一声，像是替谁把一口气吐了出来。',
@@ -54,7 +55,7 @@ export const ch09: Chapter = {
     },
     {
       id: 'b2',
-      photo: { file: 'ch09-c.jpg', credit: '日军特别陆战队占领美国海军炮舰「威克」号（USS Wake PR-3），上海，1941 年 12 月 8 日 · 美国海军（NHHC · NH 96568） · Wikimedia Commons · 公有领域（美国政府作品）' },
+      photo: { file: 'ch09-c.jpg', credit: '日军特别陆战队占领美国海军炮舰「威克」号（USS Wake PR-3），上海，1941 年 12 月 8 日 · 美国海军（NHHC · NH 96568） · Wikimedia Commons · 公有领域（美国政府作品）', url: 'https://commons.wikimedia.org/wiki/File:Japanese_soldiers_aboard_USS_Wake_(PR-3)_at_Shanghai,_China,_8_December_1941_(NH_96568).jpg' },
       source: '一九四一年十二月八日晨日军进占公共租界，《申报》等报馆当日被封停——据上海孤岛新闻史料',
       art: 'dx-letter',
       narrative:
@@ -77,6 +78,7 @@ export const ch09: Chapter = {
     {
       id: 'b2x',
       source: '据郑振铎《最后一课》——一九四一年十二月八日，暨南大学',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/鄭振鐸',
       art: 'dx-letter',
       narrative:
         '上海的消息还在陆陆续续地来，多半绕了远路，过了好些人的口。有一件事你听人说了两遍，两遍说得一字不差：八日那天清早，有大学召集各院开会，议定了一条——望见一个日本兵或一面日本旗经过校门，即刻停课，全校关闭。那天上午的课照常上，先生讲得比平日更清朗。十点半，载兵的车开过校门，先生合上书，说，现在下课。满堂的人一齐起立，没有一点声音。你听完了也没有说话。过了一会儿，你把它一字一字记下来，写到停课两个字，笔在纸上停了很久。',

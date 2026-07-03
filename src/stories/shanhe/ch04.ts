@@ -15,8 +15,9 @@ export const ch04: Chapter = {
   beats: [
     {
       id: 'b1',
-      photo: { file: 'ch04-f.jpg', credit: '前门（正阳门）大街街景，约 1920 年代 · 纽约公共图书馆(NYPL) · Wikimedia Commons · 公有领域（原为彩色网点明信片，已裁去白边题字并转灰度）——战前北平街市氛围照，非该场景实拍' },
+      photo: { file: 'ch04-f.jpg', credit: '前门（正阳门）大街街景，约 1920 年代 · 纽约公共图书馆(NYPL) · Wikimedia Commons · 公有领域（原为彩色网点明信片，已裁去白边题字并转灰度）——战前北平街市氛围照，非该场景实拍', url: 'https://commons.wikimedia.org/wiki/File:Chien_Men_Street,_Peking_(NYPL_Hades-2359344-4043700).jpg' },
       source: '七七前日军自五月起在宛平近郊频繁演习，由昼而夜、由虚弹而实弹，据宛平县长王冷斋《卢沟桥事变始末》',
+      sourceUrl: 'https://zh.wikipedia.org/wiki/七七事變',
       art: 'lg-card',
       narrative:
         '一年半以后，你领到了自己的记者证：一张硬纸卡，贴着照片，压着钢印，你的名字头一回端端正正印在上面。编辑先生说，往后跑外勤，腿要勤，眼要尖，笔要稳。这年七月的北平热得反常，槐花早谢尽了，蝉声把人叫得心里发空。西南郊的演习一天比一天勤，从白天演到深夜，先前放的是虚弹，近来听人说连实弹都用上了，报上的字眼却一天比一天含混。茶馆里老人摇着蒲扇说，不碍的，这些年哪一年不折腾。你把记者证收进内袋。天太热，硬纸卡贴着胸口，一会儿就焐热了。',
@@ -24,7 +25,7 @@ export const ch04: Chapter = {
     },
     {
       id: 'b2',
-      photo: { file: 'ch04-e.jpg', credit: '二十九军在卢沟桥头向侵略者还击，1937 年 7 月 · 佚名／《中华》(上海)1939 年第 79 期 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch04-e.jpg', credit: '二十九军在卢沟桥头向侵略者还击，1937 年 7 月 · 佚名／《中华》(上海)1939 年第 79 期 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:1937_%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%86%9B%E5%9C%A8%E5%8D%A2%E6%B2%9F%E6%A1%A5%E5%A4%B4%E5%90%91%E4%BE%B5%E7%95%A5%E8%80%85%E7%9A%84%E8%BF%98%E5%87%BB.jpg' },
       art: 'lg-wire',
       narrative:
         '七月八日天没亮，同事来砸你的门：出事了，卢沟桥。分社里灯火通明，电话铃一个压着一个。消息一条条对拢来：头天夜里，日军在卢沟桥边演习，说丢了一个兵，要进宛平城搜，守军没有应；后半夜枪响了，跟着是炮，宛平的城墙上落了弹。电讯纸摊满一桌，编辑先生的烟一支接一支。你抓起采访簿往城南跑。广安门一带已经戒严，只望得见西南方向的天，灰蒙蒙的，什么也看不出来。你在路边站了半晌，把看见的和没看见的，都记在本子上。',
@@ -32,7 +33,7 @@ export const ch04: Chapter = {
     },
     {
       id: 'b2x',
-      photo: { file: 'ch04-d.jpg', credit: '坚守卢沟桥的中国士兵，沙袋工事间可见桥栏石狮，1937 年 7 月 · 佚名／《中华》(上海)1937 年第 56 期 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch04-d.jpg', credit: '坚守卢沟桥的中国士兵，沙袋工事间可见桥栏石狮，1937 年 7 月 · 佚名／《中华》(上海)1937 年第 56 期 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:1937_%E5%8D%A2%E6%B2%9F%E6%A1%A5%E7%9A%84%E5%AE%88%E5%86%9B.jpg' },
       source: '赴长辛店、卢沟桥一线采访所见，据方大曾战地通讯《卢沟桥抗战记》（上海《世界知识》1937 年 8 月）',
       art: 'lg-wire',
       narrative:
@@ -42,14 +43,14 @@ export const ch04: Chapter = {
     {
       id: 'b2y',
       source: '城内堆垒沙袋设防、七月下旬又连夜撤除，据当年平津报刊记载',
-      photo: { file: 'ch04-b.jpg', credit: '北平城内堆垒沙袋、备战日军进攻的第29军士兵，1937 年 7 月 · 佚名 · Wikimedia Commons · 公有领域' },
+      photo: { file: 'ch04-b.jpg', credit: '北平城内堆垒沙袋、备战日军进攻的第29军士兵，1937 年 7 月 · 佚名 · Wikimedia Commons · 公有领域', url: 'https://commons.wikimedia.org/wiki/File:Soldiers_of_the_Chinese_29th_Route_Army_in_Beijing_preparing_for_battle_with_the_Japanese_Army.png' },
       narrative:
         '城里也在变样。各处城门口垒起了沙袋，一层压一层，垛得齐人高，架枪的兵站在垛口后头，钢盔上罩着布。拉洋车的绕着走，卖冰核的照旧吆喝，只是嗓门低了。你把沙袋的层数、街口的岗数，一样一样记下来。到七月下旬的一天，忽然又传下话来：局面缓和了。当夜沙袋一垛一垛地撤，兵们不声不响地扛。第二天，戏园子照旧开了锣。你站在空出来的街口，看沙袋留下的一圈圈印子。心里那点不踏实，比看见沙袋的时候更重了。',
       next: 'b3',
     },
     {
       id: 'b3',
-      photo: { file: 'ch04-g.jpg', credit: '北支事变（平津作战）中天津日租界内的巷战，1937 年 7 月 · 佚名（战前日本刊行照片）· Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——同期平津战事实拍，非南苑实拍' },
+      photo: { file: 'ch04-g.jpg', credit: '北支事变（平津作战）中天津日租界内的巷战，1937 年 7 月 · 佚名（战前日本刊行照片）· Wikimedia Commons · 公有领域（PD-Japan-oldphoto）——同期平津战事实拍，非南苑实拍', url: 'https://commons.wikimedia.org/wiki/File:Street_battle_in_Tianjin_-_July_1937.png' },
       art: 'lg-stay',
       narrative:
         '半个月里，消息像潮水，一天三变：今天说谈妥了，明天城外又打起来。到七月末，南苑方向的炮响了一整天，城里谣言四起，车站挤满了人。报馆定了章程：分社南撤，愿走的即刻动身，路费报销。编辑先生问到你，你低头看自己那本采访簿，一半页码写的都是这座城的街名。走，是迟早的事；可怎么走，什么时候走，这一回轮到你自己定。',
