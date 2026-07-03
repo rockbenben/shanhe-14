@@ -11,7 +11,8 @@ export const ch10: Chapter = {
   epigraph: '饿着肚纳粮，卖了田纳粮。——《大公报》社评《看重庆，念中原！》（1943）',
   historyNote:
     '1942 年河南大旱继以蝗灾，受灾三千万人，死亡近三百万。1943 年 1 月《大公报》记者张高峰自叶县寄出长篇通讯《饥饿的河南》，总编辑王芸生改题《豫灾实录》，2 月 1 日刊于重庆版，次日配发社评《看重庆，念中原！》，报纸旋被勒令停刊三日，张高峰在豫被捕；同年二三月间，美国《时代》周刊记者赴豫采访，自洛阳发出电报绕过新闻检查，3 月 22 日报道刊出。本章据《大公报》史料及当事报人回忆。',
-  artCredit: '本章有意不配影像——当年的灾情影像或被封锁、或版权未清，影像的缺席本身即是这段历史的一部分。',
+  art: 'ch10.jpg',
+  artCredit: '中国民工拉石碾平整机场跑道，1944 年 · 美国陆军 · Wikimedia Commons · 公有领域（1944 年中国机场工地，非河南实拍）',
   entry: 'b1',
   beats: [
     {
@@ -41,6 +42,7 @@ export const ch10: Chapter = {
     },
     {
       id: 'b2x',
+      photo: { file: 'ch10-c.jpg', credit: '中国内地（湖南）窄巷集市，约 1917–1923 年 · 佚名／国际传教摄影档案（USC） · Wikimedia Commons · 公有领域（非中原/非该年代实拍）', url: 'https://commons.wikimedia.org/wiki/File:Narrow_market_street,_China,_ca.1917-1923_(IMP-YDS-RG224-OV1-0000-0037).jpg' },
       art: 'zy-chest',
       source: '张高峰《豫灾实录》所记灾中市况：牲口贱卖、粮比肉贵、逼卖田地——本拍止于集市白描',
       narrative:
