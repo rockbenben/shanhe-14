@@ -1,9 +1,28 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import type { Story } from '../stories/schema'
 import type { ReaderState } from '../engine/types'
 import { currentBeat } from '../engine/reader'
 import { artUrl } from './art'
 import { useLang } from './lang'
+
+// 防闪背景：旧图保持到新图解码完成才切换——切拍时不露空白
+function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
+  const [shown, setShown] = useState(url)
+  useEffect(() => {
+    if (!url || url === shown) return
+    const im = new Image()
+    im.onload = () => setShown(url)
+    im.src = url
+  }, [url, shown])
+  if (!shown) return null
+  return (
+    <div
+      className={full ? 'reader-bg reader-bg--full' : 'reader-bg'}
+      style={{ backgroundImage: `url(${shown})` }}
+      aria-hidden="true"
+    />
+  )
+}
 
 // 选择后的即时回应：非空时先显示「你的选择 + 回应」，推进后才展开本拍正文
 export interface Reaction {
@@ -67,6 +86,26 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
   // 真实照片拍（beat.photo，档案照片+出处署名）优先于版画插画（beat.art）
   const photoUrl = beat.photo ? `${import.meta.env.BASE_URL}covers/${beat.photo.file}` : undefined
   const img = photoUrl ?? (beat.art ? artUrl(beat.art) : undefined)
+
+  // 预加载下一拍可能用到的图——多数切换可无缝
+  useEffect(() => {
+    const ch = story.chapters[state.chapter]
+    const tos = beat.choices
+      ? beat.choices.map((c) => c.to)
+      : typeof beat.next === 'string'
+        ? [beat.next]
+        : (beat.next ?? []).map((n) => n.to)
+    for (const to of tos) {
+      const nb = ch.beats.find((b) => b.id === to)
+      if (!nb) continue
+      const u = nb.photo
+        ? `${import.meta.env.BASE_URL}covers/${nb.photo.file}`
+        : nb.art
+          ? artUrl(nb.art)
+          : undefined
+      if (u) new Image().src = u
+    }
+  }, [beat, state.chapter, story])
   const photoCredit = beat.photo && (
     <p className="reader-photocredit">{tr(beat.photo.credit)}</p>
   )
@@ -82,7 +121,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
           onToggleArt()
         }}
       >
-        <div className="reader-bg reader-bg--full" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />
+        <ReaderBg url={img} full />
         <button className="reader-viewtoggle" onClick={onToggleArt}>
           {tr('读文')}
         </button>
@@ -107,7 +146,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
   if (reaction) {
     return (
       <main className={cls} onClick={onSurfaceClick}>
-        {img && <div className="reader-bg" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />}
+        <ReaderBg url={img} />
         <header className="reader-chapter">
           {tr(`第${state.chapter + 1}章`)} · {tr(chapter.title)}
         </header>
