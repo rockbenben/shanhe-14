@@ -139,7 +139,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
           </p>
         )}
         {tr(beat.narrative)}
-        {beat.source && <p className="reader-source">◈ {tr('据')} {tr(beat.source)}</p>}
+        {beat.source && <p className="reader-source">◈ {tr(beat.source)}</p>}
       </article>
       {beat.choices ? (
         <div className="reader-choices">
