@@ -123,7 +123,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       >
         <ReaderBg url={img} full />
         <button className="reader-viewtoggle" onClick={onToggleArt}>
-          {tr('读文')}
+          {tr('返回阅读')}
         </button>
         {photoCredit}
       </main>
@@ -139,7 +139,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
   const cls = `reader${canAdvance ? ' reader--advance' : ''}${img ? ' reader--immersive' : ''}`
   const viewBtn = img && (
     <button className="reader-viewtoggle" onClick={onToggleArt}>
-      {tr('览图')}
+      {tr('看全图')}
     </button>
   )
 

@@ -23,9 +23,9 @@ export default function EndingCard({ story, ending, log, onRestart, onRecap, onG
       <p className="ending-epilogue">{tr(ending.epilogue)}</p>
       <p className="ending-meta">{tr(`走过 ${story.chapters.length} 章，做出 ${choices} 次选择`)}</p>
       <div className="ending-actions">
-        <button onClick={onRecap}>{tr('回顾长卷')}</button>
-        <button onClick={onGallery}>{tr('影像志')}</button>
-        <button onClick={onRestart}>{tr('重开一卷')}</button>
+        <button onClick={onRecap}>{tr('回顾全程')}</button>
+        <button onClick={onGallery}>{tr('历史影像')}</button>
+        <button onClick={onRestart}>{tr('重新开始')}</button>
       </div>
     </main>
   )

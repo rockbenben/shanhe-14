@@ -53,7 +53,7 @@ export default function ChapterCover({ story, state, onEnter, onBack }: Props) {
         <h2 className="cover-title">{tr(ch.title)}</h2>
         {ch.epigraph && <Epigraph text={ch.epigraph} />}
         <button className="cover-enter" onClick={onEnter}>
-          {tr(state.chapter === 0 ? '开卷' : '续读')}
+          {tr('进入本章')}
         </button>
         {ch.historyNote && (
           <div className="cover-note">
