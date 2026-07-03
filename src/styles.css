@@ -48,7 +48,7 @@ button:hover { background: var(--ink); color: var(--paper); }
 .cover-epigraph { color: var(--dim); font-style: italic; max-width: 32em; }
 .cover-epigraph-source { display: block; margin-top: 6px; font-size: 0.82rem; font-style: normal; opacity: 0.75; }
 /* 可推进画面（无分支/回应页/章封）：整屏可点，指针提示 */
-.reader--advance, .cover { }
+.reader--advance, .cover { cursor: pointer; }
 .reader--advance button, .cover button { cursor: pointer; }
 /* 开卷：去方框，作一枚安静的字——整屏本就可点，按钮只是视线的落点 */
 .cover-enter {
@@ -209,7 +209,7 @@ body::before {
 /* 卷首·十四年时间轴：每条切片一章，悬停亮起显年份章题；ch10 为全黑切片（影像从缺） */
 .home--photo { color: #f0ead9; background: #14100a; }
 .home-strip { position: fixed; inset: 0; display: flex; z-index: 0; }
-.home-slice { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-right: 1px solid rgba(20, 16, 10, 0.8); cursor: pointer; }
+.home-slice { position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-right: 1px solid rgba(20, 16, 10, 0.8); }
 .home-slice img, .home-slice-void {
   width: 100%; height: 100%; object-fit: cover; display: block;
   filter: grayscale(1) sepia(0.25) brightness(0.42);
