@@ -32,10 +32,10 @@ export default function Home({ stories, onStart, onContinue }: {
             <div className="story-actions">
               {resumable && (
                 <button className="story-primary" onClick={() => onContinue(s)}>
-                  {tr(`继续阅读 · 第 ${saved.chapter + 1} 章`)}
+                  {tr(`继续 · 第 ${saved.chapter + 1} 章`)}
                 </button>
               )}
-              <button onClick={() => onStart(s)}>{tr(resumable ? '重新开始' : '开始阅读')}</button>
+              <button onClick={() => onStart(s)}>{tr(resumable ? '重新开始' : '开始')}</button>
             </div>
           </section>
         )

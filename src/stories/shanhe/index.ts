@@ -16,7 +16,7 @@ import { ch12 } from './ch12'
 export const shanhe: Story = storySchema.parse({
   id: 'shanhe',
   title: '山河十四年',
-  tagline: '1931—1945，一个记者走过的中国',
+  tagline: '1931—1945 · 据史实与亲历记载改编',
   cover: 'ch01.jpg',
   chapters: [ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09, ch10, ch11, ch12],
   endings: [

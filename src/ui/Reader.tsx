@@ -123,7 +123,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       >
         <ReaderBg url={img} full />
         <button className="reader-viewtoggle" onClick={onToggleArt}>
-          {tr('返回阅读')}
+          {tr('返回')}
         </button>
         {photoCredit}
       </main>
@@ -167,7 +167,7 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
 
   return (
     <main className={cls} onClick={onSurfaceClick}>
-      {img && <div className="reader-bg" style={{ backgroundImage: `url(${img})` }} aria-hidden="true" />}
+      <ReaderBg url={img} />
       <header className="reader-chapter">
         {tr(`第${state.chapter + 1}章`)} · {tr(chapter.title)}
       </header>
