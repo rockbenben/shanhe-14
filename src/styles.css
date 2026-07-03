@@ -150,8 +150,9 @@ button:hover { background: var(--ink); color: var(--paper); }
 .home--photo .story-card p { color: #cfc5ad; }
 .home--photo .story-actions button { border-color: #f0ead9; color: #f0ead9; }
 .home--photo .story-actions button:hover { background: #f0ead9; color: #1a150e; }
-.home--photo .story-primary { background: #f0ead9; color: #1a150e; }
-.home--photo .story-primary:hover { background: #ffffff; }
+/* 主按钮（续读）：提高选择器权重，避免被通用按钮的米色文字规则盖掉（曾致米字米底看不清） */
+.home--photo .story-actions button.story-primary { background: #f0ead9; color: #1a150e; }
+.home--photo .story-actions button.story-primary:hover { background: #ffffff; color: #1a150e; }
 
 /* 卷末影像志：档案照片小影像馆 */
 .gallery { gap: 20px; max-width: 720px; }

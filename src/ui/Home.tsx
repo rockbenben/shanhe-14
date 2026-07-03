@@ -23,8 +23,8 @@ export default function Home({ stories, onStart, onContinue }: {
       <p className="home-sub">{tr('编排式叙事 · 每一次选择都被长卷记得')}</p>
       {stories.map((s) => {
         const saved = validProgress(s, loadProgress(s.id))
-        // 「续读」只有在真正读进去之后才有意义（仍停在第一章封面＝等于从头）
-        const resumable = saved && !saved.ended && (saved.chapter > 0 || saved.beatId !== null)
+        // 「续读」只在读到第二章之后出现——第一章内的进度不值得占一个按钮
+        const resumable = saved && !saved.ended && saved.chapter > 0
         return (
           <section key={s.id} className="story-card">
             <h2>{tr(s.title)}</h2>
