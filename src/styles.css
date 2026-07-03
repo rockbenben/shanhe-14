@@ -129,19 +129,6 @@ button:hover { background: var(--ink); color: var(--paper); }
 .ending-story { color: var(--dim); letter-spacing: 0.2em; }
 .ending-title { font-size: 1.8rem; margin: 0; letter-spacing: 0.1em; }
 .ending-epilogue { line-height: 2.1; max-width: 34em; text-align: left; }
-/* 题块＋存档朱印：印章压结局题右上角、手钤微斜——与卷首「史实改编」印首尾同构 */
-.ending-titleblock { position: relative; display: inline-block; }
-.ending-seal {
-  position: absolute; top: -14px; right: -52px;
-  writing-mode: vertical-rl; font-size: 0.74rem; letter-spacing: 0.22em;
-  color: #f0ead9; background: rgba(158, 43, 37, 0.88); border: 1px solid rgba(240, 234, 217, 0.4);
-  padding: 7px 4px; border-radius: 2px; transform: rotate(6deg);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
-}
-@media (prefers-reduced-motion: no-preference) {
-  .ending-seal { animation: seal-press 0.45s cubic-bezier(0.2, 1.4, 0.4, 1) 0.35s backwards; }
-  @keyframes seal-press { from { opacity: 0; transform: rotate(6deg) scale(1.6); } to { opacity: 1; transform: rotate(6deg) scale(1); } }
-}
 .ending-actions { display: flex; gap: 12px; margin-top: 8px; }
 
 /* 常驻角标：简繁切换（右上）；览图/读文（右下） */
