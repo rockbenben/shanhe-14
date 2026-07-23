@@ -1,10 +1,19 @@
 # 山河十四年 · This Land, Fourteen Years
 
+> 据史实与亲历记载改编的互动叙事：1931 九一八 → 1945 胜利，十二章
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![365 开源计划 #021](https://img.shields.io/badge/365%20%E5%BC%80%E6%BA%90%E8%AE%A1%E5%88%92-%23021-1f6feb)](https://github.com/rockbenben/365opensource)
+
 一部据史实与亲历记载改编的互动叙事：1931 九一八 → 1945 胜利，十二章。你扮演一个提笔的人，在选择里走完这十四年。
 
 零配置、无需 API Key，打开即读，简繁一键切换。
 
 **▶ 在线阅读：<https://shanhe14.newzone.top>**
+
+![第一章章封：1931 年 10 月，沈阳（奉天）近郊的日军士兵](public/covers/ch01.jpg)
+
+<sub>第一章章封 · 1931 年 10 月奉天 · Agence de presse Meurisse／法国国家图书馆 BnF Gallica · 公有领域（[Commons 文件页](https://commons.wikimedia.org/wiki/File:Japanese_soldiers_near_Mukden,_October_1931.jpg)）。全部 66 张图的逐张来源与许可见 [`public/covers/CREDITS.md`](public/covers/CREDITS.md)。</sub>
 
 ## 做法
 
@@ -40,7 +49,7 @@ npm run build # 纯静态，dist/ 可部署到任意静态托管（base './'，�
 
 引擎 **浮生长卷 floating-life**（365 开源计划 #021）：作者编排故事，引擎负责推进与记忆。故事即数据——线性章节串（珠）、章内分支章末汇聚（DAG）、选择只落 flag（无数值），flag 驱动跨章回响与结局分化。
 
-与 **千世书（#015）** 互为镜像姐妹作：千世书用数值涌现故事，浮生长卷用编排承载故事。
+与 **[千世书](https://lives.newzone.top)（#015）** 互为镜像姐妹作：千世书用数值涌现故事，浮生长卷用编排承载故事。
 
 ## 授权
 
@@ -50,3 +59,7 @@ npm run build # 纯静态，dist/ 可部署到任意静态托管（base './'，�
 | 《山河十四年》剧本文案 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) |
 | 档案照片               | 公有领域，逐张出处与许可见 [public/covers/CREDITS.md](public/covers/CREDITS.md)                             |
 | 环境声                 | CC0 / 公有领域 / CC BY（署名履约同上文件「环境声」节）                                                      |
+
+## 关于 365 开源计划
+
+[365 开源计划](https://github.com/rockbenben/365opensource) 的第 **#021** 个项目——一个人 + AI，一年 300+ 个开源项目。[提交你的需求 →](https://365.aishort.top/) · [Discord](https://discord.gg/PZTQfJ4GjX) · [Telegram](https://t.me/aishort_top)
