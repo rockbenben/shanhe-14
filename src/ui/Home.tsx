@@ -1,5 +1,6 @@
 import type { Story } from '../stories/schema'
 import { loadProgress, validProgress } from '../engine/storage'
+import { getHomeEntry } from './homeState'
 import { useLang } from './lang'
 
 export default function Home({ stories, onStart, onContinue, onAbout }: {
@@ -14,7 +15,9 @@ export default function Home({ stories, onStart, onContinue, onAbout }: {
   // ch10 无影像，是一条全黑切片（1942 · 影像从缺）——时间轴上的黑缝本身即叙事
   const slices = story?.chapters ?? []
   const saved = story ? validProgress(story, loadProgress(story.id)) : null
-  const resumable = saved && !saved.ended && saved.chapter > 0
+  const entry = getHomeEntry(saved)
+  const resumable = entry === 'resume'
+  const finished = entry === 'ending'
   return (
     <main className="home home--photo">
       <div className="home-strip" aria-hidden="true">
@@ -45,7 +48,17 @@ export default function Home({ stories, onStart, onContinue, onAbout }: {
                 {tr(`继续 · 第 ${saved!.chapter + 1} 章`)}
               </button>
             )}
-            <button onClick={() => { const ch1 = saved && !saved.ended && saved.chapter === 0 && saved.beatId !== null; if (ch1) onContinue(story); else onStart(story) }}>{tr(resumable ? '重新开始' : '进入')}</button>
+            {finished && (
+              <button className="story-primary" onClick={() => onContinue(story)}>
+                {tr('重看结局')}
+              </button>
+            )}
+            {(resumable || finished) && (
+              <button onClick={() => onStart(story)}>{tr('重新开始')}</button>
+            )}
+            {!resumable && !finished && (
+              <button onClick={() => onStart(story)}>{tr('进入')}</button>
+            )}
           </div>
         </section>
       )}

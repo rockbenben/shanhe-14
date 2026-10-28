@@ -41,6 +41,7 @@ button:hover { background: var(--ink); color: var(--paper); }
 .cover--photo .cover-note-body { color: #cfc5ad; border-left-color: #d8a37a; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
 .cover-credit {
   position: fixed; left: 0; right: 0; bottom: 10px; margin: 0;
+  padding: 0 96px;
   text-align: center; font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(240, 234, 217, 0.55);
 }
 .cover-index { color: var(--dim); letter-spacing: 0.2em; }
@@ -91,7 +92,6 @@ button:hover { background: var(--ink); color: var(--paper); }
 /* 窄屏：提示行让位（触屏本能点按，提示的键位也不适用）；署名缩排避开看全图钮 */
 @media (max-width: 720px) {
   .reader-hint { display: none; }
-  .reader-photocredit { font-size: 0.64rem; text-align: left; padding: 0 92px 0 12px; }
 }
 /* 沉浸式插画：整屏版画为幕、卷文浮层（呼应千世书范式）；无图节点保持素纸样式 */
 .reader-bg {
@@ -148,6 +148,7 @@ body::before {
 /* 真实照片拍的出处署名：与章封 cover-credit 同规沉底 */
 .reader-photocredit {
   position: fixed; left: 0; right: 0; bottom: 10px; margin: 0; pointer-events: none;
+  padding: 0 96px;
   text-align: center; font-size: 0.72rem; letter-spacing: 0.05em; color: rgba(240, 234, 217, 0.6);
 }
 /* 线上来源可点：虚线下划线标识，署名行的链接恢复可点 */
@@ -204,10 +205,33 @@ body::before {
   padding: 5px 12px; font-size: 0.85rem; border-radius: 2px;
 }
 .reader-viewtoggle:hover { background: #e9e1cd; color: #1a150e; }
+/* 回退钮：与简繁角标左右对称，触屏也有实体入口 */
+.reader-back {
+  position: fixed; top: 14px; left: 14px; z-index: 10;
+  width: 36px; height: 36px; padding: 0; border-radius: 2px;
+  font-size: 1.05rem; line-height: 1; letter-spacing: 0;
+  border: 1px solid rgba(122, 111, 95, 0.5); color: var(--dim); background: rgba(245, 241, 232, 0.5);
+}
+/* 视觉保持 36px，热区补到 44px；不改变与简繁/声钮的视觉对齐 */
+.reader-back::after { content: ''; position: absolute; inset: -4px; }
+.reader-back:hover { background: var(--ink); color: var(--paper); }
+.reader--immersive .reader-back, .cover--photo .reader-back {
+  border-color: rgba(240, 234, 217, 0.55); background: rgba(26, 21, 14, 0.6); color: #f0ead9;
+}
+.reader--immersive .reader-back:hover, .cover--photo .reader-back:hover { background: #f0ead9; color: #1a150e; }
 /* 览图模式：全屏原画，不加暗化滤镜 */
 .reader--artonly { cursor: pointer; }
 .reader-bg--full { filter: none; }
 .reader--artonly::after { content: none; }
+/* 版画插画是 2752×1536 的横幅印刷（≈16:9）：宽屏 cover 正好整幅铺满，16:9 视口几乎零裁切；
+   竖屏时 cover 只能切下中间一条（七成画面被裁掉）——看全图改为整幅可见，留白由纸色承接，画册一页一画。 */
+@media (max-aspect-ratio: 1/1) {
+  .reader-bg--full.reader-bg--art {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
 /* 章封看全图：同规——原片无滤镜、无渐晕 */
 .cover--artview .cover-photo { filter: none; }
 .cover--artview::after { content: none; }
@@ -264,7 +288,7 @@ body::before {
 .home--photo .story-actions button.story-primary:hover { background: #ffffff; color: #1a150e; }
 
 /* 卷末影像志：档案照片小影像馆 */
-.gallery { gap: 20px; max-width: 720px; }
+.gallery { gap: 20px; max-width: 720px; padding-top: 64px; }
 .gallery h2 { margin: 0; letter-spacing: 0.1em; }
 .gallery-sub { color: var(--dim); font-size: 0.9rem; margin: 0 0 8px; }
 .gallery-item { margin: 0; }
@@ -280,8 +304,39 @@ body::before {
 .gallery-extra img { width: 100%; display: block; border-radius: 2px; filter: grayscale(0.2) sepia(0.12); }
 .gallery > button { align-self: flex-start; }
 
-.recap { gap: 8px; }
+.recap { gap: 8px; padding-top: 64px; }
 .recap-chapter h3 { margin: 16px 0 4px; font-size: 1rem; }
 .recap-chapter ul { margin: 0; color: var(--dim); }
 .recap-ending { color: var(--accent); margin-top: 16px; }
-.recap button { align-self: flex-start; margin-top: 16px; }
+.recap-back { align-self: flex-start; margin-top: 16px; }
+
+/* 窄屏：长段落不再塞进 44vh 的内滚动框（会截在句子中间、也难看出还有下文），
+   改为整页自然滚动；margin-top:auto 让短段落仍沉底。署名左右留白避开右下角按钮 */
+@media (max-width: 720px) {
+  .cover-credit { font-size: 0.64rem; text-align: left; padding: 0 92px 0 12px; }
+  /* 正文页右下还有「继续」，署名再收窄，别让可点的署名压到继续键上 */
+  .reader-photocredit { font-size: 0.64rem; text-align: left; padding: 0 120px 0 12px; }
+  .reader--immersive { justify-content: flex-start; padding-top: 56px; padding-bottom: 120px; }
+  .reader--immersive .reader-chapter { margin-top: auto; }
+  .reader--immersive .reader-narrative { max-height: none; overflow: visible; }
+}
+
+/* 矮屏（小屏手机竖屏）：长史实注/长段落会把内容顶到视口外，
+   固定的署名与「看全图」会压住正文；此时把这两项放回文末，随页面滚动，
+   览图模式仍保留固定返回与署名 */
+@media (max-width: 720px) and (max-height: 720px) {
+  .reader:not(.reader--artonly) .reader-viewtoggle,
+  .cover:not(.cover--artview) .reader-viewtoggle {
+    position: static; align-self: flex-end; margin: 0;
+  }
+  .cover:not(.cover--artview) .reader-viewtoggle { align-self: center; }
+  .reader:not(.reader--artonly) .reader-photocredit,
+  .cover:not(.cover--artview) .cover-credit,
+  .ending .cover-credit {
+    position: static; left: auto; right: auto; bottom: auto; margin: 0;
+    padding: 0; text-align: left;
+  }
+  .cover:not(.cover--artview) .cover-credit,
+  .ending .cover-credit { max-width: 100%; padding: 0 12px; text-align: center; }
+  .reader--immersive { padding-bottom: 48px; }
+}

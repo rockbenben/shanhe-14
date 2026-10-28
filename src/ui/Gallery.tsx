@@ -19,6 +19,9 @@ export default function Gallery({ story, onBack }: Props) {
   }, [onBack])
   return (
     <main className="gallery">
+      <button className="reader-back" onClick={onBack} aria-label={tr('返回')} title={tr('返回')}>
+        ←
+      </button>
       <h2>{tr('历史影像')} · {tr(story.title)}</h2>
       <p className="gallery-sub">
         {tr('各章章封影像均取自公有领域档案（Wikimedia Commons 等），出处随图注明。')}

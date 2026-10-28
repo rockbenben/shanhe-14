@@ -7,7 +7,7 @@ import { useLang } from './lang'
 
 // 影像层：画册式翻页——旧图保持到新图解码完成后瞬时硬切，无空窗无叠影无暗场；
 // 本拍无图（如素纸拍）则立即清空。
-function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
+function ReaderBg({ url, full, art }: { url?: string; full?: boolean; art?: boolean }) {
   const [shown, setShown] = useState(url)
   useEffect(() => {
     if (!url) {
@@ -22,7 +22,7 @@ function ReaderBg({ url, full }: { url?: string; full?: boolean }) {
   if (!shown) return null
   return (
     <div
-      className={full ? 'reader-bg reader-bg--full' : 'reader-bg'}
+      className={`reader-bg${full ? ' reader-bg--full' : ''}${art ? ' reader-bg--art' : ''}`}
       style={{ backgroundImage: `url(${shown})` }}
       aria-hidden="true"
     />
@@ -41,6 +41,7 @@ interface Props {
   reaction: Reaction | null
   // 览图模式：隐去文字浮层纯赏画面，再点返回文字
   artOnly: boolean
+  canGoBack: boolean
   onToggleArt: () => void
   onChoose: (index: number) => void
   onAdvance: () => void
@@ -50,12 +51,17 @@ interface Props {
 
 const HINT_KEY = 'floating-life:hinted'
 
-export default function Reader({ story, state, reaction, artOnly, onToggleArt, onChoose, onAdvance, onBack }: Props) {
+export default function Reader({ story, state, reaction, artOnly, canGoBack, onToggleArt, onChoose, onAdvance, onBack }: Props) {
   const { tr } = useLang()
   const chapter = story.chapters[state.chapter]
   const beat = currentBeat(story, state)
   // 视觉小说惯例：无分支时空格/回车推进，点击画面任意处亦可
   const canAdvance = !artOnly && (!!reaction || !beat.choices)
+  // 窄屏改为整页滚动后，换拍要回到段首，别停在上一条的滚动位置
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [state.chapter, state.beatId, reaction, artOnly])
+
   // 首次操作提示：初次进入正文出现，一翻页或 10 秒后收起，之后不再打扰
   const [showHint, setShowHint] = useState(() => !localStorage.getItem(HINT_KEY))
   useEffect(() => {
@@ -71,6 +77,11 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      // 焦点停在按钮/链接上时，空格与回车交给浏览器原生激活，别把「出处」链接的
+      // 回车、或键盘用户选中的选项，抢成全局推进/随机选择
+      const active = document.activeElement as HTMLElement | null
+      const onControl = !!active?.closest?.('button, a')
+      if (onControl && (e.key === ' ' || e.key === 'Enter')) return
       // 空格/↓/→ 是「放剧情键」：普通拍推进；到选择点自动替读者选一项（随机），
       // 照常走「你的选择+回应」流程——只想看故事的人可以一键到底
       if (e.key === ' ' || e.key === 'ArrowDown' || e.key === 'ArrowRight') {
@@ -105,6 +116,8 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
   // 真实照片拍（beat.photo，档案照片+出处署名）优先于版画插画（beat.art）
   const photoUrl = beat.photo ? `${import.meta.env.BASE_URL}covers/${beat.photo.file}` : undefined
   const img = photoUrl ?? (beat.art ? artUrl(beat.art) : undefined)
+  // 当前这幅是版画插画（而非档案照片）——竖屏看全图时按插画的比例整幅显示
+  const isArt = !photoUrl && !!beat.art
 
   // 预加载下一拍可能用到的图——多数切换可无缝
   useEffect(() => {
@@ -141,12 +154,12 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       <main
         className="reader reader--artonly"
         onClick={(e) => {
-          // 按钮自带 onClick；冒泡到整屏会二次切换（切出去又切回来），故拦掉
-          if ((e.target as HTMLElement).closest('button')) return
+          // 按钮/出处链接自带 onClick；冒泡到整屏会二次切换、或把「点出处」当成翻页
+          if ((e.target as HTMLElement).closest('button, a')) return
           onToggleArt()
         }}
       >
-        <ReaderBg url={img} full />
+        <ReaderBg url={img} full art={isArt} />
         <button className="reader-viewtoggle" onClick={onToggleArt}>
           {tr('返回')}
         </button>
@@ -157,7 +170,8 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
 
   const onSurfaceClick = (e: React.MouseEvent) => {
     if (!canAdvance) return
-    if ((e.target as HTMLElement).closest('button')) return // 按钮自带 onClick，避免双触发
+    // 按钮与出处链接自带 onClick；冒泡到整屏会把「点出处」当成翻页
+    if ((e.target as HTMLElement).closest('button, a')) return
     onAdvance()
   }
 
@@ -167,11 +181,18 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
       {tr('看全图')}
     </button>
   )
+  // 触屏没有 ← 键，给一页一枚实体回退钮（览图模式只留「返回」，不叠两个返回）
+  const backBtn = canGoBack && (
+    <button className="reader-back" onClick={onBack} aria-label={tr('回退上一页')} title={tr('回退上一页')}>
+      ←
+    </button>
+  )
 
   if (reaction) {
     return (
       <main className={cls} onClick={onSurfaceClick}>
-        <ReaderBg url={img} />
+        <ReaderBg url={img} art={isArt} />
+        {backBtn}
         <header className="reader-chapter">
           {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}{chapter.era && <span className="reader-era">{chapter.era}</span>}
         </header>
@@ -192,7 +213,8 @@ export default function Reader({ story, state, reaction, artOnly, onToggleArt, o
 
   return (
     <main className={cls} onClick={onSurfaceClick}>
-      <ReaderBg url={img} />
+      <ReaderBg url={img} art={isArt} />
+      {backBtn}
       <header className="reader-chapter">
         {tr(`第 ${state.chapter + 1} 章`)} · {tr(chapter.title)}{chapter.era && <span className="reader-era">{chapter.era}</span>}
       </header>

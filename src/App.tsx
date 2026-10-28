@@ -31,7 +31,7 @@ function Shell() {
   // 览图模式：隐去文字浮层纯赏画面
   const [artOnly, setArtOnly] = useState(false)
   // 回退栈：状态快照（会话级，不入存档）——←/↑ 逐步退回上一页，退过选择点即可重选
-  const [, setHistory] = useState<ReaderState[]>([])
+  const [history, setHistory] = useState<ReaderState[]>([])
   // 关于本作页（仅从卷首进入）
   const [showAbout, setShowAbout] = useState(false)
   // 环境声：跟随当前章（卷首/关于/终卷静默）
@@ -103,8 +103,12 @@ function Shell() {
             story={story}
             ending={ending}
             onRestart={() => {
+              const fresh = startStory(story)
               setEndView('card')
-              setSession(null)
+              setHistory([])
+              clearProgress(story.id)
+              saveProgress(fresh)
+              setSession({ story, state: fresh })
             }}
             onRecap={() => setEndView('recap')}
             onGallery={() => setEndView('gallery')}
@@ -116,6 +120,7 @@ function Shell() {
         <ChapterCover
           story={story}
           state={state}
+          canGoBack={history.length > 0}
           onEnter={() => update(story, enterChapter(story, state))}
           onBack={goBack}
         />
@@ -127,6 +132,7 @@ function Shell() {
           state={state}
           reaction={reaction}
           artOnly={artOnly}
+          canGoBack={history.length > 0}
           onBack={goBack}
           onToggleArt={() => setArtOnly((v) => !v)}
           onChoose={(i) => {

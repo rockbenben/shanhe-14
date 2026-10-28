@@ -6,12 +6,13 @@ import { useLang } from './lang'
 interface Props {
   story: Story
   state: ReaderState
+  canGoBack: boolean
   onEnter: () => void
   // ←/↑ 回退（退回上一章的末尾）
   onBack: () => void
 }
 
-export default function ChapterCover({ story, state, onEnter, onBack }: Props) {
+export default function ChapterCover({ story, state, canGoBack, onEnter, onBack }: Props) {
   const { tr } = useLang()
   const ch = story.chapters[state.chapter]
   // 史实注默认展开——它是本作「真实底本」的证词，不该藏在折叠里
@@ -29,6 +30,8 @@ export default function ChapterCover({ story, state, onEnter, onBack }: Props) {
         }
         return
       }
+      // 焦点在收起史实注/看全图等按钮上时，空格/回车交给原生激活，不要抢成「进入本章」
+      if ((e.key === ' ' || e.key === 'Enter') && document.activeElement instanceof HTMLButtonElement) return
       if (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight' || e.key === 'ArrowDown') {
         e.preventDefault()
         onEnter()
@@ -44,10 +47,15 @@ export default function ChapterCover({ story, state, onEnter, onBack }: Props) {
   }, [onEnter, onBack, artView])
 
   const onSurfaceClick = (e: React.MouseEvent) => {
-    if ((e.target as HTMLElement).closest('button')) return
+    if ((e.target as HTMLElement).closest('button, a')) return
     if (artView) setArtView(false)
     else onEnter()
   }
+  const backBtn = canGoBack && (
+    <button className="reader-back" onClick={onBack} aria-label={tr('回退上一页')} title={tr('回退上一页')}>
+      ←
+    </button>
+  )
 
   // 看全图：只留照片与署名
   if (artView && ch.art) {
@@ -75,6 +83,7 @@ export default function ChapterCover({ story, state, onEnter, onBack }: Props) {
           aria-hidden="true"
         />
       )}
+      {backBtn}
       <div className="cover-body">
         <p className="cover-index">{tr(`第 ${state.chapter + 1} 章 · 共 ${story.chapters.length} 章`)}</p>
         <h2 className="cover-title">{tr(ch.title)}</h2>

@@ -23,6 +23,9 @@ export default function Recap({ story, log, ending, onBack }: Props) {
   return (
   
     <main className="recap">
+      <button className="reader-back" onClick={onBack} aria-label={tr('返回')} title={tr('返回')}>
+        ←
+      </button>
       <h2>{tr('回顾全程')} · {tr(story.title)}</h2>
       {story.chapters.map((ch, ci) => {
         const entries = log.filter((l) => l.chapter === ci)
@@ -43,7 +46,7 @@ export default function Recap({ story, log, ending, onBack }: Props) {
         )
       })}
       <p className="recap-ending">→ {tr(ending.title)}</p>
-      <button onClick={onBack}>{tr('返回')}</button>
+      <button className="recap-back" onClick={onBack}>{tr('返回')}</button>
     </main>
   )
 }
