@@ -2,3 +2,4 @@ node_modules
 dist
 .superpowers
 docs/superpowers/
+.qoder*
